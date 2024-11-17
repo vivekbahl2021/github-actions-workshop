@@ -1,6 +1,6 @@
 # Custom Workflow
 
-In this lab you will customize the existing workflow to trigger when a change is made to the labs folder on the main branch. You will also add steps to the workflow to use an action that greets Mona the Octocat.
+In this lab you will customize the existing workflow to trigger when a change is made to the src folder on the main branch. You will also add steps to the workflow to use an action that greets Mona the Octocat.
 
 > Duration: 10-15 minutes
 
@@ -14,7 +14,7 @@ In this lab you will customize the existing workflow to trigger when a change is
     branches:
       - main
     paths:
-      - 'labs/**'
+      - 'src/**'
 ```
 
 3. Commit the workflow changes into the `main` branch
