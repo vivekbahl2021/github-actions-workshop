@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="upper",  # Name of your package
+    name="upper_project",  # Name of your package
     version="0.1",  # Version of your package
-    description="A Python module to convert strings to uppercase.",  # Short description
+    description="A Python module to convert user provided arguments to uppercase.",  # Short description
     author="Prasad Honrao",  
     author_email="honrao.prasad@gmail.com",  
     packages=find_packages(),  # Automatically discover all packages and subpackages

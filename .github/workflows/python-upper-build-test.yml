@@ -41,5 +41,4 @@ jobs:
         working-directory: src/python/upper_project
 
       - name: Run upper package
-        run: python -c "import upper_project; print(upper_project.upper('github actions is awesome!'))"
-        working-directory: src/python/upper_project
+        run: upper gihub actions is awesome
