@@ -20,10 +20,11 @@ jobs:
     environment: ${{ matrix.environment }}
 
     steps:
-      - name: Print environment and version
+      - name: Print environment variables and secrets
         run: |
           echo "Building for environment: ${{ matrix.environment }}"
           echo "Version: ${{ secrets.VERSION }}"
+          echo "Variable: ${{ env.VARIABLE }}"
 
   build:
     runs-on: ubuntu-latest
