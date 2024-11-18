@@ -51,6 +51,6 @@ jobs:
         run: echo $PATH
 
       - name: Run upper package
-        run: |
-          export PATH=$HOME/.local/bin:$PATH
-          upper github actions is awesome
+        env:
+          PATH: $HOME/.local/bin:$PATH
+        run: upper github actions is awesome
