@@ -29,7 +29,7 @@ jobs:
         run: python -m pip install --upgrade pip
 
       - name: Unit test
-        run: python -m unittest discover -p '*_test.py'
+        run: python -m unittest discover tests
         working-directory: src/python/upper_project
 
       - name: Build upper package
@@ -43,6 +43,9 @@ jobs:
       - name: Install upper package
         run: python -m pip install upper_project-0.1-py3-none-any.whl
         working-directory: src/python/upper_project/dist
+
+      - name: Print PATH
+        run: echo $PATH
 
       - name: Run upper package
         run: upper gihub actions is awesome
