@@ -96,7 +96,7 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 2. Go to `Actions` and manually trigger the workflow `.NET Weather WebApi Build with Mac Runner` by clicking on `Run Workflow` button
 3. See the details of your running workflow
 
-## 3.2 Solution
+## 3.4 Solution
 
 <details>
   <summary>dotnet-weather-webapi-build.yml</summary>
