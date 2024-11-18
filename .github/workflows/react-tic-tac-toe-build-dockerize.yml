@@ -1,4 +1,4 @@
-name: React Tic-Tac-Tow Build and Dockerize Workflow
+name: React Tic-Tac-Toe Build and Dockerize Workflow
 
 on:
   workflow_dispatch:
@@ -11,26 +11,8 @@ env:
   DOCKER_IMAGE: prasadhonrao/react-tic-tac-toe
 
 jobs:
-  print:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        environment: [dev, prod]
-
-    environment: ${{ matrix.environment }}
-
-    steps:
-      - name: Print environment variables and secrets
-        run: |
-          echo "Building for environment: ${{ matrix.environment }}"
-          echo "Version: ${{ secrets.VERSION }}"
-          echo "Variable: ${{ env.VARIABLE }}"
-        env:
-          VARIABLE: ${{ secrets.VARIABLE }}
-
   build:
     runs-on: ubuntu-latest
-    needs: print
     steps:
       - name: Get all the files in current directory before checkout
         run: pwd && ls -al
@@ -60,7 +42,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push Docker image
         run: |
-          docker build -t ${{ env.DOCKER_IMAGE }}:${{ github.sha }} -f src/webapi/Dockerfile src/webapi
+          docker build -t ${{ env.DOCKER_IMAGE }}:${{ github.sha }} -f src/react/react-tic-tac-toe/Dockerfile src/react/react-tic-tac-toe
           docker tag ${{ env.DOCKER_IMAGE }}:${{ github.sha }} ${{ env.DOCKER_IMAGE }}:latest
           docker push ${{ env.DOCKER_IMAGE }}:${{ github.sha }}
           docker push ${{ env.DOCKER_IMAGE }}:latest
