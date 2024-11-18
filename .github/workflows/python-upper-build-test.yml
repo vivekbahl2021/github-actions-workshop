@@ -37,11 +37,12 @@ jobs:
         working-directory: src/python/upper_project
 
       - name: List dist directory
-        run: ls src/python/upper_project/dist
+        run: ls
+        working-directory: src/python/upper_project/dist
 
       - name: Install upper package
-        run: python -m pip install dist/upper_project-0.1.0-py3-none-any.whl
-        working-directory: src/python/upper_project
+        run: python -m pip install upper_project-0.1-py3-none-any.whl
+        working-directory: src/python/upper_project/dist
 
       - name: Run upper package
         run: upper gihub actions is awesome
