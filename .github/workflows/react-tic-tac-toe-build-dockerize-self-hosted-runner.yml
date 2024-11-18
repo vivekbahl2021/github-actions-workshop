@@ -24,6 +24,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: true # Fetch the submodules
+      - name: Update submodules
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --recursive --force
+        shell: pwsh
       - name: Install dependencies
         run: |
           cd src/react/react-tic-tac-toe
