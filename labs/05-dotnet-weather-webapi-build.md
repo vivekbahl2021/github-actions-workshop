@@ -4,7 +4,7 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 
 > Duration: 20-30 minutes
 
-## 2.1 Create ASP.NET Core Web API project
+## 3.1 Create ASP.NET Core Web API project
 
 1. Launch Visual Studio and select `Create a new project` option.
 
@@ -56,10 +56,10 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 11. Go to `Actions` and manually trigger the workflow by clicking on `Run Workflow` button
 12. See the details of your running workflow
 
-## 2.3 Solution
+## 3.2 Solution
 
 <details>
-  <summary>yaml-syntax.yml</summary>
+  <summary>dotnet-weather-webapi-build.yml</summary>
   
 ```YAML
 name: .NET Weather WebApi Build
@@ -79,8 +79,6 @@ jobs:
       - run: dotnet --list-sdks
       - run: dotnet build
         working-directory: ./src/dotnet/Weather.WebApi
-
 ```
 
 </details>
-```

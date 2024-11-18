@@ -163,7 +163,6 @@ jobs:
     needs: [ring04]
     steps:
       - run: echo "This job will be run after the ring04 job."
-
 ```
 
 </details>
@@ -173,6 +172,3 @@ jobs:
 - [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
 - [Using jobs in a workflow](https://docs.github.com/en/actions/using-jobs/using-jobs-in-a-workflow)
 - [Environment variables](https://docs.github.com/en/actions/learn-github-actions/environment-variables)
-
-
-```
