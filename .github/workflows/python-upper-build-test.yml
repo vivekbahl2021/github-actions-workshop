@@ -44,6 +44,9 @@ jobs:
         run: python -m pip install upper_project-0.1-py3-none-any.whl
         working-directory: src/python/upper_project/dist
 
+      - name: List user bin directory
+        run: ls $HOME/.local/bin
+
       - name: Print PATH
         run: echo $PATH
 
