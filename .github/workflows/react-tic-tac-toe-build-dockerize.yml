@@ -29,7 +29,8 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install --prefix src/react/react-tic-tac-toe
+        run: npm install
+        working-directory: src/react/react-tic-tac-toe
 
   print:
     runs-on: ubuntu-latest
