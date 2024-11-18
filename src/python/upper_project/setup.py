@@ -10,7 +10,7 @@ setup(
     install_requires=[],  # List of dependencies (leave empty if there are none)
     entry_points={
         'console_scripts': [
-            'upper=upper.upper:to_upper',  # Command line utility setup
+            'upper=upper_project.upper:to_upper',  # Command line utility setup
         ]
     },
     classifiers=[
