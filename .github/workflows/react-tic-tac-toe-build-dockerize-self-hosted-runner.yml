@@ -1,10 +1,10 @@
-name: React Tic-Tac-Toe Build and Dockerize Workflow
+name: React Tic-Tac-Toe Build and Dockerize Workflow with Self Hosted Runner
 
 on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/react-tic-tac-toe-build-dockerize.yml'
+      - '.github/workflows/react-tic-tac-toe-build-dockerize-self-hosted-runner.yml'
       - 'src/react/react-tic-tac-toe/**'
 
 env:
