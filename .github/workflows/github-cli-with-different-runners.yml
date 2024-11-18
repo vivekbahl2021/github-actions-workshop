@@ -44,7 +44,7 @@ jobs:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
-      - run: env
+      # - run: env # Code commented as env command is not available in Windows
       - run: gh --version
       - run: gh auth status
       - run: gh repo list
