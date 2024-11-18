@@ -29,13 +29,17 @@ jobs:
         run: python -m pip install --upgrade pip
 
       - name: Unit test
-        run: python -m unittest discover -s src/python/upper_project -p '*_test.py'
+        run: python -m unittest discover -p '*_test.py'
+        working-directory: src/python/upper_project
 
       - name: Build upper package
         run: python setup.py sdist bdist_wheel
+        working-directory: src/python/upper_project
 
       - name: Install upper package
         run: python -m pip install dist/upper_project-0.1.0-py3-none-any.whl
+        working-directory: src/python/upper_project
 
       - name: Run upper package
-        run: python -c "import upper_project; print(upper_project.upper('hello'))"
+        run: python -c "import upper_project; print(upper_project.upper('github actions is awesome!'))"
+        working-directory: src/python/upper_project
