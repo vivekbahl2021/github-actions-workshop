@@ -1,7 +1,6 @@
 name: Custom Workflow
 on:
   workflow_dispatch:
-  workflow_call:
   push:
     branches:
       - main
