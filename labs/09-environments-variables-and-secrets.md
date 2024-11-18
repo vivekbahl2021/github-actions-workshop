@@ -56,3 +56,9 @@ In this lab, you will learn how to setup different environments in GitHub and ho
 3. Commit the changes into the `main` branch
 4. Go to `Actions` and manually trigger the workflow by clicking on `Run Workflow` button
 5. See the details of your running workflow
+
+## References
+
+- [Using environments for deployment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)
+- [Encrypted secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
+- [Accessing your secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#accessing-your-secrets)
