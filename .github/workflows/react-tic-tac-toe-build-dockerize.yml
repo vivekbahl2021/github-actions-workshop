@@ -13,12 +13,15 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        environment: [dev, prod]
     steps:
+      - name: Get all the files in current directory before checkout
+        run: pwd && ls -al
+
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Get all the files in current directory after checkout
+        run: pwd && ls -al
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -31,6 +34,10 @@ jobs:
   print:
     runs-on: ubuntu-latest
     needs: build
+    strategy:
+      matrix:
+        environment: [dev, prod]
+
     steps:
       - name: Print environment and version
         run: |
