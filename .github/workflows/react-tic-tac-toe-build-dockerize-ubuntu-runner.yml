@@ -14,29 +14,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Get all the files in current directory before checkout
-        run: |
-          Get-Location
-          Get-ChildItem -Force
-        shell: pwsh
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           submodules: true # Fetch the submodules
-      - name: Get all the files in current directory after checkout
+      - name: Update submodules
         run: |
-          Get-Location
-          Get-ChildItem -Force
-        shell: pwsh
+          git submodule sync --recursive
+          git submodule update --init --recursive --force
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
       - name: Install dependencies
-        run: |
-          cd src/react/react-tic-tac-toe
-          npm install
-        shell: pwsh
+        run: npm install
+        working-directory: ./src/react/react-tic-tac-toe
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       - name: Log in to Docker Hub
