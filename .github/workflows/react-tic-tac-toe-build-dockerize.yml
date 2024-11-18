@@ -21,15 +21,17 @@ jobs:
         shell: pwsh
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          submodules: true # Fetch the submodules
       - name: Get all the files in current directory after checkout
         run: |
           Get-Location
           Get-ChildItem -Force
         shell: pwsh
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+      # - name: Set up Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '20'
       - name: Install dependencies
         run: npm install --prefix src/react/react-tic-tac-toe
 
