@@ -32,7 +32,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push Docker image
         run: |
-          Get-Location
-          docker build -t ${{ env.DOCKER_IMAGE }} .
+          cd src/react/react-tic-tac-toe 
+          docker build -t ${{ env.DOCKER_IMAGE }} -f Dockerfile .
           docker push ${{ env.DOCKER_IMAGE }}
         shell: pwsh
