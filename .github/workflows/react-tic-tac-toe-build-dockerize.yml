@@ -25,6 +25,8 @@ jobs:
           echo "Building for environment: ${{ matrix.environment }}"
           echo "Version: ${{ secrets.VERSION }}"
           echo "Variable: ${{ env.VARIABLE }}"
+        env:
+          VARIABLE: ${{ secrets.VARIABLE }}
 
   build:
     runs-on: ubuntu-latest
