@@ -38,7 +38,9 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 
 ![Test API](../images/3.8-test-api.png)
 
-9. Open the workflow file [dotnet-weather-webapi-build.yml](/.github/workflows/dotnet-weather-webapi-build.yml) and copy the following YAML content in `jobs` section
+## 3.2 Create GitHub Actions Workflow
+
+1. Open the workflow file [dotnet-weather-webapi-build.yml](/.github/workflows/dotnet-weather-webapi-build.yml) and copy the following YAML content in `jobs` section
 
 ```YAML
   build:
@@ -55,6 +57,44 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 10. Commit the changes into the `main` branch
 11. Go to `Actions` and manually trigger the workflow by clicking on `Run Workflow` button
 12. See the details of your running workflow
+
+## 3.2 Run the Workflow with Windows Runner
+
+1. Open the workflow file [dotnet-weather-webapi-build-windows-runner.yml](/.github/workflows/dotnet-weather-webapi-windows-runner.yml) and note that the runner is `windows-latest`
+
+```YAML
+  build:
+    name: build
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: dotnet --list-runtimes
+      - run: dotnet --list-sdks
+      - run: dotnet build
+        working-directory: ./src/dotnet/Weather.WebApi
+```
+
+2. Go to `Actions` and manually trigger the workflow `.NET Weather WebApi Build with Windows Runner` by clicking on `Run Workflow` button
+3. See the details of your running workflow
+
+## 3.3 Run the Workflow with Mac Runner
+
+1. Open the workflow file [dotnet-weather-webapi-build-mac-runner.yml](/.github/workflows/dotnet-weather-webapi-mac-runner.yml) and note that the runner is `macos-latest`
+
+```YAML
+  build:
+    name: build
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: dotnet --list-runtimes
+      - run: dotnet --list-sdks
+      - run: dotnet build
+        working-directory: ./src/dotnet/Weather.WebApi
+```
+
+2. Go to `Actions` and manually trigger the workflow `.NET Weather WebApi Build with Mac Runner` by clicking on `Run Workflow` button
+3. See the details of your running workflow
 
 ## 3.2 Solution
 
@@ -73,6 +113,56 @@ jobs:
   build:
     name: build
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: dotnet --list-runtimes
+      - run: dotnet --list-sdks
+      - run: dotnet build
+        working-directory: ./src/dotnet/Weather.WebApi
+```
+
+</details>
+
+<details>
+  <summary>dotnet-weather-webapi-build-windows-runner.yml</summary>
+  
+```YAML
+name: .NET Weather WebApi Build with Windows Runner
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/dotnet-weather-webapi-build-windows-runner.yml'
+      - 'src/dotnet/Weather.WebApi/**'
+jobs:
+  build:
+    name: build
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: dotnet --list-runtimes
+      - run: dotnet --list-sdks
+      - run: dotnet build
+        working-directory: ./src/dotnet/Weather.WebApi
+```
+
+</details>
+
+<details>
+  <summary>dotnet-weather-webapi-build-mac-runner.yml</summary>
+  
+```YAML
+name: .NET Weather WebApi Build with Mac Runner
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/dotnet-weather-webapi-build-mac-runner.yml'
+      - 'src/dotnet/Weather.WebApi/**'
+jobs:
+  build:
+    name: build
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
       - run: dotnet --list-runtimes

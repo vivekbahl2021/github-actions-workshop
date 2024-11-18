@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/dotnet-weather-webapi-build.yml'
+      - '.github/workflows/dotnet-weather-webapi-build-windows-runner.yml'
       - 'src/dotnet/Weather.WebApi/**'
 jobs:
   build:
