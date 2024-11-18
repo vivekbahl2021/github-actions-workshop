@@ -10,6 +10,7 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - uses: actions/checkout@v4
       - run: env
       - run: gh --version
       - run: gh auth status
@@ -20,6 +21,7 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - uses: actions/checkout@v4
       - run: env
       - run: gh --version
       - run: gh auth status
@@ -30,6 +32,7 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - uses: actions/checkout@v4
       - run: env
       - run: gh --version
       - run: gh auth status
@@ -40,6 +43,7 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - uses: actions/checkout@v4
       - run: env
       - run: gh --version
       - run: gh auth status
