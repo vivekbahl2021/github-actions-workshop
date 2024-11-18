@@ -21,7 +21,7 @@ jobs:
       - name: Print environment and version
         run: |
           echo "Building for environment: ${{ matrix.environment }}"
-          echo "Version: ${{ secrets.VERSION }}""
+          echo "Version: ${{ secrets.VERSION }}"
 
   build:
     runs-on: ubuntu-latest
