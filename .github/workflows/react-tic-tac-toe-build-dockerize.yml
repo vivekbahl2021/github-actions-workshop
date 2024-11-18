@@ -15,11 +15,17 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Get all the files in current directory before checkout
-        run: pwd && ls -al
+        run: |
+          Get-Location
+          Get-ChildItem -Force
+        shell: pwsh
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Get all the files in current directory after checkout
-        run: pwd && ls -al
+        run: |
+          Get-Location
+          Get-ChildItem -Force
+        shell: pwsh
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
