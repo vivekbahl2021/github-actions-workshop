@@ -17,6 +17,8 @@ jobs:
       matrix:
         environment: [dev, prod]
 
+    environment: ${{ matrix.environment }}
+
     steps:
       - name: Print environment and version
         run: |
