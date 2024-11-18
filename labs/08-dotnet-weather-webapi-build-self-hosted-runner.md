@@ -1,10 +1,12 @@
 # .NET Web API Build Workflow with Self-Hosted Runner
 
+## Introduction
+
 In this lab, you will create a workflow to build ASP.NET Core Web API project using GitHub Actions.
 
 > Duration: 30-45 minutes
 
-## 8.1 Create ASP.NET Core Web API project
+## Create ASP.NET Core Web API project
 
 1. Launch Visual Studio and select `Create a new project` option.
 
@@ -38,7 +40,7 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 
    [Test API](../images/3.8-test-api.png)
 
-## 8.2 Create GitHub Actions Workflow for Self-Hosted Runner
+## Create GitHub Actions Workflow for Self-Hosted Runner
 
 1. Open the workflow file [dotnet-weather-webapi-build-self-hosted-runner.yml](/.github/workflows/dotnet-weather-webapi-build-self-hosted-runner.yml) and copy the following YAML content in `jobs` section
 
@@ -58,7 +60,7 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 3. Go to `Actions` and manually trigger the workflow by clicking on `Run Workflow` button
 4. See the details of your running workflow
 
-## 8.3 Solution
+## Solution
 
 <details>
   <summary>dotnet-weather-webapi-build.yml</summary>

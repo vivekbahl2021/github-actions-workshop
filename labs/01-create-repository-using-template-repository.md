@@ -1,10 +1,12 @@
 # Create Repository Using Template Repository
 
+## Introduction
+
 In this lab, you will create a new repository using the GitHub Actions Workshop template. The template contains the code for the GitHub Actions Workshop and is designed to help you get started with GitHub Actions.
 
 > Duration: 10-15 minutes
 
-## 1.1 Create a new repository using the template
+## Create a new repository using the template
 
 1. Login to your GitHub account
 

@@ -1,10 +1,12 @@
 # .NET Web API Build Workflow with MacOS Runner
 
+## Introduction
+
 In this lab, you will create a workflow to build ASP.NET Core Web API project using GitHub Actions.
 
 > Duration: 20-30 minutes
 
-## 7.1 Create ASP.NET Core Web API project
+## Create ASP.NET Core Web API project
 
 1. Launch Visual Studio and select `Create a new project` option.
 
@@ -38,7 +40,7 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 
    [Test API](../images/3.8-test-api.png)
 
-## 7.2 Run the Workflow with Mac Runner
+## Run the Workflow with Mac Runner
 
 1. Open the workflow file [dotnet-weather-webapi-build-mac-runner.yml](/.github/workflows/dotnet-weather-webapi-mac-runner.yml) and note that the runner is `macos-latest`
 
@@ -57,7 +59,7 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 2. Go to `Actions` and manually trigger the workflow `.NET Weather WebApi Build with Mac Runner` by clicking on `Run Workflow` button
 3. See the details of your running workflow
 
-## 7.3 Solution
+## Solution
 
 <details>
   <summary>dotnet-weather-webapi-build-mac-runner.yml</summary>

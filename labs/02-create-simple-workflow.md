@@ -1,10 +1,12 @@
 # Create Simple Workflow
 
+## Introduction
+
 In this lab, you will create a simple workflow that runs on every push to the repository. The workflow will echo a message to the console.
 
 > Duration: 10-15 minutes
 
-## 2.1 Create a new workflow
+## Create a new workflow
 
 1. Navigate to the repository you created in the previous lab.
 
