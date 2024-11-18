@@ -14,20 +14,10 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-      - name: Get all the files in current directory before checkout
-        run: |
-          Get-Location
-          Get-ChildItem -Force
-        shell: pwsh
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           submodules: true # Fetch the submodules
-      - name: Get all the files in current directory after checkout
-        run: |
-          Get-Location
-          Get-ChildItem -Force
-        shell: pwsh
       - name: Install dependencies
         run: |
           cd src/react/react-tic-tac-toe
@@ -45,3 +35,4 @@ jobs:
           Get-Location
           docker build -t ${{ env.DOCKER_IMAGE }} .
           docker push ${{ env.DOCKER_IMAGE }}
+        shell: pwsh
