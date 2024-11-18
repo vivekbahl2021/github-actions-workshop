@@ -1,0 +1,17 @@
+name: .NET Weather WebApi Build
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/dotnet-weather-webapi-build.yml'
+      - 'src/dotnet/Weather.WebApi/**'
+jobs:
+  build:
+    name: build
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: dotnet --list-runtimes
+      - run: dotnet --list-sdks
+      - run: dotnet build
+        working-directory: ./src/dotnet/Weather.WebApi
