@@ -48,4 +48,6 @@ jobs:
         run: echo $PATH
 
       - name: Run upper package
-        run: upper gihub actions is awesome
+        run: |
+          export PATH=$HOME/.local/bin:$PATH
+          upper github actions is awesome
