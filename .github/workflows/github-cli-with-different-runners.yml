@@ -14,7 +14,6 @@ jobs:
       - run: gh --version
       - run: gh auth status
       - run: gh repo list
-      - run: gh repo issue list
       - run: gh workflow list
   run-on-windows-latest:
     runs-on: windows-latest
@@ -25,7 +24,6 @@ jobs:
       - run: gh --version
       - run: gh auth status
       - run: gh repo list
-      - run: gh repo issue list
       - run: gh workflow list
   run-on-macos-latest:
     runs-on: macos-latest
@@ -36,7 +34,6 @@ jobs:
       - run: gh --version
       - run: gh auth status
       - run: gh repo list
-      - run: gh repo issue list
       - run: gh workflow list
   run-on-self-hosted:
     runs-on: self-hosted
@@ -47,5 +44,4 @@ jobs:
       - run: gh --version
       - run: gh auth status
       - run: gh repo list
-      - run: gh repo issue list
       - run: gh workflow list
