@@ -1,0 +1,32 @@
+name: Python Upper Test
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/python-upper-test.yml'
+      - 'src/python/upper_project/**'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get all the files in current directory before checkout
+        run: pwd && ls -al
+
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Get all the files in current directory after checkout
+        run: pwd && ls -al
+
+      - name: Print Python version
+        run: python --version
+
+      - name: Print pip version
+        run: python -m pip --version
+
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
+      - name: Unit test
+        run: python -m unittest discover tests
+        working-directory: src/python/upper_project
