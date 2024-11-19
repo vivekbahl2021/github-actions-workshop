@@ -34,5 +34,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          path: ./upper/upper*
+          path: src/python/upper_project/dist/*
           name: 'build-${{ matrix.os }}'
