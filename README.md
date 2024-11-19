@@ -42,7 +42,14 @@ The workshop is divided into the following sections:
 1. Runners
 1. CI / CD
 
-Each section contains a hands-on exercise that will help you learn how to use GitHub Actions effectively.
+## Workshop Labs
+
+The workshop labs are designed to help you learn how to use GitHub Actions by completing hands-on exercises. Each lab contains step-by-step instructions to guide you through the process of setting up and configuring GitHub Actions workflows.
+
+1. [Create Repository using Template Repository](./labs/create-repository-using-template-repository.md)
+1. [Create Manual Workflow](./labs/manual-workflow.md)
+1. [Create Simple Workflow](./labs/simple-workflow.md)
+1. [Create Custom Workflow](./labs/custom-workflow.md)
 
 ## Resources
 
