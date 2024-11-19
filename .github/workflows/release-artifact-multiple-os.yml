@@ -43,22 +43,6 @@ jobs:
           name: upper-executable
           path: src/python/upper_project/dist/upper.exe
 
-  release:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
-    needs: build
-    steps:
-      - name: Checkout repository code
-        uses: actions/checkout@v4
-
-      - name: Download artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: upper-executable
-          path: ./dist
-
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
