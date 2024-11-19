@@ -46,7 +46,7 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: ./dist/*
+          files: src/python/upper_project/dist/*
           body: 'Binaries for the upper (python) command line tool!!!'
           tag_name: ${{ github.ref_name }}
           name: 'python-upper-${{ github.ref_name }}'
