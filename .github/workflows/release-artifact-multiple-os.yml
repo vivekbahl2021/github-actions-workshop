@@ -71,6 +71,7 @@ jobs:
           path: ./dist/macos
 
       - name: Create GitHub Release
+        id: create_release
         uses: softprops/action-gh-release@v2
         with:
           files: ./dist/**
@@ -79,3 +80,7 @@ jobs:
           name: 'python-upper-${{ github.ref_name }}'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check Release
+        run: |
+          echo "Release created: ${{ steps.create_release.outputs.html_url }}"
