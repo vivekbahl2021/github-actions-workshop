@@ -1,4 +1,4 @@
-name: .NET Weather WebApi Build
+name: .NET Weather WebApi Build with Ubuntu Runner
 on:
   workflow_dispatch:
   push:
