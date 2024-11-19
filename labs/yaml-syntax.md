@@ -6,7 +6,7 @@ In this lab, you will learn how to use YAML syntax to define workflows in GitHub
 
 > Duration: 10-15 minutes
 
-## Add new jobs with dependencies
+## Instructions
 
 1. Open the workflow file [yaml-syntax.yml](/.github/workflows/yaml-syntax.yml)
 2. Edit the file and copy the following YAML content at the end of the file:
@@ -169,7 +169,11 @@ jobs:
 
 </details>
 
-## References
+## Conclusion
+
+In this lab, you learned how to use YAML syntax to define workflows in GitHub Actions. You learned how to add new jobs with dependencies and create a matrix build.
+
+## Additional Resources
 
 - [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
 - [Using jobs in a workflow](https://docs.github.com/en/actions/using-jobs/using-jobs-in-a-workflow)
