@@ -1,34 +1,40 @@
-name: React Tic-Tac-Toe Build and Dockerize Workflow with Ubuntu Runner
+name: React Tic-Tac-Toe Build and Dockerize
 
 on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/react-tic-tac-toe-build-dockerize-ubuntu-runner.yml'
+      - '.github/workflows/react-tic-tac-toe-build-dockerize.yml'
       - 'src/react/react-tic-tac-toe/**'
 
 env:
   DOCKER_IMAGE: prasadhonrao/react-tic-tac-toe
+  CONTEXT_PATH: ./src/react/react-tic-tac-toe
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v4
         with:
           submodules: true # Fetch the submodules
-      - name: Update submodules
-        run: |
-          git submodule sync --recursive
-          git submodule update --init --recursive --force
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
       - name: Install dependencies
-        run: npm install
-        working-directory: ./src/react/react-tic-tac-toe
+        run: npm ci
+        working-directory: ${{ env.CONTEXT_PATH }}
+
+  dockerize:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          submodules: true # Ensure submodules are available for Docker build
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       - name: Log in to Docker Hub
@@ -38,6 +44,8 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push Docker image
         run: |
-          cd src/react/react-tic-tac-toe
-          docker build -t ${{ env.DOCKER_IMAGE }} .
-          docker push ${{ env.DOCKER_IMAGE }}
+          cd ${{ env.CONTEXT_PATH }}
+          TAG=${{ github.sha }}
+          docker build -t ${{ env.DOCKER_IMAGE }}:$TAG -t ${{ env.DOCKER_IMAGE }}:latest .
+          docker push ${{ env.DOCKER_IMAGE }}:$TAG
+          docker push ${{ env.DOCKER_IMAGE }}:latest

@@ -48,11 +48,13 @@ The workshop labs are designed to help you learn how to use GitHub Actions by co
 
 1. [Create Repository using Template Repository](./labs/create-repository-using-template-repository.md)
 1. [Create Manual Workflow](./labs/manual-workflow.md)
+1. [Understanding YAML Syntax](./labs/yaml-syntax.md)
 1. [Create Simple Workflow](./labs/simple-workflow.md)
 1. [Create Custom Workflow](./labs/custom-workflow.md)
 1. [Build ASP.NET Core Web API](./labs/dotnet-weather-webapi-build.md)
 1. [Build ASP.NET Core Web API using Self Hosted Runner](./labs/dotnet-weather-webapi-build-self-hosted-runner.md)
 1. [Environments, Variables and Secrets](./labs/environments-variables-and-secrets.md)
+1. [Display Workflow Status Badge](./labs/workflow-status-badge.md)
 
 ## Resources
 
