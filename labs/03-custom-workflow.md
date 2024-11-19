@@ -17,6 +17,7 @@ In this lab you will customize the existing workflow to trigger when a change is
       - main
     paths:
       - 'src/**'
+
 ```
 
 3. Commit the workflow changes into the `main` branch
@@ -39,6 +40,7 @@ In this lab you will customize the existing workflow to trigger when a change is
 # This step prints an output (time) from the previous step's action.
 - name: Echo the greeting's time
   run: echo 'The time was ${{ steps.hello.outputs.time }}.'
+
 ```
 
 3. Optional remove the `paths` to trigger the workflow on any push to main branch
