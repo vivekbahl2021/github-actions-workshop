@@ -1,0 +1,49 @@
+name: Package Artifact
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/package-artifact.yml'
+      - 'src/python/upper_project/**'
+jobs:
+  compile:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: dotnet --list-runtimes
+      - run: dotnet --list-sdks
+      - run: dotnet build
+        working-directory: ./src/dotnet/Weather.WebApi
+  build:
+    name: package
+    runs-on: ubuntu-latest
+    needs: compile
+    steps:
+      - run: echo "Packaging artifact..."
+      - run: docker version
+      - run: docker image build -t weather-webapi .
+        working-directory: ./src/dotnet/Weather.WebApi
+      - run: docker image ls
+      - run: docker container run --name weather-webapi -d -p 8080:80 weather-webapi
+      - run: docker container ls
+      - name: Test WebApi
+        run: |
+          curl -s -o /dev/null -w "%{http_code}" http://localhost:8080/weatherforecast
+        continue-on-error: true
+      - run: docker container stop weather-webapi
+      - run: docker container rm weather-webapi
+  package:
+    name: package
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - run: docker tag weather-webapi ghcr.io/prasadhonrao/weather-webapi:latest
+      - run: docker tag weather-webapi ghcr.io/prasadhonrao/weather-webapi:${{ github.ref_name }}
+      - run: docker push ghcr.io/prasadhonrao/weather-webapi:latest
+      - run: docker push ghcr.io/prasadhonrao/weather-webapi:${{ github.ref_name }}
