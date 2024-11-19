@@ -10,8 +10,6 @@ The following badges show the status of the workflows in this repository:
 
 [![.NET Weather WebApi Build](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/dotnet-weather-webapi-build.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/dotnet-weather-webapi-build.yml)
 
-[![.NET Weather WebApi Build with Self-Hosted Runner](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/dotnet-weather-webapi-build-self-hosted-runner.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/dotnet-weather-webapi-build-self-hosted-runner.yml)
-
 [![Environments, Variables and Secrets](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/environments-variables-and-secrets.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/environments-variables-and-secrets.yml)
 
 [![React Tic-Tac-Toe Build and Dockerize Workflow with Ubuntu Runner](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/react-tic-tac-toe-build-dockerize-ubuntu-runner.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/react-tic-tac-toe-build-dockerize-ubuntu-runner.yml)
