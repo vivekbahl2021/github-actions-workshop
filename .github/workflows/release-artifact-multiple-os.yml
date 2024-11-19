@@ -40,8 +40,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: upper-executable
-          path: src/python/upper_project/dist/upper.exe
+          path: src/python/upper_project/dist/*
+          name: 'build-${{ matrix.os }}'
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
@@ -50,5 +50,3 @@ jobs:
           body: 'Binaries for the upper (python) command line tool!!!'
           tag_name: ${{ github.ref_name }}
           name: 'python-upper-${{ github.ref_name }}'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
