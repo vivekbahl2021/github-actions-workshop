@@ -76,3 +76,12 @@ jobs:
 ```
 
 </details>
+
+## Conclusion
+
+In this lab, you learned how to create a self-hosted runner and use it in a GitHub Actions workflow to build a .NET Web API project.
+
+## Additional Resources
+
+- [GitHub Actions Documentation](https://docs.github.com/en/actions)
+- [GitHub Actions Self-Hosted Runners](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners)
