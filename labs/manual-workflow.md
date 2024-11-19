@@ -59,6 +59,28 @@ In this lab you will create a manual workflow that runs on a manual trigger. The
 
    ![Job Details](../images/manual-workflow/9.png)
 
+## Solution
+
+<details>
+  <summary>manual-workflow.yml</summary>
+  
+```YAML
+name: Manual Workflow
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/manual-workflow.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hows GitHub Actions?
+        run: echo "Awesome!!"
+```
+
+</details>
+
 ## Conclusion
 
 In this lab, you created a manual workflow that runs on a manual trigger. The workflow echoed a message to the console.
