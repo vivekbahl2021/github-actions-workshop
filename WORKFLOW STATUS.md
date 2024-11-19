@@ -8,11 +8,7 @@ The following badges show the status of the workflows in this repository:
 
 [![YAML Syntax](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/yaml-syntax.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/yaml-syntax.yml)
 
-[![.NET Weather WebApi Build with Ubuntu Runner](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/dotnet-weather-webapi-build-ubntu-runner.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/dotnet-weather-webapi-build-ubntu-runner.yml)
-
-[![.NET Weather WebApi Build with Windows Runner](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/dotnet-weather-webapi-build-windows-runner.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/dotnet-weather-webapi-build-windows-runner.yml)
-
-[![.NET Weather WebApi Build with Mac Runner](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/dotnet-weather-webapi-build-mac-runner.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/dotnet-weather-webapi-build-mac-runner.yml)
+[![.NET Weather WebApi Build](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/dotnet-weather-webapi-build.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/dotnet-weather-webapi-build.yml)
 
 [![.NET Weather WebApi Build with Self-Hosted Runner](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/dotnet-weather-webapi-build-self-hosted-runner.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/dotnet-weather-webapi-build-self-hosted-runner.yml)
 

@@ -1,8 +1,8 @@
-# .NET Web API Build with Different Runners
+# .NET Weather Web API Build
 
 ## Introduction
 
-In this lab, you will create a workflow to build ASP.NET Core Web API project using GitHub Actions.
+In this lab, you will create a workflow to build ASP.NET Core Web API project using GitHub Actions. You will learn how to create a workflow file, define jobs and steps, and run the workflow on different runners.
 
 > Duration: 20-30 minutes
 

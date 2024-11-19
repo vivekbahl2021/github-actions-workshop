@@ -50,6 +50,7 @@ The workshop labs are designed to help you learn how to use GitHub Actions by co
 1. [Create Manual Workflow](./labs/manual-workflow.md)
 1. [Create Simple Workflow](./labs/simple-workflow.md)
 1. [Create Custom Workflow](./labs/custom-workflow.md)
+1. [Build ASP.NET Core Web API](./labs/dotnet-weather-webapi-build.md)
 
 ## Resources
 
