@@ -6,26 +6,35 @@ In this lab, you will create a new repository using the GitHub Actions Workshop 
 
 > Duration: 10-15 minutes
 
-## Create a new repository using the template
+## Instructions
 
 1. Login to your GitHub account
 
 2. Go to [GitHub Actions Workshop Template Repository](https://prasadhonrao/github-actions-workshop/generate)
 
-   ![Navigate to Template Repository](../images/1.1-navigate-to-template-repository.png)
+   ![Navigate to Template Repository](../images/template-repository/1.png)
 
 3. Click on `Use this template` button and select 'Create a new repository' option.
 
-   ![Use This Template](../images/1.2-use-this-template.png)
+   ![Use This Template](../images/template-repository/2.png)
 
 4. Enter the repository name and description
 
-   ![Enter Repository Name](../images/1.3-create-a-new-repository.png)
+   ![Enter Repository Name](../images/template-repository/3.png)
 
 5. This will display 'Generating your repository' message
 
-   ![Generating Repository](../images/1.4-generating-your-repository.png)
+   ![Generating Repository](../images/template-repository/4.png)
 
 6. Once the repository is created, you will see the repository page
 
-   ![Repository Created](../images/1.5-repository-created.png)
+   ![Repository Created](../images/template-repository/5.png)
+
+## Conclusion
+
+Congratulations! You have successfully created a new repository using the GitHub Actions Workshop template. You can now explore the repository and learn more about GitHub Actions.
+
+## Additional Resources
+
+- [Creating a repository from a template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
+- [GitHub Actions Workshop Template Repository](https://github.com/prasadhonrao/github-actions-workshop)
