@@ -1,0 +1,38 @@
+name: Upload Artifact Multiple OS
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/upload-artifact-multiple-os.yml'
+      - 'src/python/upper_project/**'
+jobs:
+  build-and-upload:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          cd src/python/upper_project
+          pip install pyinstaller
+
+      - name: Build executable
+        run: |
+          cd src/python/upper_project
+          pyinstaller --onefile upper/upper.py
+        shell: pwsh
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          path: ./upper/upper*
+          name: 'build-${{ matrix.os }}'
