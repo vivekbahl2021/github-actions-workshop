@@ -6,7 +6,7 @@ In this lab you will customize the existing workflow to trigger when a change is
 
 > Duration: 10-15 minutes
 
-## Update the workflow to trigger when a change is made to the `src` folder on main branch
+## Instructions
 
 1. Open the workflow file [custom-workflow.yml](/.github/workflows/custom-workflow.yml)
 2. Edit the file and copy the following YAML content after line 4:
@@ -96,11 +96,17 @@ jobs:
         # This step prints an output (time) from the previous step's action.
       - name: Echo the greeting's time
         run: echo 'The time was ${{ steps.hello.outputs.time }}.'
+
 ```
 
 </details>
 
-## References
+## Conclusion
+
+You have successfully customized the workflow to trigger when a change is made to the `src` folder on the main branch. You have also added steps to the workflow to use an action that greets Mona the Octocat.
+
+## Additional Resources
 
 - [Events that trigger workflows](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)
 - [Adding an action to your workflow](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#adding-an-action-to-your-workflow)
+```
