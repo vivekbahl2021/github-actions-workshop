@@ -1,12 +1,12 @@
-name: Python Upload Artifact
+name: Upload Artifact
 on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/python-upload-artifact.yml'
+      - '.github/workflows/upload-artifact.yml'
       - 'src/python/upper_project/**'
 jobs:
-  test:
+  build-and-upload:
     runs-on: windows-latest
     steps:
       - name: Checkout repository code
