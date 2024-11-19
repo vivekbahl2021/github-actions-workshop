@@ -24,8 +24,9 @@ jobs:
       - run: docker image ls
       - run: docker container run --name weather-webapi -d -p 8080:80 weather-webapi
       - run: docker container ls
-      - name: Test WebApi
-        run: |
+      - run: docker exec weather-webapi curl -s -o /dev/null -w "%{http_code}" http://localhost:80/weatherforecast
+        continue-on-error: true
+      - run: |
           sleep 10  # Wait for the application to start
           curl -s -o /dev/null -w "%{http_code}" http://localhost:8080/weatherforecast
         continue-on-error: true
