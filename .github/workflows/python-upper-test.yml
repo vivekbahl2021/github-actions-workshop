@@ -6,7 +6,7 @@ on:
       - '.github/workflows/python-upper-test.yml'
       - 'src/python/upper_project/**'
 jobs:
-  test:
+  run:
     runs-on: ubuntu-latest
     steps:
       - name: Get all the files in current directory before checkout
