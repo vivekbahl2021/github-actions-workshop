@@ -9,7 +9,6 @@ In this lab you will customize the existing workflow to trigger when a change is
 ## Update the workflow to trigger when a change is made to the `src` folder on main branch
 
 1. Open the workflow file [custom-workflow.yml](/.github/workflows/custom-workflow.yml)
-
 2. Edit the file and copy the following YAML content after line 4:
 
 ```YAML
