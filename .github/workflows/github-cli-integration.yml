@@ -1,9 +1,9 @@
-name: GitHub CLI with Different Runners
+name: GitHub CLI Integration
 on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/github-cli-with-different-runners.yml'
+      - '.github/workflows/github-cli-integration.yml'
 jobs:
   run-on-ubuntu-latest:
     runs-on: ubuntu-latest
