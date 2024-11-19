@@ -9,4 +9,5 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "GitHub Actions is awesome!"
+      - name: Hows GitHub Actions?
+        run: echo "Awesome!!"
