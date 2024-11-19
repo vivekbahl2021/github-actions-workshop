@@ -6,6 +6,9 @@ from upper.upper import to_upper
 class TestUpperModule(unittest.TestCase):
 
     def test_single_word(self):
+        self.assertEqual(to_upper("a"), "A")
+
+    def test_single_word(self):
         self.assertEqual(to_upper("hello"), "HELLO")
 
     def test_multiple_words(self):
