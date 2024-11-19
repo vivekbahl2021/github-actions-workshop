@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write # Required for creating packages
     steps:
       - uses: actions/checkout@v4
       - run: dotnet --list-runtimes
