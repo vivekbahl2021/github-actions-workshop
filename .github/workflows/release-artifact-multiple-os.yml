@@ -1,0 +1,70 @@
+name: Release Artifact Multiple OS
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/release-artifact-multiple-os.yml'
+      - 'src/python/upper_project/**'
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    permissions:
+      contents: write # required to create releases
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          cd src/python/upper_project
+          pip install pyinstaller
+
+      - name: Build executable
+        run: |
+          cd src/python/upper_project
+          pyinstaller --onefile upper/upper.py
+        shell: pwsh
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: upper-executable
+          path: src/python/upper_project/dist/upper.exe
+
+  release:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    needs: build
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: upper-executable
+          path: ./dist
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ./dist/*
+          body: 'Binaries for the upper (python) command line tool!!!'
+          tag_name: ${{ github.ref_name }}
+          name: 'python-upper-${{ github.ref_name }}'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
