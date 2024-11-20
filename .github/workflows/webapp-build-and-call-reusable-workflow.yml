@@ -1,9 +1,10 @@
-name: WebApp Build and Call Shared Deploy Workflow
+name: WebApp Build and Call Reusable Workflow
 
 on:
   push:
     paths:
-      - '.github/workflows/webapp-build-and-call-shared-deploy-workflow.yml'
+      - '.github/workflows/webapp-build-and-call-reusable-workflow.yml'
+      - '.github/workflows/webapp-reusable-workflow.yml'
       - 'src/dotnet/WebApp/**'
     branches:
       - main
@@ -36,9 +37,9 @@ jobs:
           name: .net-web-app # Artifact name
           path: ${{env.DOTNET_ROOT}}\myapp
 
-  call-shared-deploy-workflow:
+  call-reusable-deploy-workflow:
     needs: build
-    uses: prasadhonrao/github-actions-workshop-shared-repo/.github/workflows/deploy.yml@main
+    uses: ./.github/workflows/reusable-workflow.yml
     with:
       package-name: .net-web-app
       app-name: azureapp1
