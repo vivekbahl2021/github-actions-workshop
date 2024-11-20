@@ -58,6 +58,7 @@ The workshop labs are designed to help you learn how to use GitHub Actions by co
 1. [Build and Dockerize React Tic-Tac-Toe Game](./labs/react-tic-tac-toe-build-dockerize.md)
 1. [Build and Unit Test Python Application](./labs/python-upper-test.md)
 1. [Display Workflow Status Badge](./labs/workflow-status-badge.md)
+1. [Upload and Download Artifact](./labs/upload-and-download-artifact.md)
 
 ## Resources
 
