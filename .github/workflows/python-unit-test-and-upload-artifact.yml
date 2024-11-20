@@ -1,0 +1,65 @@
+name: Python Unit Test and Upload Artifact on Self-Hosted Runner
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/upload-artifact.yml'
+      - 'src/python/upper_project/**'
+jobs:
+  test:
+    runs-on: self-hosted
+    defaults:
+      run:
+        working-directory: ./src/python/upper_project
+    steps:
+      - name: Get all the files in current directory before checkout
+        run: pwd && ls -al
+
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Get all the files in current directory after checkout
+        run: pwd && ls -al
+
+      - name: Print Python version
+        run: python --version
+
+      - name: Print pip version
+        run: python -m pip --version
+
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
+      - name: Unit test
+        run: python -m unittest discover tests
+  upload:
+    runs-on: self-hosted
+    needs: test
+    defaults:
+      run:
+        working-directory: ./src/python/upper_project
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          cd src/python/upper_project
+          pip install pyinstaller
+
+      - name: Build executable
+        run: |
+          cd src/python/upper_project
+          pyinstaller --onefile upper/upper.py
+        shell: pwsh
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: upper-executable
+          path: src/python/upper_project/dist/upper.exe
