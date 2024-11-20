@@ -1,4 +1,4 @@
-name: Python Unit Test
+name: Python Upper App Unit Test
 on:
   workflow_dispatch:
   push:

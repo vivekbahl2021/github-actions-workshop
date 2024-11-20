@@ -1,4 +1,4 @@
-name: Python Unit Test and Upload Artifact on Self-Hosted Runner
+name: Python Upper App Unit Test and Upload Artifact
 
 on:
   workflow_dispatch:
