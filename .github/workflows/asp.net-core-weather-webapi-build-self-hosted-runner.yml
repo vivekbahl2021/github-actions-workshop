@@ -1,4 +1,4 @@
-name: ASP.NET Core Weather WebApi Build with Self-Hosted Runner
+name: ASP.NET Core Weather WebApi Build Self-Hosted Runner
 on:
   workflow_dispatch:
   push:
