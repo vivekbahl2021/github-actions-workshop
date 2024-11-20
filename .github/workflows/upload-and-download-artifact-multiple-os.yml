@@ -3,7 +3,7 @@ name: Upload and Download Artifact Multiple OS
 on:
   push:
     paths:
-      - '.github/workflows/upload-download-artifact-multiple-os.yml'
+      - '.github/workflows/upload-and-download-artifact-multiple-os.yml'
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 
