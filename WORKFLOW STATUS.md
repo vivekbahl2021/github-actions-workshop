@@ -10,6 +10,8 @@ The following badges show the status of the workflows in this repository:
 
 1. [![YAML Syntax Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/yaml-syntax.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/yaml-syntax.yml)
 
+1. [![ASP.NET Core WebApp Build and Deploy](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/asp.net-core-webapp-build-and-deploy.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/asp.net-core-webapp-build-and-deploy.yml)
+
 1. [![ASP.NET Core Weather WebApi Build](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/asp.net-core-webapi-build.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/asp.net-core-webapi-build.yml)
 
 1. [![ASP.NET Core Weather WebApi Build Self-Hosted Runner](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/asp.net-core-webapi-build-self-hosted-runner.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/asp.net-core-webapi-build-self-hosted-runner.yml)
