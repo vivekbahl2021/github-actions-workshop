@@ -25,35 +25,37 @@ jobs:
         with:
           dotnet-version: '8.x'
 
-      - name: Build code
+      - name: Build Code
         run: dotnet build --configuration Release
 
-      - name: Publish code
+      - name: Publish Code
+        shell: bash
         run: |
-          # Define the publish directory
-          if [ "$RUNNER_OS" == "Windows" ]; then
-            $Env:PUBLISH_DIR = "${{ runner.temp }}\myapp"
+          # Set the publish directory based on OS
+          if [ "$RUNNER_OS" = "Windows" ]; then
+            export PUBLISH_DIR="${{ runner.temp }}\\myapp"
           else
             export PUBLISH_DIR="${{ runner.temp }}/myapp"
           fi
 
-          # Create the directory and publish
-          mkdir -p $PUBLISH_DIR
-          dotnet publish -c Release --output $PUBLISH_DIR
+          # Publish the application
+          mkdir -p "$PUBLISH_DIR"
+          dotnet publish -c Release --output "$PUBLISH_DIR"
 
       - name: Verify Publish Directory
+        shell: bash
         run: |
           echo "Contents of publish directory:"
-          if [ "$RUNNER_OS" == "Windows" ]; then
-            dir $Env:PUBLISH_DIR
+          if [ "$RUNNER_OS" = "Windows" ]; then
+            ls "$PUBLISH_DIR"
           else
-            ls -la $PUBLISH_DIR
+            ls -la "$PUBLISH_DIR"
           fi
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4.3.6
         with:
-          name: '.net-web-app-${{ runner.os }}' # Artifact name
+          name: '.net-web-app-${{ runner.os }}'
           path: ${{ runner.temp }}/myapp
 
   download:
@@ -63,15 +65,16 @@ jobs:
     runs-on: ${{ matrix.os }}
     needs: upload
     steps:
-      - name: Download artifact from build job
+      - name: Download Artifact from Build Job
         uses: actions/download-artifact@v4.1.8
         with:
           name: '.net-web-app-${{ matrix.os }}'
 
-      - name: List files in downloaded artifact
+      - name: List Files in Downloaded Artifact
+        shell: bash
         run: |
-          if [[ "$RUNNER_OS" == "Windows" ]]; then
-            dir
+          if [ "$RUNNER_OS" = "Windows" ]; then
+            ls
           else
             ls -la
           fi
