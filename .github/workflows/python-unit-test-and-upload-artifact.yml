@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/upload-artifact.yml'
+      - '.github/workflows/python-unit-test-and-upload-artifact.yml'
       - 'src/python/upper_project/**'
 jobs:
   test:
