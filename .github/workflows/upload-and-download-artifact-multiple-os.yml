@@ -17,7 +17,7 @@ jobs:
       run:
         working-directory: ./src/dotnet/WebApp
     steps:
-      - name: Checkout Code
+      - name: checkout code
         uses: actions/checkout@v4.1.7
 
       - name: Set up .NET Core
@@ -25,32 +25,26 @@ jobs:
         with:
           dotnet-version: '8.x'
 
-      - name: Build Code
+      - name: Build code
         run: dotnet build --configuration Release
 
       - name: Publish Code
-        shell: bash
         run: |
           # Set the publish directory based on OS
-          if [ "$RUNNER_OS" = "Windows" ]; then
-            export PUBLISH_DIR="${{ runner.temp }}\\myapp"
+          if [[ "$RUNNER_OS" == "Windows" ]]; then
+            PUBLISH_DIR="${{ runner.temp }}\\myapp"
           else
-            export PUBLISH_DIR="${{ runner.temp }}/myapp"
+            PUBLISH_DIR="${{ runner.temp }}/myapp"
           fi
 
           # Publish the application
+          echo "Publishing to $PUBLISH_DIR"
           mkdir -p "$PUBLISH_DIR"
           dotnet publish -c Release --output "$PUBLISH_DIR"
 
-      - name: Verify Publish Directory
-        shell: bash
-        run: |
-          echo "Contents of publish directory:"
-          if [ "$RUNNER_OS" = "Windows" ]; then
-            ls "$PUBLISH_DIR"
-          else
-            ls -la "$PUBLISH_DIR"
-          fi
+          # Verify contents
+          echo "Contents of $PUBLISH_DIR:"
+          ls "$PUBLISH_DIR"
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4.3.6
@@ -58,23 +52,26 @@ jobs:
           name: '.net-web-app-${{ runner.os }}'
           path: ${{ runner.temp }}/myapp
 
-  download:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
-    needs: upload
-    steps:
-      - name: Download Artifact from Build Job
-        uses: actions/download-artifact@v4.1.8
-        with:
-          name: '.net-web-app-${{ matrix.os }}'
+  # download:
+  #   strategy:
+  #     matrix:
+  #       os: [ubuntu-latest, windows-latest, macos-latest]
+  #   runs-on: ${{ matrix.os }}
+  #   needs: upload
+  #   env:
+  #     package-name: .net-web-app
+  #     deployment-slot: production
 
-      - name: List Files in Downloaded Artifact
-        shell: bash
-        run: |
-          if [ "$RUNNER_OS" = "Windows" ]; then
-            ls
-          else
-            ls -la
-          fi
+  #   steps:
+  #     - name: Download artifact from build job
+  #       uses: actions/download-artifact@v4.1.8
+  #       with:
+  #         name: ${{ env.package-name }}
+
+  #     - name: List files in root directory
+  #       run: |
+  #         if [[ "$RUNNER_OS" == "Windows" ]]; then
+  #           Get-ChildItem -Path . | ForEach-Object { Write-Output $_.Name }
+  #         else
+  #           ls -la
+  #         fi
