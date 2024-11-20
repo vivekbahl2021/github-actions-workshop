@@ -16,6 +16,7 @@ jobs:
     defaults:
       run:
         working-directory: ./src/dotnet/WebApp
+        shell: bash # Use Bash shell for all steps
     steps:
       - name: checkout code
         uses: actions/checkout@v4.1.7
@@ -51,27 +52,3 @@ jobs:
         with:
           name: '.net-web-app-${{ runner.os }}'
           path: ${{ runner.temp }}/myapp
-
-  # download:
-  #   strategy:
-  #     matrix:
-  #       os: [ubuntu-latest, windows-latest, macos-latest]
-  #   runs-on: ${{ matrix.os }}
-  #   needs: upload
-  #   env:
-  #     package-name: .net-web-app
-  #     deployment-slot: production
-
-  #   steps:
-  #     - name: Download artifact from build job
-  #       uses: actions/download-artifact@v4.1.8
-  #       with:
-  #         name: ${{ env.package-name }}
-
-  #     - name: List files in root directory
-  #       run: |
-  #         if [[ "$RUNNER_OS" == "Windows" ]]; then
-  #           Get-ChildItem -Path . | ForEach-Object { Write-Output $_.Name }
-  #         else
-  #           ls -la
-  #         fi
