@@ -30,6 +30,8 @@ The following badges show the status of the workflows in this repository:
 
 1. [![Upload and Download Artifact on Multiple OS](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/upload-and-download-artifact-multiple-os.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/upload-and-download-artifact-multiple-os.yml)
 
+1. [![Package Artifact](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/package-artifact.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/package-artifact.yml)
+
 1. [![Release Artifact](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/release-artifact.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/release-artifact.yml)
 
 1. [![Auto Comment on New Issue](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/auto-comment-on-new-issue-using-github-script.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/auto-comment-on-new-issue-using-github-script.yml)
