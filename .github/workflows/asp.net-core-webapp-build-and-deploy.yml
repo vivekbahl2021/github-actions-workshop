@@ -1,9 +1,9 @@
-name: .NET WebApp Build and Deploy
+name: ASP.NET Core WebApp Build and Deploy
 
 on:
   push:
     paths:
-      - '.github/workflows/dotnet-webapp-build-deploy.yml'
+      - '.github/workflows/asp.net-core-webapp-build-and-deploy.yml'
       - 'src/dotnet/WebApp/**'
     branches:
       - main
