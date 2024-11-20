@@ -12,39 +12,39 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 
 1. Launch Visual Studio and select `Create a new project` option.
 
-   ![Launch Visual Studio](../images/dotnet-weather-webapi/1.png)
+   ![Launch Visual Studio](../images/asp.net-core-webapi/1.png)
 
 2. Search for `ASP.NET` template and select `ASP.NET Core Web API` template.
 
-   ![Select ASP.NET Core Web API](../images/dotnet-weather-webapi/2.png)
+   ![Select ASP.NET Core Web API](../images/asp.net-core-webapi/2.png)
 
 3. Enter the project name as `Weather.WebAPI` and click on `Next` button.
 
-   ![Enter Project Name](../images/dotnet-weather-webapi/3.png)
+   ![Enter Project Name](../images/asp.net-core-webapi/3.png)
 
 4. Provide additional information as shown below and click on `Create` button.
 
-   ![Provide Additional Information](../images/dotnet-weather-webapi/4.png)
+   ![Provide Additional Information](../images/asp.net-core-webapi/4.png)
 
 5. The project will be created and displayed in Visual Studio.
 
-   ![Project Created](../images/dotnet-weather-webapi/5.png)
+   ![Project Created](../images/asp.net-core-webapi/5.png)
 
 6. Run the project by clicking on the `http` button.
 
-   ![Run Project](../images/dotnet-weather-webapi/6.png)
+   ![Run Project](../images/asp.net-core-webapi/6.png)
 
 7. The project will be launched in the browser.
 
-   ![Project Launched](../images/dotnet-weather-webapi/7.png)
+   ![Project Launched](../images/asp.net-core-webapi/7.png)
 
 8. Test the API using the Swagger UI and verify the response.
 
-   [Test API](../images/dotnet-weather-webapi/8.png)
+   [Test API](../images/asp.net-core-webapi/8.png)
 
 ### Create Workflow
 
-1. Open the workflow file [dotnet-weather-webapi-build.yml](/.github/workflows/dotnet-weather-webapi-build.yml) and copy the following YAML content in `jobs` section
+1. Open the workflow file [asp.net-core-webapi-build.yml](/.github/workflows/asp.net-core-webapi-build.yml) and copy the following YAML content in `jobs` section
 
 ```YAML
   build:
@@ -64,7 +64,7 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 
 ### Configure Workflow to Run on Windows Runner
 
-1. Open the workflow file [dotnet-weather-webapi-build.yml](/.github/workflows/dotnet-weather-webapi-build.yml) and change the `runs-on` value to `windows-latest`
+1. Open the workflow file [asp.net-core-webapi-build.yml](/.github/workflows/asp.net-core-webapi-build.yml) and change the `runs-on` value to `windows-latest`
 
 ```YAML
     runs-on: windows-latest
@@ -76,7 +76,7 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 
 ### Configure Workflow to Run on MacOS Runner
 
-1. Open the workflow file [dotnet-weather-webapi-build.yml](/.github/workflows/dotnet-weather-webapi-build.yml) and change the `runs-on` value to `macos-latest`
+1. Open the workflow file [asp.net-core-webapi-build.yml](/.github/workflows/asp.net-core-webapi-build.yml) and change the `runs-on` value to `macos-latest`
 
 ```YAML
     runs-on: macos-latest
@@ -89,7 +89,7 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 ## Solution
 
 <details>
-  <summary>dotnet-weather-webapi-build.yml</summary>
+  <summary>asp.net-core-webapi-build.yml</summary>
   
 ```YAML
 name: .NET Weather WebApi Build
@@ -97,7 +97,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/dotnet-weather-webapi-build.yml'
+      - '.github/workflows/asp.net-core-webapi-build.yml'
       - 'src/dotnet/Weather.WebApi/**'
 jobs:
   build:

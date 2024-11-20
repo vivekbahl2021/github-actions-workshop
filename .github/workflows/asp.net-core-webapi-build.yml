@@ -1,14 +1,14 @@
-name: ASP.NET Core Weather WebApi Build Self-Hosted Runner
+name: ASP.NET Core WebApi Build
 on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/asp.net-core-weather-webapi-build-self-hosted-runner.yml'
+      - '.github/workflows/asp.net-core-webapi-build.yml'
       - 'src/dotnet/Weather.WebApi/**'
 jobs:
   build:
     name: build
-    runs-on: self-hosted
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
       - run: dotnet --list-runtimes
