@@ -29,16 +29,19 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: Publish code
-        run: dotnet publish -c Release --property:PublishDir="${{env.DOTNET_ROOT}}\myapp"
+        run: dotnet publish -c Release --property:PublishDir=$RUNNER_TEMP/myapp
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4.3.6
         with:
           name: '.net-web-app-${{ runner.os }}' # Artifact name
-          path: ${{env.DOTNET_ROOT}}\myapp
+          path: $RUNNER_TEMP/myapp
 
   download:
-    runs-on: windows-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
     needs: upload
     env:
       package-name: .net-web-app
@@ -52,5 +55,8 @@ jobs:
 
       - name: List files in root directory
         run: |
-          Get-ChildItem -Path . | ForEach-Object { Write-Output $_.Name }
-        shell: pwsh
+          if [[ "$RUNNER_OS" == "Windows" ]]; then
+            Get-ChildItem -Path . | ForEach-Object { Write-Output $_.Name }
+          else
+            ls -la
+          fi
