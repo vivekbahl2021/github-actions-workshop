@@ -11,6 +11,7 @@ jobs:
     defaults:
       run:
         working-directory: ./src/python/upper_project
+        shell: C:\Program Files\Git\bin\bash.exe
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v4
@@ -29,7 +30,7 @@ jobs:
     defaults:
       run:
         working-directory: ./src/python/upper_project
-        shell: bash
+        shell: C:\Program Files\Git\bin\bash.exe
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v4
