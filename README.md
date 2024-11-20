@@ -59,6 +59,7 @@ The workshop labs are designed to help you learn how to use GitHub Actions by co
 1. [Build and Unit Test Python Application](./labs/python-upper-test.md)
 1. [Display Workflow Status Badge](./labs/workflow-status-badge.md)
 1. [Upload and Download Artifact](./labs/upload-and-download-artifact.md)
+1. [Upload and Download Artifact on Multiple OS](./labs/upload-and-download-artifact-multiple-os.md)
 
 ## Resources
 

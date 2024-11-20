@@ -6,7 +6,7 @@ The following badges show the status of the workflows in this repository:
 
 [![Custom Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-workflow.yml)
 
-[![YAML Syntax](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/yaml-syntax.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/yaml-syntax.yml)
+[![YAML Syntax Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/yaml-syntax.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/yaml-syntax.yml)
 
 [![.NET Weather WebApi Build](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/dotnet-weather-webapi-build.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/dotnet-weather-webapi-build.yml)
 
@@ -16,8 +16,8 @@ The following badges show the status of the workflows in this repository:
 
 [![Auto Comment on New Issue](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/auto-comment-on-new-issue-using-github-script.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/auto-comment-on-new-issue-using-github-script.yml)
 
-[![Upload Artifact](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/upload-artifact.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/upload-artifact.yml)
+[![Upload and Download Artifact](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/upload-and-download-artifact.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/upload-and-download-artifact.yml)
 
-[![Upload Artifact Multiple OS](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/upload-artifact-multiple-os.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/upload-artifact-multiple-os.yml)
+[![Upload and Download Artifact on Multiple OS](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/upload-and-download-artifact-multiple-os.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/upload-and-download-artifact-multiple-os.yml)
 
 [![Release Artifact](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/release-artifact.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/release-artifact.yml)
