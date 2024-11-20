@@ -1,9 +1,9 @@
-name: Python Upper Test
+name: Python Unit Test
 on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/python-upper-test.yml'
+      - '.github/workflows/python-unit-test.yml'
       - 'src/python/upper_project/**'
 jobs:
   run:
