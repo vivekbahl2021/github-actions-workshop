@@ -3,7 +3,8 @@ name: ASP.NET Core WebApp Build and Call Reusable Deploy Workflow
 on:
   push:
     paths:
-      - '.github/workflows/asp.net-core-webapp-build-and-deploy.yml'
+      - '.github/workflows/asp.net-core-webapp-build-and-call-reusable-deploy-workflow.yml'
+      - '.github/workflows/asp.net-core-webapp-reusable-deploy-workflow.yml'
       - 'src/dotnet/WebApp/**'
     branches:
       - main
