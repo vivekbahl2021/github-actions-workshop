@@ -62,4 +62,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: upper-executable
-          path: ./dist/upper.exe # Path to the artifact to be uploaded
+          path: ./src/python/upper_project/dist/upper.exe # Use full path to the executable
+
