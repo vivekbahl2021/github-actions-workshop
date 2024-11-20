@@ -36,7 +36,7 @@ jobs:
           name: .net-web-app # Artifact name
           path: ${{env.DOTNET_ROOT}}\myapp
 
-  call-shared-workflow:
+  call-shared-deploy-workflow:
     needs: build
     uses: prasadhonrao/github-actions-workshop-shared-repo/.github/workflows/deploy.yml@main
     with:

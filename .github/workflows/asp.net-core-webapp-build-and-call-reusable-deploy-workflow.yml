@@ -37,7 +37,7 @@ jobs:
           name: .net-web-app # Artifact name
           path: ${{env.DOTNET_ROOT}}\myapp
 
-  call-deploy-workflow:
+  call-reusable-deploy-workflow:
     needs: build
     uses: ./.github/workflows/asp.net-core-webapp-reusable-deploy-workflow.yml
     with:
