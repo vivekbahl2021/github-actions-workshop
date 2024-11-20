@@ -1,4 +1,4 @@
-name: ASP.NET Core WebApp Reusable Deploy Workflow
+name: Reusable Deploy Workflow
 
 on:
   workflow_call:
