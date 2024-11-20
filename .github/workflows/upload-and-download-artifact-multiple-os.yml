@@ -71,9 +71,3 @@ jobs:
         run: |
           echo "Listing files in the downloaded directory:"
           ls -R $GITHUB_WORKSPACE
-
-      - name: List Artifact directory
-        run: |
-          ARTIFACT_DIR="$GITHUB_WORKSPACE/.net-web-app-${{ runner.os }}"
-          echo "Listing contents of the downloaded artifact directory: $ARTIFACT_DIR"
-          ls $ARTIFACT_DIR
