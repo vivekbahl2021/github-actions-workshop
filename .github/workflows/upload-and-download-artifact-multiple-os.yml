@@ -71,9 +71,9 @@ jobs:
         run: |
           # Set the artifact directory based on OS
           if [[ "$RUNNER_OS" == "Windows" ]]; then
-            ARTIFACT_DIR="${{ runner.temp }}\\myapp"
+            ARTIFACT_DIR="${{ github.workspace }}\\myapp"
           else
-            ARTIFACT_DIR="${{ runner.temp }}/myapp"
+            ARTIFACT_DIR="${{ github.workspace }}/myapp"
           fi
 
           # Check contents of the artifact
