@@ -40,7 +40,7 @@ In this lab, you will create a self-hosted runner and and modify existing GitHub
 
 ### Update Workflow for Self-Hosted Runner
 
-1. Open the workflow file [asp.net-core-webapi-build-self-hosted-runner.yml](/.github/workflows/asp.net-core-webapi-build.yml) and update the `runs-on` attribute to use `self-hosted` runner.
+1. Open the workflow file [webapi-build-self-hosted-runner.yml](/.github/workflows/webapi-build.yml) and update the `runs-on` attribute to use `self-hosted` runner.
 
 ```YAML
       runs-on: self-hosted
@@ -53,7 +53,7 @@ In this lab, you will create a self-hosted runner and and modify existing GitHub
 ## Solution
 
 <details>
-  <summary>asp.net-core-webapi-build.yml</summary>
+  <summary>webapi-build.yml</summary>
   
 ```YAML
 name: .NET Weather WebApi Build
@@ -61,7 +61,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/asp.net-core-webapi-build.yml'
+      - '.github/workflows/webapi-build.yml'
       - 'src/dotnet/Weather.WebApi/**'
 jobs:
   build:

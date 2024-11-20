@@ -1,10 +1,9 @@
-name: ASP.NET Core WebApp Build and Call Reusable Deploy Workflow
+name: WebApp Build and Deploy
 
 on:
   push:
     paths:
-      - '.github/workflows/asp.net-core-webapp-build-and-call-reusable-deploy-workflow.yml'
-      - '.github/workflows/asp.net-core-webapp-reusable-deploy-workflow.yml'
+      - '.github/workflows/webapp-build-and-deploy.yml'
       - 'src/dotnet/WebApp/**'
     branches:
       - main
@@ -37,12 +36,27 @@ jobs:
           name: .net-web-app # Artifact name
           path: ${{env.DOTNET_ROOT}}\myapp
 
-  call-reusable-deploy-workflow:
+  deploy:
+    runs-on: windows-latest
     needs: build
-    uses: ./.github/workflows/asp.net-core-webapp-reusable-deploy-workflow.yml
-    with:
+    env:
       package-name: .net-web-app
       app-name: azureapp1
       deployment-slot: production
-    secrets:
-      azure-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v4.1.8
+        with:
+          name: ${{ env.package-name }}
+
+      - name: Secret Information
+        run: echo "Value of secret matches - ${{ secrets.AZURE_PUBLISH_PROFILE  == 'AZ_PRROFILE' }}"
+
+      - name: Print name of App Service to deploy to
+        run: echo "App will be deployed to ${{ env.app-name }}"
+
+      - name: List files in root directory
+        run: |
+          Get-ChildItem -Path . | ForEach-Object { Write-Output $_.Name }
+        shell: pwsh

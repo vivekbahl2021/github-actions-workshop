@@ -1,9 +1,9 @@
-name: ASP.NET Core WebApi Build
+name: WebApi Build
 on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/asp.net-core-webapi-build.yml'
+      - '.github/workflows/webapi-build.yml'
       - 'src/dotnet/Weather.WebApi/**'
 jobs:
   build:

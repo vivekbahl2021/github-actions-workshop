@@ -1,9 +1,9 @@
-name: ASP.NET Core WebApp Build and Call Shared Deploy Workflow
+name: WebApp Build and Call Shared Deploy Workflow
 
 on:
   push:
     paths:
-      - '.github/workflows/asp.net-core-webapp-build-and-call-shared-deploy-workflow.yml'
+      - '.github/workflows/webapp-build-and-call-shared-deploy-workflow.yml'
       - 'src/dotnet/WebApp/**'
     branches:
       - main
