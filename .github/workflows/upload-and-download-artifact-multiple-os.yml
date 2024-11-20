@@ -67,26 +67,13 @@ jobs:
         with:
           name: '.net-web-app-${{ runner.os }}'
 
-      - name: Extract Artifact
+      - name: List downloaded files
         run: |
-          echo "The downloaded artifact will be a ZIP file. Let's extract it."
+          echo "Listing files in the downloaded directory:"
+          ls -R $GITHUB_WORKSPACE
 
-          # List the files in the current directory to confirm the zip file is there
-          echo "Listing files in the current directory:"
-          ls $GITHUB_WORKSPACE
-
-          # Extract the zip file (ensure it's actually the downloaded file)
-          unzip -q "$GITHUB_WORKSPACE/*.zip" -d $GITHUB_WORKSPACE/myapp
-
-      - name: Verify Artifact Contents
+      - name: List Artifact directory
         run: |
-          # Set the artifact directory based on OS
-          if [[ "$RUNNER_OS" == "Windows" ]]; then
-            ARTIFACT_DIR="${{ github.workspace }}\\myapp"
-          else
-            ARTIFACT_DIR="${{ github.workspace }}/myapp"
-          fi
-
-          # Check contents of the artifact
-          echo "Checking contents of $ARTIFACT_DIR"
-          ls "$ARTIFACT_DIR"
+          ARTIFACT_DIR="$GITHUB_WORKSPACE/.net-web-app-${{ runner.os }}"
+          echo "Listing contents of the downloaded artifact directory: $ARTIFACT_DIR"
+          ls $ARTIFACT_DIR
