@@ -52,3 +52,30 @@ jobs:
         with:
           name: '.net-web-app-${{ runner.os }}'
           path: ${{ runner.temp }}/myapp
+  download:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    needs: upload
+    defaults:
+      run:
+        shell: bash # Consistent shell for all OSes
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v4.1.8
+        with:
+          name: '.net-web-app-${{ runner.os }}'
+
+      - name: Verify Artifact Contents
+        run: |
+          # Set the artifact directory based on OS
+          if [[ "$RUNNER_OS" == "Windows" ]]; then
+            ARTIFACT_DIR="${{ runner.temp }}\\myapp"
+          else
+            ARTIFACT_DIR="${{ runner.temp }}/myapp"
+          fi
+
+          # Check contents of the artifact
+          echo "Checking contents of $ARTIFACT_DIR"
+          ls "$ARTIFACT_DIR"
