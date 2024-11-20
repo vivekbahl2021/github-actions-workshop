@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src/dotnet/Weather.WebApi
     permissions:
       contents: read
       packages: write # Required for creating packages
@@ -20,11 +23,9 @@ jobs:
 
       - name: Build .NET WebApi
         run: dotnet build
-        working-directory: ./src/dotnet/Weather.WebApi
 
       - name: Build Local Docker Image
         run: docker image build -t weather-webapi .
-        working-directory: ./src/dotnet/Weather.WebApi
 
       - name: List Docker Images
         run: docker image ls
@@ -43,6 +44,3 @@ jobs:
 
       - name: Push Image with latest tag to Docker Hub Registry
         run: docker push prasadhonrao/weather-webapi:latest
-
-      - name: Push Image with branch tag to GitHub Container Registry
-        run: docker push ghcr.io/prasadhonrao/weather-webapi:${{ github.ref_name }}
