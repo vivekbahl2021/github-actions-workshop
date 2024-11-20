@@ -1,4 +1,4 @@
-# Release an Artifact using GitHub Actions
+# Release Artifact
 
 ## Introduction
 
