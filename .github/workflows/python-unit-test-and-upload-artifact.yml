@@ -11,58 +11,53 @@ jobs:
     defaults:
       run:
         working-directory: ./src/python/upper_project
-        shell: C:\Program Files\Git\bin\bash.exe
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v4
 
       - name: Print Python version
         run: |
-          echo "Printing Python version..."
-          python --version  # This will work correctly in Git Bash
+          bash -c "python --version"  # Run Python version check using bash
 
       - name: Print pip version
         run: |
-          echo "Printing pip version..."
-          python -m pip --version
+          bash -c "python -m pip --version"  # Run pip version check using bash
 
       - name: Unit test
         run: |
-          echo "Running unit tests..."
-          python -m unittest discover tests  # Running the unit tests
+          bash -c "python -m unittest discover tests"  # Run unit tests using bash
+
   upload:
     runs-on: self-hosted
     needs: test
     defaults:
       run:
         working-directory: ./src/python/upper_project
-        shell: C:\Program Files\Git\bin\bash.exe
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v4
 
       - name: Check if pyinstaller is installed
         run: |
-          if ! command -v pyinstaller &> /dev/null
-          then
-            echo "PyInstaller not found, installing..."
+          bash -c "
+          if ! command -v pyinstaller &> /dev/null; then
+            echo 'PyInstaller not found, installing...'
             pip install pyinstaller
           else
-            echo "PyInstaller is already installed."
+            echo 'PyInstaller is already installed.'
           fi
+          "  # Check if pyinstaller is installed using bash
 
       - name: Build executable
         run: |
-          echo "Building the executable..."
-          pyinstaller --onefile upper/upper.py
+          bash -c "pyinstaller --onefile upper/upper.py"  # Run pyinstaller build using bash
 
       - name: List dist directory contents
         run: |
-          echo "Listing dist directory contents..."
-          ls -l ./dist  # Ensures you're checking the correct path
+          bash -c "ls -l ./dist"  # List contents of dist directory using bash
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: upper-executable
-          path: /dist/upper.exe
+          path: ./dist/upper.exe # Path to the artifact to be uploaded
