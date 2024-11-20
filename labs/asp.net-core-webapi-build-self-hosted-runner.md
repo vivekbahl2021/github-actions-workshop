@@ -1,4 +1,4 @@
-# .NET Web API Build Workflow with Self-Hosted Runner
+# ASP.NET Core Web API Build Workflow with Self-Hosted Runner
 
 ## Introduction
 
