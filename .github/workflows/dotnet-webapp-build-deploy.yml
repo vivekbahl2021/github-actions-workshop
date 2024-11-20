@@ -12,7 +12,9 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-
+    defaults:
+      run:
+        working-directory: ./src/dotnet/WebApp
     steps:
       - name: checkout code
         uses: actions/checkout@v4.1.7
