@@ -1,0 +1,47 @@
+name: ASP.NET Core WebApp Build and Call Reusable Deploy Workflow
+
+on:
+  push:
+    paths:
+      - '.github/workflows/asp.net-core-webapp-build-and-deploy.yml'
+      - 'src/dotnet/WebApp/**'
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: ./src/dotnet/WebApp
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4.1.7
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v4.0.1
+        with:
+          dotnet-version: '8.x'
+
+      - name: Build code
+        run: dotnet build --configuration Release
+
+      - name: Publish code
+        run: dotnet publish -c Release --property:PublishDir="${{env.DOTNET_ROOT}}\myapp"
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4.3.6
+        with:
+          name: .net-web-app # Artifact name
+          path: ${{env.DOTNET_ROOT}}\myapp
+
+  call-deploy-workflow:
+    needs: build
+    uses: ./.github/workflows/asp.net-core-webapp-reusable-deploy-workflow.yml
+    with:
+      package-name: .net-web-app
+      app-name: azureapp1
+      deployment-slot: production
+    secrets:
+      azure-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
