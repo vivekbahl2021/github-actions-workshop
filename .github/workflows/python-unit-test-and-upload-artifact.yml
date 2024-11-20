@@ -34,13 +34,21 @@ jobs:
       - name: Checkout repository code
         uses: actions/checkout@v4
 
-      - name: Install dependencies
+      - name: Check if pyinstaller is installed
         run: |
-          pip install pyinstaller
+          if ! command -v pyinstaller &> /dev/null
+          then
+            echo "PyInstaller not found, installing..."
+            pip install pyinstaller
+          else
+            echo "PyInstaller is already installed."
+          fi
 
       - name: Build executable
-        run: |
-          pyinstaller --onefile upper/upper.py
+        run: pyinstaller --onefile upper/upper.py
+
+      - name: List dist directory contents
+        run: ls -l ./dist
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
