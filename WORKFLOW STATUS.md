@@ -12,6 +12,8 @@ The following badges show the status of the workflows in this repository:
 
 1. [![ASP.NET Core Weather WebApi Build](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/asp.net-core-weather-webapi-build.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/asp.net-core-weather-webapi-build.yml)
 
+1. [![ASP.NET Core Weather WebApi Build Self Hosted Runner](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/asp.net-core-weather-webapi-build.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/asp.net-core-weather-webapi-build.yml)
+
 1. [![Python Unit Test](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/python-unit-test.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/python-unit-test.yml)
 
 1. [![Environments, Variables and Secrets](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/environments-variables-and-secrets.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/environments-variables-and-secrets.yml)
