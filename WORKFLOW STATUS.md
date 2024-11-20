@@ -22,12 +22,14 @@ The following badges show the status of the workflows in this repository:
 
 1. [![Environments, Variables and Secrets](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/environments-variables-and-secrets.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/environments-variables-and-secrets.yml)
 
-1. [![React Tic-Tac-Toe Build and Dockerize](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/react-tic-tac-toe-build-dockerize.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/react-tic-tac-toe-build-dockerize.yml)
+1. [![GitHub CLI Integration](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/github-cli-integration.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/github-cli-integration.yml)
 
-1. [![Auto Comment on New Issue](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/auto-comment-on-new-issue-using-github-script.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/auto-comment-on-new-issue-using-github-script.yml)
+1. [![React Tic-Tac-Toe Build and Dockerize](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/react-tic-tac-toe-build-dockerize.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/react-tic-tac-toe-build-dockerize.yml)
 
 1. [![Upload and Download Artifact](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/upload-and-download-artifact.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/upload-and-download-artifact.yml)
 
 1. [![Upload and Download Artifact on Multiple OS](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/upload-and-download-artifact-multiple-os.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/upload-and-download-artifact-multiple-os.yml)
 
 1. [![Release Artifact](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/release-artifact.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/release-artifact.yml)
+
+1. [![Auto Comment on New Issue](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/auto-comment-on-new-issue-using-github-script.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/auto-comment-on-new-issue-using-github-script.yml)
