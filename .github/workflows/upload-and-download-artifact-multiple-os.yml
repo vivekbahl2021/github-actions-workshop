@@ -67,6 +67,11 @@ jobs:
         with:
           name: '.net-web-app-${{ runner.os }}'
 
+      - name: Extract Artifact
+        run: |
+          echo "The downloaded artifact will be a ZIP file. Let's extract it."
+          unzip -q '*.zip' -d $GITHUB_WORKSPACE
+
       - name: Verify Artifact Contents
         run: |
           # Set the artifact directory based on OS
