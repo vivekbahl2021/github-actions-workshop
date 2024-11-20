@@ -70,7 +70,13 @@ jobs:
       - name: Extract Artifact
         run: |
           echo "The downloaded artifact will be a ZIP file. Let's extract it."
-          unzip -q '*.zip' -d $GITHUB_WORKSPACE
+
+          # List the files in the current directory to confirm the zip file is there
+          echo "Listing files in the current directory:"
+          ls $GITHUB_WORKSPACE
+
+          # Extract the zip file (ensure it's actually the downloaded file)
+          unzip -q "$GITHUB_WORKSPACE/*.zip" -d $GITHUB_WORKSPACE/myapp
 
       - name: Verify Artifact Contents
         run: |
