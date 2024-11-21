@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./src/dotnet/WebApp
@@ -28,20 +28,20 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: Publish code
-        run: dotnet publish -c Release --property:PublishDir="${{env.DOTNET_ROOT}}\myapp"
+        run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}/webapp"
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4.3.6
         with:
           name: .net-web-app # Artifact name
-          path: ${{env.DOTNET_ROOT}}\myapp
+          path: ${{runner.temp}}/webapp
 
   call-shared-deploy-workflow:
     needs: build
     uses: prasadhonrao/github-actions-workshop-shared-repo/.github/workflows/deploy.yml@main
     with:
       package-name: .net-web-app
-      app-name: azureapp1
+      app-name: github-actions-webapp-shared
       deployment-slot: production
     secrets:
       azure-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
