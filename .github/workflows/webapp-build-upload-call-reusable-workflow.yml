@@ -1,4 +1,4 @@
-name: WebApp Build and Call Reusable Workflow
+name: WebApp Build - Call Reusable Workflow
 
 on:
   push:

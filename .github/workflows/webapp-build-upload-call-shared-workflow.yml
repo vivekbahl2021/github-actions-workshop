@@ -1,4 +1,4 @@
-name: WebApp Build and Call Shared Workflow
+name: WebApp Build - Call Shared Workflow
 
 on:
   push:

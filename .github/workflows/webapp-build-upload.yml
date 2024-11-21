@@ -1,4 +1,4 @@
-name: WebApp Build and Upload
+name: WebApp Build - Upload
 
 on:
   push:
