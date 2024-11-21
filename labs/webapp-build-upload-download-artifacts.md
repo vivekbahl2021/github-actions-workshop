@@ -86,6 +86,61 @@ Create a new Web App by following the instructions in the [Create a Web App](./c
 
 11. Verify that the workflow has built and published the application successfully, and the artifact has been uploaded and downloaded, and the contents are displayed.
 
+## Lab Solution
+
+The complete solution is provided below.
+
+```yaml
+name: WebApp Build - Upload - Download Artifacts
+
+on:
+  push:
+    paths:
+      - '.github/workflows/webapp-build-upload-download-artifacts.yml'
+      - 'src/dotnet/WebApp/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src/dotnet/WebApp
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4.1.7
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v4.0.1
+        with:
+          dotnet-version: '8.x'
+
+      - name: Build code
+        run: dotnet build --configuration Release
+
+      - name: Publish code
+        run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}/webapp"
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4.3.6
+        with:
+          name: .net-web-app # Artifact name
+          path: ${{runner.temp}}/webapp
+
+  download:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v4.1.8
+        with:
+          name: .net-web-app # Artifact name
+      - name: List files in root directory
+        run: |
+          ls -al
+        shell: bash
+```
+
 ## Summary
 
 In this lab, you learned how to upload and download artifacts in GitHub Actions workflow. You created a simple workflow that builds a .NET Core application and uploads the build artifact to GitHub. You then extended the workflow to download the artifact and display the contents.
