@@ -26,10 +26,10 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: Publish code
-        run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}\webapp"
+        run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}/webapp"
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4.3.6
         with:
           name: .net-web-app # Artifact name
-          path: ${{runner.temp}}\webapp
+          path: ${{runner.temp}}/webapp
