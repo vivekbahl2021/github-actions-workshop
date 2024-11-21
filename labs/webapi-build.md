@@ -86,11 +86,10 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 3. Go to `Actions` and manually trigger the workflow by clicking on `Run Workflow` button
 4. See the details of your running workflow and verify the build is running on MacOS runner
 
-## Solution
+## Workflow Code
 
-<details>
-  <summary>webapi-build.yml</summary>
-  
+The complete workflow code is shown below.
+
 ```YAML
 name: .NET Weather WebApi Build
 on:
@@ -110,8 +109,6 @@ jobs:
       - run: dotnet build
         working-directory: ./src/dotnet/Weather.WebApi
 ```
-
-</details>
 
 ## Summary
 

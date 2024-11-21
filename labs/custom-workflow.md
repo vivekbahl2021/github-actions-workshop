@@ -48,11 +48,10 @@ In this lab you will customize the existing workflow to trigger when a change is
 5. If not step 3), change a file inside the folder [src](/src) and commit the changes into the `main` branch
 6. Go to `Actions` and see the details of your running workflow
 
-## Solution
+## Workflow Code
 
-<details>
-  <summary>custom-workflow.yml</summary>
-  
+The complete workflow code is shown below.
+
 ```YAML
 name: Custom Workflow
 on:
@@ -99,8 +98,6 @@ jobs:
 
 ```
 
-</details>
-
 ## Summary
 
 You have successfully customized the workflow to trigger when a change is made to the `src` folder on the main branch. You have also added steps to the workflow to use an action that greets Mona the Octocat.
@@ -109,4 +106,3 @@ You have successfully customized the workflow to trigger when a change is made t
 
 - [Events that trigger workflows](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)
 - [Adding an action to your workflow](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#adding-an-action-to-your-workflow)
-```

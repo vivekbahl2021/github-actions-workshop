@@ -89,67 +89,64 @@ In this lab, you will create a GitHub Actions workflow to build and dockerize a 
 
 1. Once the workflow is completed, navigate to the Docker Hub repository to see the docker image pushed.
 
-## Solution
+## Workflow Code
 
-<details>
-  <summary>react-tic-tac-toe-build-dockerize.yml</summary>
-  
-  ```YAML
-    name: React Tic-Tac-Toe Build and Dockerize
+The complete workflow code is shown below.
 
-    on:
-      workflow_dispatch:
-      push:
-        paths:
-          - '.github/workflows/react-tic-tac-toe-build-dockerize.yml'
-          - 'src/react/react-tic-tac-toe/**'
+```YAML
+  name: React Tic-Tac-Toe Build and Dockerize
 
-    env:
-      DOCKER_IMAGE: prasadhonrao/react-tic-tac-toe
-      CONTEXT_PATH: ./src/react/react-tic-tac-toe
+  on:
+    workflow_dispatch:
+    push:
+      paths:
+        - '.github/workflows/react-tic-tac-toe-build-dockerize.yml'
+        - 'src/react/react-tic-tac-toe/**'
 
-    jobs:
-      build:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout Code
-            uses: actions/checkout@v4
-            with:
-              submodules: true # Fetch the submodules
-          - name: Set up Node.js
-            uses: actions/setup-node@v4
-            with:
-              node-version: '20'
-          - name: Install dependencies
-            run: npm ci
-            working-directory: ${{ env.CONTEXT_PATH }}
+  env:
+    DOCKER_IMAGE: prasadhonrao/react-tic-tac-toe
+    CONTEXT_PATH: ./src/react/react-tic-tac-toe
 
-      dockerize:
-        runs-on: ubuntu-latest
-        needs: build
-        steps:
-          - name: Checkout Code
-            uses: actions/checkout@v4
-            with:
-              submodules: true # Ensure submodules are available for Docker build
-          - name: Set up Docker Buildx
-            uses: docker/setup-buildx-action@v2
-          - name: Log in to Docker Hub
-            uses: docker/login-action@v2
-            with:
-              username: ${{ secrets.DOCKER_USERNAME }}
-              password: ${{ secrets.DOCKER_PASSWORD }}
-          - name: Build and push Docker image
-            run: |
-              cd ${{ env.CONTEXT_PATH }}
-              TAG=${{ github.sha }}
-              docker build -t ${{ env.DOCKER_IMAGE }}:$TAG -t ${{ env.DOCKER_IMAGE }}:latest .
-              docker push ${{ env.DOCKER_IMAGE }}:$TAG
-              docker push ${{ env.DOCKER_IMAGE }}:latest
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Code
+          uses: actions/checkout@v4
+          with:
+            submodules: true # Fetch the submodules
+        - name: Set up Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: '20'
+        - name: Install dependencies
+          run: npm ci
+          working-directory: ${{ env.CONTEXT_PATH }}
+
+    dockerize:
+      runs-on: ubuntu-latest
+      needs: build
+      steps:
+        - name: Checkout Code
+          uses: actions/checkout@v4
+          with:
+            submodules: true # Ensure submodules are available for Docker build
+        - name: Set up Docker Buildx
+          uses: docker/setup-buildx-action@v2
+        - name: Log in to Docker Hub
+          uses: docker/login-action@v2
+          with:
+            username: ${{ secrets.DOCKER_USERNAME }}
+            password: ${{ secrets.DOCKER_PASSWORD }}
+        - name: Build and push Docker image
+          run: |
+            cd ${{ env.CONTEXT_PATH }}
+            TAG=${{ github.sha }}
+            docker build -t ${{ env.DOCKER_IMAGE }}:$TAG -t ${{ env.DOCKER_IMAGE }}:latest .
+            docker push ${{ env.DOCKER_IMAGE }}:$TAG
+            docker push ${{ env.DOCKER_IMAGE }}:latest
 
 ```
-
-</details>
 
 ## Summary
 
@@ -158,4 +155,3 @@ In this lab, you created a GitHub Actions workflow to build and dockerize a Reac
 ## Additional Resources
 
 1. [GitHub Actions Documentation](https://docs.github.com/en/actions)
-```

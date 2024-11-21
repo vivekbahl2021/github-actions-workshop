@@ -50,11 +50,8 @@ In this lab, you will create a self-hosted runner and and modify existing GitHub
 3. Go to `Actions` and manually trigger the workflow by clicking on `Run Workflow` button
 4. See the details of your running workflow
 
-## Solution
+## Workflow Code
 
-<details>
-  <summary>webapi-build.yml</summary>
-  
 ```YAML
 name: .NET Weather WebApi Build
 on:
@@ -74,8 +71,6 @@ jobs:
       - run: dotnet build
         working-directory: ./src/dotnet/Weather.WebApi
 ```
-
-</details>
 
 ## Summary
 

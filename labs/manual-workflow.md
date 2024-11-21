@@ -59,11 +59,10 @@ In this lab you will create a manual workflow that runs on a manual trigger. The
 
    ![Job Details](../images/manual-workflow/9.png)
 
-## Solution
+## Workflow Code
 
-<details>
-  <summary>manual-workflow.yml</summary>
-  
+The complete workflow code is shown below.
+
 ```YAML
 name: Manual Workflow
 on:
@@ -78,8 +77,6 @@ jobs:
       - name: Hows GitHub Actions?
         run: echo "Awesome!!"
 ```
-
-</details>
 
 ## Summary
 

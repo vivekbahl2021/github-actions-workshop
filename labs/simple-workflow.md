@@ -44,11 +44,10 @@ In this lab, you will create a simple workflow that runs on every push to the re
 
    ![Workflow Run](../images/simple-workflow/9.png)
 
-## Solution
+## Workflow Code
 
-<details>
-  <summary>simple-workflow.yml</summary>
-  
+The complete workflow code is shown below.
+
 ```YAML
 
 # This is a basic workflow to help you get started with Actions
@@ -99,8 +98,6 @@ runs-on: ubuntu-latest
 
 ```
 
-</details>
-
 ## Summary
 
 In this lab, you created a simple workflow that runs on every push to the repository. The workflow echoed a message to the console.
@@ -108,4 +105,3 @@ In this lab, you created a simple workflow that runs on every push to the reposi
 ## Additional Resources
 
 1. [GitHub Actions Documentation](https://docs.github.com/en/actions)
-```
