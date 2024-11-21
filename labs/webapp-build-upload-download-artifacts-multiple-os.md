@@ -6,6 +6,10 @@ In this lab, you will learn how to create a GitHub Actions workflow that uploads
 
 > Duration: 30-45 minutes
 
+## Prerequisites
+
+Create a new Web App by following the instructions in the [Create a Web App](./create-webapp.md) lab.
+
 ## Instructions
 
 ### Create a Workflow using Visual Studio Code
@@ -55,9 +59,9 @@ In this lab, you will learn how to create a GitHub Actions workflow that uploads
             run: |
             # Set the publish directory based on OS
             if [[ "$RUNNER_OS" == "Windows" ]]; then
-                PUBLISH_DIR="${{ runner.temp }}\\myapp"
+                PUBLISH_DIR="${{ runner.temp }}\\webapp"
             else
-                PUBLISH_DIR="${{ runner.temp }}/myapp"
+                PUBLISH_DIR="${{ runner.temp }}/webapp"
             fi
 
             # Publish the application
@@ -73,44 +77,42 @@ In this lab, you will learn how to create a GitHub Actions workflow that uploads
             uses: actions/upload-artifact@v4.3.6
             with:
             name: '.net-web-app-${{ runner.os }}'
-            path: ${{ runner.temp }}/myapp
+            path: ${{ runner.temp }}/webapp
    ```
 
 5. Now add a job to download the artifact and display the contents.
 
    ```yaml
-        download:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
-    needs: upload
-    defaults:
-      run:
-        shell: bash # Consistent shell for all OSes
-    steps:
-      - name: Download Artifact
-        uses: actions/download-artifact@v4.1.8
-        with:
-          name: '.net-web-app-${{ runner.os }}'
+   download:
+     strategy:
+       matrix:
+         os: [ubuntu-latest, windows-latest, macos-latest]
+     runs-on: ${{ matrix.os }}
+     needs: upload
+     defaults:
+       run:
+         shell: bash # Consistent shell for all OSes
+     steps:
+       - name: Download Artifact
+         uses: actions/download-artifact@v4.1.8
+         with:
+           name: '.net-web-app-${{ runner.os }}'
 
-      - name: List downloaded files
-        run: |
-          echo "Listing files in the downloaded directory:"
-          ls -R $GITHUB_WORKSPACE
+       - name: List downloaded files
+         run: |
+           echo "Listing files in the downloaded directory:"
+           ls -R $GITHUB_WORKSPACE
    ```
 
 6. Save the file and commit the changes to the `main` branch.
 
-### Run the Workflow
+7. Go to the repository in GitHub and click on the `Actions` tab.
 
-1. Go to the repository in GitHub and click on the `Actions` tab.
+8. Click on the `Upload and Download Artifact on Multiple Operating Systems` workflow and click on the `Run workflow` button.
 
-2. Click on the `Upload and Download Artifact on Multiple Operating Systems` workflow and click on the `Run workflow` button.
+9. Once the workflow is complete, notice that the artifacts are uploaded and downloaded for Windows, Ubuntu, and macOS.
 
-3. Once the workflow is complete, notice that the artifacts are uploaded and downloaded for Windows, Ubuntu, and macOS.
-
-4. Click on the `Download Artifact` job to view the details.
+10. Click on the `Download Artifact` job to view the details.
 
 ## Summary
 
