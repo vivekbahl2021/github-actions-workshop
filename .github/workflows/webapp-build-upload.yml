@@ -1,9 +1,9 @@
-name: WebApp Build
+name: WebApp Build and Upload
 
 on:
   push:
     paths:
-      - '.github/workflows/webapp-build.yml'
+      - '.github/workflows/webapp-build-upload.yml'
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 
@@ -27,3 +27,9 @@ jobs:
 
       - name: Publish code
         run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}/webapp"
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4.3.6
+        with:
+          name: .net-web-app # Artifact name
+          path: ${{runner.temp}}/webapp
