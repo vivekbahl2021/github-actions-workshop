@@ -33,9 +33,9 @@ jobs:
         run: |
           # Set the publish directory based on OS
           if [[ "$RUNNER_OS" == "Windows" ]]; then
-            PUBLISH_DIR="${{ runner.temp }}\\myapp"
+            PUBLISH_DIR="${{ runner.temp }}\\webapp"
           else
-            PUBLISH_DIR="${{ runner.temp }}/myapp"
+            PUBLISH_DIR="${{ runner.temp }}/webapp"
           fi
 
           # Publish the application
@@ -51,7 +51,7 @@ jobs:
         uses: actions/upload-artifact@v4.3.6
         with:
           name: '.net-web-app-${{ runner.os }}'
-          path: ${{ runner.temp }}/myapp
+          path: ${{ runner.temp }}/webapp # Temporary directory used for publishing.
   download:
     strategy:
       matrix:
