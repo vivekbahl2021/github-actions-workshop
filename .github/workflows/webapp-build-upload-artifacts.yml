@@ -1,9 +1,9 @@
-name: WebApp Build - Upload
+name: WebApp Build - Upload Artifacts
 
 on:
   push:
     paths:
-      - '.github/workflows/webapp-build-upload.yml'
+      - '.github/workflows/webapp-build-upload-artifacts.yml'
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 
