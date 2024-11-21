@@ -3,7 +3,7 @@ name: Scheduled Workflow
 on:
   workflow_dispatch:
   schedule:
-    - cron: '* * * * *' # Run every minute. Remember to change this to a more realistic value.
+    - cron: '*/5 * * * *' # Every 5 minutes. You can use https://crontab.guru/ to generate cron expressions
   push:
     paths:
       - '.github/workflows/scheduled-workflow.yml'
