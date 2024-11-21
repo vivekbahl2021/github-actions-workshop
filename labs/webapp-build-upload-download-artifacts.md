@@ -6,115 +6,85 @@ In this lab, you will learn how to upload and download artifacts in GitHub Actio
 
 > Duration: 20-30 minutes
 
+## Prerequisites
+
+Create a new Web App by following the instructions in the [Create a Web App](./create-webapp.md) lab.
+
 ## Instructions
-
-### Create .NET Core Web Application using Command Line
-
-1. Open a command prompt and create a new directory for the project.
-
-   ```bash
-   mkdir WebApp
-   cd WebApp
-   ```
-
-2. Create a new .NET Core Web application using the following command.
-
-   ```bash
-    dotnet new webapp
-   ```
-
-3. Run the application using the following command.
-
-   ```bash
-    dotnet run
-   ```
-
-4. Open a browser and navigate to `https://localhost:5001` to view the application. You should see the default .NET Core Web application. Please note port number may vary.
-
-5. Stop the application by pressing `Ctrl+C` in the command prompt.
-
-6. Commit the source code to the repository. For this lab, you can save the source code `src/dotnet` directory.
-
-### Create GitHub Actions Workflow using Visual Studio Code
 
 1. Open Visual Studio Code and open the project directory.
 
-2. Open existing directory `.github/workflows` in the root of the project.
+2. Open the existing directory `.github/workflows` in the root of the project.
 
-3. Create a new file named `upload-and-download-artifact.yml` and provide workflow name and event trigger information as shown below.
+3. Create a new file named `webapp-build-upload-download-artifacts.yml` and provide workflow name and event trigger information as shown below.
 
    ```yaml
-   name: Upload and Download Artifact
+   name: WebApp Build
    on:
      push:
        paths:
-         - '.github/workflows/upload-download-artifact.yml'
+         - '.github/workflows/webapp-build-upload-download-artifacts.yml'
          - 'src/dotnet/WebApp/**'
      workflow_dispatch:
    ```
 
-4. Add a job to build and upload the .NET Core application. Note that we are providing `artifact name` and `path` to upload the artifact. We will refer to this artifact name and path in the download job.
+4. Add a job to build the .NET Core application. Note that we are using the `actions/setup-dotnet` action to set up the .NET Core SDK.
 
    ```yaml
-     jobs:
-       upload:
-         runs-on: windows-latest
-         defaults:
-           run:
-             working-directory: ./src/dotnet/WebApp
-         steps:
-           - name: checkout code
-             uses: actions/checkout@v4.1.7
+   jobs:
+     build:
+       runs-on: ubuntu-latest
+       steps:
+         - name: checkout code
+           uses: actions/checkout@v4.1.7
 
-           - name: Set up .NET Core
-             uses: actions/setup-dotnet@v4.0.1
-             with:
-             dotnet-version: '8.x'
+         - name: Set up .NET Core
+           uses: actions/setup-dotnet@v4.0.1
+           with:
+           dotnet-version: '8.x'
 
-           - name: Build code
-             run: dotnet build --configuration Release
+         - name: Build code
+           run: dotnet build --configuration Release
 
-           - name: Publish code
-             run: dotnet publish -c Release --property:PublishDir="${{env.DOTNET_ROOT}}\myapp"
-
-           - name: Upload Artifact
-             uses: actions/upload-artifact@v4.3.6
-             with:
-             name: .net-web-app # Artifact name
-             path: ${{env.DOTNET_ROOT}}\myapp
+         - name: Publish code
+           run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}/webapp"
    ```
 
-5. Now add a job to download the artifact and display the contents.
+5. Add a new step to upload the artifacts.
+
+   ```yaml
+   - name: Upload artifacts
+     uses: actions/upload-artifact@v2
+     with:
+       name: webapp-artifacts
+   ```
+
+6. Add a new job to download the artifacts and display the contents.
 
    ```yaml
    download:
-     runs-on: windows-latest
+     runs-on: ubuntu-latest
+     needs: build
      steps:
-       - name: Download Artifact
-         uses: actions/download-artifact@v4.3.6
+       - name: Download artifact from build job
+         uses: actions/download-artifact@v4.1.8
          with:
            name: .net-web-app # Artifact name
-
-       - name: Display Artifact
+       - name: List files in root directory
          run: |
-           Get-ChildItem -Path ${{ github.workspace }}\myapp -Recurse
+           ls -al
+         shell: bash
    ```
 
-6. Commit the changes to the repository.
+7. Commit the changes and push them to the repository.
 
-### Run the Workflow
+8. Navigate to the "Actions" tab in your repository to view the workflow runs.
 
-1. Go to the repository in GitHub and navigate to the `Actions` tab.
+9. Click on the latest workflow run to view the details.
 
-2. Click on the `Upload and Download Artifact` workflow and click on the `Run workflow` button.
+10. Click on the job to view the logs.
 
-3. Once the workflow is completed, click on the `Download Artifact` job to view the details.
-
-4. You should see the contents of the artifact displayed in the logs.
-
-5. You can also download the artifact by clicking on the `Download artifact` button.
-
-6. Open the downloaded artifact and verify the contents.
+11. Verify that the workflow has built and published the application successfully, and the artifact has been uploaded and downloaded, and the contents are displayed.
 
 ## Summary
 
