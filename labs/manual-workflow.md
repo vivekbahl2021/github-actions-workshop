@@ -59,9 +59,9 @@ In this lab you will create a manual workflow that runs on a manual trigger. The
 
    ![Job Details](../images/manual-workflow/9.png)
 
-## Workflow Code
+## Lab Solution
 
-The complete workflow code is shown below.
+The complete solution is provided below.
 
 ```YAML
 name: Manual Workflow

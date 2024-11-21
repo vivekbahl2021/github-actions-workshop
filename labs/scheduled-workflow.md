@@ -32,7 +32,7 @@ Scheduled workflows are workflows that are triggered on a schedule. You can use 
 
 6. Commit the changes to the repository and observe the scheduled workflow running every 5 minutes.
 
-## Workflow Code
+## Lab Solution
 
 The complete workflow code is shown below:
 

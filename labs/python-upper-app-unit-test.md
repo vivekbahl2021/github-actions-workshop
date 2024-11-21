@@ -62,9 +62,9 @@ The Python application is a simple console based application that converts the i
 
 1. Once the workflow is completed, navigate to the Docker Hub repository to see the docker image pushed.
 
-## Workflow Code
+## Lab Solution
 
-The complete workflow code is shown below.
+The complete solution is provided below.
 
 ```YAML
   name: Python Upper Test

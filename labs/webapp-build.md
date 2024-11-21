@@ -60,9 +60,9 @@ Create a new Web App by following the instructions in the [Create a Web App](./c
 
 9. Verify that the workflow has built and published the application successfully.
 
-## Workflow Code
+## Lab Solution
 
-The complete workflow code is shown below.
+The complete solution is provided below.
 
 ```yaml
 name: WebApp Build

@@ -44,9 +44,9 @@ In this lab, you will create a simple workflow that runs on every push to the re
 
    ![Workflow Run](../images/simple-workflow/9.png)
 
-## Workflow Code
+## Lab Solution
 
-The complete workflow code is shown below.
+The complete solution is provided below.
 
 ```YAML
 

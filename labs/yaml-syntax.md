@@ -80,9 +80,9 @@ on:
 
 4. Go to `Actions` and see the details of your running workflow
 
-## Workflow Code
+## Lab Solution
 
-The complete workflow code is shown below.
+The complete solution is provided below.
 
 ```YAML
 name: YAML Syntax

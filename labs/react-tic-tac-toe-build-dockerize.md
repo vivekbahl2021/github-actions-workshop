@@ -89,9 +89,9 @@ In this lab, you will create a GitHub Actions workflow to build and dockerize a 
 
 1. Once the workflow is completed, navigate to the Docker Hub repository to see the docker image pushed.
 
-## Workflow Code
+## Lab Solution
 
-The complete workflow code is shown below.
+The complete solution is provided below.
 
 ```YAML
   name: React Tic-Tac-Toe Build and Dockerize

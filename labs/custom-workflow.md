@@ -48,9 +48,9 @@ In this lab you will customize the existing workflow to trigger when a change is
 5. If not step 3), change a file inside the folder [src](/src) and commit the changes into the `main` branch
 6. Go to `Actions` and see the details of your running workflow
 
-## Workflow Code
+## Lab Solution
 
-The complete workflow code is shown below.
+The complete solution is provided below.
 
 ```YAML
 name: Custom Workflow
