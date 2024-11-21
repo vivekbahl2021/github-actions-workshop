@@ -6,8 +6,6 @@ on:
       - '.github/workflows/webapp-build-and-call-reusable-workflow.yml'
       - '.github/workflows/webapp-reusable-workflow.yml'
       - 'src/dotnet/WebApp/**'
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:

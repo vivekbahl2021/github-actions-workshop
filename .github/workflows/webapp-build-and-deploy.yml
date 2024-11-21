@@ -5,8 +5,6 @@ on:
     paths:
       - '.github/workflows/webapp-build-and-deploy.yml'
       - 'src/dotnet/WebApp/**'
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
