@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./src/dotnet/WebApp
@@ -29,20 +29,14 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: Publish code
-        run: dotnet publish -c Release --property:PublishDir="${{env.DOTNET_ROOT}}\myapp"
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4.3.6
-        with:
-          name: .net-web-app # Artifact name
-          path: ${{env.DOTNET_ROOT}}\myapp
+        run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}/webapp"
 
   call-reusable-deploy-workflow:
     needs: build
     uses: ./.github/workflows/reusable-workflow.yml
     with:
       package-name: .net-web-app
-      app-name: azureapp1
-      deployment-slot: production
+      app-name: github-actions-webapp-reusable
+      deployment-slot: development
     secrets:
       azure-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}

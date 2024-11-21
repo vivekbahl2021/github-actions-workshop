@@ -18,7 +18,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Download artifact from build job
@@ -26,13 +26,13 @@ jobs:
         with:
           name: ${{ inputs.package-name }}
 
+      - name: List files in root directory
+        run: |
+          ls -al
+        shell: bash
+
       - name: Secret Information
         run: echo "Value of secret matches - ${{ secrets.azure-profile  == 'AZ_PRROFILE' }}"
 
       - name: Print name of App Service to deploy to
         run: echo "App will be deployed to ${{ inputs.app-name }}"
-
-      - name: List files in root directory
-        run: |
-          Get-ChildItem -Path . | ForEach-Object { Write-Output $_.Name }
-        shell: pwsh
