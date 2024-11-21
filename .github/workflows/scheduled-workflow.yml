@@ -1,0 +1,14 @@
+name: Scheduled Workflow
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '* * * * *' # Run every minute. Remember to change this to a more realistic value.
+  push:
+    paths:
+      - '.github/workflows/scheduled-workflow.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Current time is $(date)"
