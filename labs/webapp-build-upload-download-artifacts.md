@@ -116,7 +116,7 @@ In this lab, you will learn how to upload and download artifacts in GitHub Actio
 
 6. Open the downloaded artifact and verify the contents.
 
-## Conclusion
+## Summary
 
 In this lab, you learned how to upload and download artifacts in GitHub Actions workflow. You created a simple workflow that builds a .NET Core application and uploads the build artifact to GitHub. You then extended the workflow to download the artifact and display the contents.
 

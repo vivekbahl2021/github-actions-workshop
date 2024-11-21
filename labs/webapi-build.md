@@ -113,7 +113,7 @@ jobs:
 
 </details>
 
-## Conclusion
+## Summary
 
 Congratulations! You have successfully created a workflow to build ASP.NET Core Web API project using GitHub Actions.
 

@@ -101,7 +101,7 @@ jobs:
 
 </details>
 
-## Conclusion
+## Summary
 
 You have successfully customized the workflow to trigger when a change is made to the `src` folder on the main branch. You have also added steps to the workflow to use an action that greets Mona the Octocat.
 

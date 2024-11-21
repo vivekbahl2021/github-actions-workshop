@@ -105,7 +105,7 @@ The Python application is a simple console based application that converts the i
 
 </details>
 
-## Conclusion
+## Summary
 
 In this lab, you created a GitHub Actions workflow to build and unit test a Python application. The workflow was triggered manually and ran on a ubuntu-latest runner.
 ```

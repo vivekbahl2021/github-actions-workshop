@@ -142,7 +142,7 @@ In this lab, you will learn how to setup different environments in GitHub and ho
 
    ![Workflow Logs](../images/environments-variables-secrets/19.png)
 
-## Conclusion
+## Summary
 
 In this lab, you learned how to create environments in GitHub, how to add environment variables and secrets to the environments and how to use them in your workflows.
 

@@ -151,7 +151,7 @@ In this lab, you will create a GitHub Actions workflow to build and dockerize a 
 
 </details>
 
-## Conclusion
+## Summary
 
 In this lab, you created a GitHub Actions workflow to build and dockerize a React Tic-Tac-Toe game. The workflow was triggered manually and ran on a ubuntu-latest runner. The workflow built the React Tic-Tac-Toe game and dockerized it.
 

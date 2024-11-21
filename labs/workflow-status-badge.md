@@ -62,7 +62,7 @@ Here’s an example of what a workflow badge might look like in a `README.md`:
 
 The badge will automatically update whenever the workflow runs, showing the latest status.
 
-## Conclusion
+## Summary
 
 Congratulations! You have successfully added a workflow status badge to your GitHub repository. The badge will help you and others quickly see the status of the latest workflow run on the repository.
 

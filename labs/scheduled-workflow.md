@@ -58,7 +58,7 @@ Scheduled workflows are workflows that are triggered on a schedule. You can use 
 
 </details>
 
-## Conclusion
+## Summary
 
 Congratulations! You have successfully created a scheduled workflow that displays the current date and time in the logs every 5 minutes. You can use scheduled workflows to automate tasks that need to run on a schedule, such as sending reminders, cleaning up data, or syncing data between systems.
 

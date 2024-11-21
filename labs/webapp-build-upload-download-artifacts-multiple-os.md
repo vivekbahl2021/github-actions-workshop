@@ -112,7 +112,7 @@ In this lab, you will learn how to create a GitHub Actions workflow that uploads
 
 4. Click on the `Download Artifact` job to view the details.
 
-## Conclusion
+## Summary
 
 In this lab, you learned how to create a GitHub Actions workflow that uploads and downloads artifacts on multiple operating systems. You created a workflow that builds a .NET Core application and uploads the build artifacts for Windows, Ubuntu, and macOS. You then created a workflow that downloads the artifacts and displays the contents of the artifacts.
 

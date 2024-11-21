@@ -30,7 +30,7 @@ In this lab, you will create a new repository using the GitHub Actions Workshop 
 
    ![Repository Created](../images/template-repository/5.png)
 
-## Conclusion
+## Summary
 
 Congratulations! You have successfully created a new repository using the GitHub Actions Workshop template. You can now explore the repository and learn more about GitHub Actions.
 

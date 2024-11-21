@@ -169,7 +169,7 @@ jobs:
 
 </details>
 
-## Conclusion
+## Summary
 
 In this lab, you learned how to use YAML syntax to define workflows in GitHub Actions. You learned how to add new jobs with dependencies and create a matrix build.
 

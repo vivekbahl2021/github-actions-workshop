@@ -81,7 +81,7 @@ jobs:
 
 </details>
 
-## Conclusion
+## Summary
 
 In this lab, you created a manual workflow that runs on a manual trigger. The workflow echoed a message to the console.
 

@@ -34,7 +34,7 @@ In this lab, you will learn how to disable a workflow in a GitHub repository. Th
 
    ![Enable Workflow](../images/disabling-a-workflow/7.png)
 
-## Conclusion
+## Summary
 
 In this lab, you learned how to disable a workflow in a GitHub repository. This is useful when you want to temporarily stop a workflow from running and you don't want to delete the workflow file.
 
