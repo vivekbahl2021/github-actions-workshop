@@ -1,0 +1,25 @@
+name: Display Environment Variables
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/display-environment-variables.yml'
+
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Environment Variables
+        run: printenv | sort
+  mac:
+    runs-on: macos-latest
+    steps:
+      - name: Display Environment Variables
+        run: printenv | sort
+  windows:
+    runs-on: windows-latest
+    steps:
+      - name: Display Environment Variables
+        run: printenv | sort
+        shell: bash
