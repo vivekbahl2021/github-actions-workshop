@@ -1,0 +1,25 @@
+name: Default Environment Variables
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/default-environment-variables.yml'
+
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Environment Variable
+        run: printenv
+  mac:
+    runs-on: macos-latest
+    steps:
+      - name: Display Environment Variable
+        run: printenv
+  windows:
+    runs-on: windows-latest
+    steps:
+      - name: Display Environment Variable
+        run: printenv
+        shell: bash
