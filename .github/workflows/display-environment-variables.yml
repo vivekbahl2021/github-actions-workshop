@@ -23,3 +23,15 @@ jobs:
       - name: Display Environment Variables
         run: printenv | sort
         shell: bash
+# This job can also be implemented using matrix as shown below
+
+# jobs:
+#   display:
+#     strategy:
+#       matrix:
+#         os: [ubuntu-latest, windows-latest, macos-latest]
+#     runs-on: ${{ matrix.os }}
+#     steps:
+#       - name: Display Environment Variables
+#         run: printenv | sort
+#         shell: bash
