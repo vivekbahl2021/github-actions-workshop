@@ -1,0 +1,9 @@
+name: 'Say Hello Action'
+description: 'A simple action to say hello to the user'
+inputs:
+  who-to-greet:
+    description: 'Who to greet'
+    required: true
+runs:
+  using: 'node20'
+  main: 'index.js'

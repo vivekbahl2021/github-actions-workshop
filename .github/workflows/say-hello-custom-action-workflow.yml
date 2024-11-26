@@ -1,0 +1,11 @@
+name: Custom Action Workflow
+on:
+  workflow_dispatch:
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello Custom Action
+        uses: ./.github/say-hello-custom-action
+        with:
+          who-to-greet: 'Bill'
