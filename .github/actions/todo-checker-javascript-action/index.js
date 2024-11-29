@@ -1,48 +1,53 @@
 const core = require('@actions/core');
-const github = require('@actions/github');
 const fs = require('fs');
 const path = require('path');
 
-async function run() {
-  try {
-    const directory = core.getInput('path');
-    const files = getAllFiles(directory);
-
-    let todoCount = 0;
-    for (const file of files) {
-      const content = fs.readFileSync(file, 'utf-8');
-      const lines = content.split('\n');
-      lines.forEach((line, index) => {
-        if (line.includes('TODO')) {
-          todoCount++;
-          core.info(`TODO found in ${file} at line ${index + 1}: ${line.trim()}`);
-          core.warning(`TODO found in ${file} at line ${index + 1}`);
-        }
-      });
-    }
-
-    if (todoCount > 0) {
-      core.setFailed(`Found ${todoCount} TODO comments in the codebase.`);
+async function getAllFiles(dirPath) {
+  let files = await fs.promises.readdir(dirPath, { withFileTypes: true });
+  let filePaths = [];
+  for (const file of files) {
+    const filePath = path.join(dirPath, file.name);
+    if (file.isDirectory()) {
+      // Recursively scan subdirectories
+      filePaths = filePaths.concat(await getAllFiles(filePath));
     } else {
-      core.info('No TODO comments found. 🎉');
+      filePaths.push(filePath);
     }
-  } catch (error) {
-    core.setFailed(error.message);
+  }
+  return filePaths;
+}
+
+async function findTodosInFiles(files) {
+  const todoPattern = /\/\/\s*TODO:.*/g; // Pattern to find TODO comments
+  let todosFound = false;
+
+  for (const file of files) {
+    const content = await fs.promises.readFile(file, 'utf-8');
+    const matches = content.match(todoPattern);
+    if (matches) {
+      todosFound = true;
+      core.info(`TODOs found in ${file}:`);
+      matches.forEach((todo) => core.info(`  - ${todo.trim()}`));
+    }
+  }
+
+  if (!todosFound) {
+    core.info('No TODO comments found!');
   }
 }
 
-// Recursively get all files in a directory
-function getAllFiles(dirPath, arrayOfFiles = []) {
-  const files = fs.readdirSync(dirPath);
-  files.forEach((file) => {
-    const fullPath = path.join(dirPath, file);
-    if (fs.statSync(fullPath).isDirectory()) {
-      arrayOfFiles = getAllFiles(fullPath, arrayOfFiles);
-    } else {
-      arrayOfFiles.push(fullPath);
-    }
-  });
-  return arrayOfFiles;
+async function run() {
+  try {
+    const srcFolder = core.getInput('src-folder') || './src';
+    core.info(`Scanning folder: ${srcFolder}`);
+
+    const allFiles = await getAllFiles(srcFolder);
+    core.info(`Found ${allFiles.length} files.`);
+
+    await findTodosInFiles(allFiles);
+  } catch (error) {
+    core.setFailed(error.message);
+  }
 }
 
 run();
