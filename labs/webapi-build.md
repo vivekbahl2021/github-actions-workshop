@@ -46,17 +46,17 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 
 1. Open the workflow file [webapi-build.yml](/.github/workflows/webapi-build.yml) and copy the following YAML content in `jobs` section
 
-```YAML
-  build:
-    name: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: dotnet --list-runtimes
-      - run: dotnet --list-sdks
-      - run: dotnet build
-        working-directory: ./src/dotnet/Weather.WebApi
-```
+   ```YAML
+   build:
+   name: build
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/checkout@v4
+   	 - run: dotnet --list-runtimes
+   	 - run: dotnet --list-sdks
+   	 - run: dotnet build
+   	 	 working-directory: ./src/dotnet/Weather.WebApi
+   ```
 
 2. Commit the changes into the `main` branch
 3. Go to `Actions` and manually trigger the workflow by clicking on `Run Workflow` button
@@ -66,9 +66,9 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 
 1. Open the workflow file [webapi-build.yml](/.github/workflows/webapi-build.yml) and change the `runs-on` value to `windows-latest`
 
-```YAML
-    runs-on: windows-latest
-```
+   ```YAML
+   runs-on: windows-latest
+   ```
 
 2. Commit the changes into the `main` branch
 3. Go to `Actions` and manually trigger the workflow by clicking on `Run Workflow` button
@@ -78,9 +78,9 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 
 1. Open the workflow file [webapi-build.yml](/.github/workflows/webapi-build.yml) and change the `runs-on` value to `macos-latest`
 
-```YAML
-    runs-on: macos-latest
-```
+   ```YAML
+   runs-on: macos-latest
+   ```
 
 2. Commit the changes into the `main` branch
 3. Go to `Actions` and manually trigger the workflow by clicking on `Run Workflow` button

@@ -12,21 +12,21 @@ jobs:
       - name: Get all the files in current directory before checkout
         run: pwd && ls -al
 
-      - name: Checkout repository code
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Get all the files in current directory after checkout
+      - name: List Files In Directory
         run: pwd && ls -al
 
-      - name: Print Python version
+      - name: Print Python Version
         run: python --version
 
-      - name: Print pip version
+      - name: Print pip Version
         run: python -m pip --version
 
       - name: Upgrade pip
         run: python -m pip install --upgrade pip
 
-      - name: Unit test
+      - name: Unit Test
         run: python -m unittest discover tests
         working-directory: src/python/upper_project

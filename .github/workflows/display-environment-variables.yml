@@ -10,17 +10,17 @@ jobs:
   ubuntu:
     runs-on: ubuntu-latest
     steps:
-      - name: Display Environment Variables
+      - name: Display Environment Variables on Ubuntu
         run: printenv | sort
   mac:
     runs-on: macos-latest
     steps:
-      - name: Display Environment Variables
+      - name: Display Environment Variables on MacOS
         run: printenv | sort
   windows:
     runs-on: windows-latest
     steps:
-      - name: Display Environment Variables
+      - name: Display Environment Variables on Windows
         run: printenv | sort
         shell: bash
 # This job can also be implemented using matrix as shown below

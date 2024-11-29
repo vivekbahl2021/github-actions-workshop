@@ -11,7 +11,7 @@ jobs:
     permissions:
       contents: write # required to create releases
     steps:
-      - name: Checkout repository code
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Set up Python

@@ -36,7 +36,7 @@ The Python application is a simple console based application that converts the i
           - name: Get all the files in current directory before checkout
             run: pwd && ls -al
 
-          - name: Checkout repository code
+          - name: Checkout Code
             uses: actions/checkout@v4
 
           - name: Get all the files in current directory after checkout
@@ -81,7 +81,7 @@ The complete solution is provided below.
         - name: Get all the files in current directory before checkout
           run: pwd && ls -al
 
-        - name: Checkout repository code
+        - name: Checkout Code
           uses: actions/checkout@v4
 
         - name: Get all the files in current directory after checkout

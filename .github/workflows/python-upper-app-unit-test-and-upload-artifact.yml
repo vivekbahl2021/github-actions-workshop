@@ -15,18 +15,18 @@ jobs:
         working-directory: ./src/python/upper_project
         shell: pwsh # Using PowerShell shell
     steps:
-      - name: Checkout repository code
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Print Python version
+      - name: Print Python Version
         run: |
           python --version  # Run Python version check in PowerShell
 
-      - name: Print pip version
+      - name: Print pip Version
         run: |
           python -m pip --version  # Run pip version check in PowerShell
 
-      - name: Unit test
+      - name: Unit Test
         run: |
           python -m unittest discover tests  # Run unit tests in PowerShell
 
@@ -38,10 +38,10 @@ jobs:
         working-directory: ./src/python/upper_project
         shell: pwsh # Using PowerShell shell
     steps:
-      - name: Checkout repository code
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Check if pyinstaller is installed
+      - name: Install pyinstaller
         run: |
           if (-not (Get-Command pyinstaller -ErrorAction SilentlyContinue)) {
             Write-Host "PyInstaller not found, installing..."
@@ -50,15 +50,15 @@ jobs:
             Write-Host "PyInstaller is already installed."
           }
 
-      - name: Build executable
+      - name: Build Executable
         run: |
           pyinstaller --onefile upper/upper.py  # Build the executable in PowerShell
 
-      - name: List dist directory contents
+      - name: List Files In Directory
         run: |
           Get-ChildItem -Path ./dist  # List contents of dist directory in PowerShell
 
-      - name: Upload artifact
+      - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: upper-executable
