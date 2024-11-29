@@ -1,0 +1,12 @@
+name: 'Check for TODOs'
+description: 'Check the codebase for TODO comments'
+runs:
+  using: 'node20'
+  main: 'index.js'
+inputs:
+  path:
+    description: 'Path to the directory to scan'
+    required: true
+    default: '.'
+permissions:
+  contents: read
