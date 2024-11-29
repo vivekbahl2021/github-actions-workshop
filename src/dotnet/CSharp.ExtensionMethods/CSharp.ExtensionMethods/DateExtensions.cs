@@ -31,7 +31,7 @@ namespace CSharp.ExtensionMethods
         /// Returns the first day of the week that the specified date is in using the current culture. 
         /// </summary>
         /// <param name="date">Input date parameter</param>
-        /// <returns>First day of a week of agiven input date</returns>
+        /// <returns>First day of a week of a given input date</returns>
         public static DateTime GetFirstDayOfWeek(this DateTime date)
         {
             CultureInfo cultureInfo = CultureInfo.CurrentCulture;
@@ -51,7 +51,7 @@ namespace CSharp.ExtensionMethods
         /// Returns the last day of the week that the specified date is in using the current culture. 
         /// </summary>
         /// <param name="date">Input date parameter</param>
-        /// <returns>Last day of a week of agiven input date</returns>
+        /// <returns>Last day of a week of a given input date</returns>
         public static DateTime GetLastDayOfWeek(this DateTime date)
         {
             CultureInfo cultureInfo = CultureInfo.CurrentCulture;

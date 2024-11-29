@@ -11,22 +11,22 @@ namespace CSharp.ExtensionMethods.Tests
         [Test]
         public void Capitalize_Lower_Case_Input_Test()
         {
-            var result = "twinkle twinkle litte star".Capitalize();
-            Assert.AreEqual("Twinkle twinkle litte star", result);
+            var result = "twinkle twinkle little star".Capitalize();
+            Assert.AreEqual("Twinkle twinkle little star", result);
         }
 
         [Test]
         public void Capitalize_Upper_Case_Input_Test()
         {
-            var result = "TWINKLE TWINKLE LITTE STAR".Capitalize();
-            Assert.AreEqual("Twinkle twinkle litte star", result);
+            var result = "TWINKLE TWINKLE LITTLE STAR".Capitalize();
+            Assert.AreEqual("Twinkle twinkle little star", result);
         }
 
         [Test]
         public void Capitalize_Each_Word_In_Capital_Input_Test()
         {
-            var result = "Twinkle Twinkle Litte Star".Capitalize();
-            Assert.AreEqual("Twinkle twinkle litte star", result);
+            var result = "Twinkle Twinkle Little Star".Capitalize();
+            Assert.AreEqual("Twinkle twinkle little star", result);
         }
 
         [Test]
@@ -55,38 +55,38 @@ namespace CSharp.ExtensionMethods.Tests
         #region GetOccurrenceCount
 
         [Test]
-        public void GetOccurrenceCount_Valid_Occurence_Test()
+        public void GetOccurrenceCount_Valid_Occurrence_Test()
         {
-            var occurenceCount = "supercalifragilisticexpealidocious".GetOccurrenceCount("li");
-            Assert.AreEqual(3, occurenceCount);
+            var occurrenceCount = "supercalifragilisticexpealidocious".GetOccurrenceCount("li");
+            Assert.AreEqual(3, occurrenceCount);
         }
 
         [Test]
-        public void GetOccurrenceCount_Invalid_Occurence_Test()
+        public void GetOccurrenceCount_Invalid_Occurrence_Test()
         {
-            var occurenceCount = "prasad".GetOccurrenceCount("xxx");
-            Assert.AreEqual(0, occurenceCount);
+            var occurrenceCount = "prasad".GetOccurrenceCount("xxx");
+            Assert.AreEqual(0, occurrenceCount);
         }
 
         [Test]
-        public void GetOccurrenceCount_EmptyString_Search_Occurence_Test()
+        public void GetOccurrenceCount_EmptyString_Search_Occurrence_Test()
         {
-            var occurenceCount = "xxx".GetOccurrenceCount(string.Empty);
-            Assert.AreEqual(0, occurenceCount);
+            var occurrenceCount = "xxx".GetOccurrenceCount(string.Empty);
+            Assert.AreEqual(0, occurrenceCount);
         }
 
         [Test]
-        public void GetOccurrenceCount_EmptyString_Input_Occurence_Test()
+        public void GetOccurrenceCount_EmptyString_Input_Occurrence_Test()
         {
-            var occurenceCount = string.Empty.GetOccurrenceCount("Prasad");
-            Assert.AreEqual(0, occurenceCount);
+            var occurrenceCount = string.Empty.GetOccurrenceCount("Prasad");
+            Assert.AreEqual(0, occurrenceCount);
         }
 
         [Test]
-        public void GetOccurrenceCount_Empty_Input_Empty_Search_Occurence_Test()
+        public void GetOccurrenceCount_Empty_Input_Empty_Search_Occurrence_Test()
         {
-            var occurenceCount = string.Empty.GetOccurrenceCount(string.Empty);
-            Assert.AreEqual(1, occurenceCount);
+            var occurrenceCount = string.Empty.GetOccurrenceCount(string.Empty);
+            Assert.AreEqual(1, occurrenceCount);
         }
 
         #endregion
@@ -128,14 +128,14 @@ namespace CSharp.ExtensionMethods.Tests
         [Test]
         public void IsLower_LowerCase_String_Input_Test()
         {
-            var result = "twinkle twinkle litte star".IsLower();
+            var result = "twinkle twinkle little star".IsLower();
             Assert.AreEqual(true, result);
         }
         
         [Test]
         public void IsLower_MixedCase_String_Input_Test()
         {
-            var result = "Twinkle Twinkle Litte Star".IsLower();
+            var result = "Twinkle Twinkle Little Star".IsLower();
             Assert.AreEqual(false, result);
         }
 
@@ -160,14 +160,14 @@ namespace CSharp.ExtensionMethods.Tests
         [Test]
         public void IsUpper_UpperCase_String_Input_Test()
         {
-            var result = "TWINKLE TWINKLE LITTE STAR".IsUpper();
+            var result = "TWINKLE TWINKLE LITTLE STAR".IsUpper();
             Assert.AreEqual(true, result);
         }
 
         [Test]
         public void IsUpper_MixedCase_String_Input_Test()
         {
-            var result = "Twinkle Twinkle Litte Star".IsUpper();
+            var result = "Twinkle Twinkle Little Star".IsUpper();
             Assert.AreEqual(false, result);
         }
 

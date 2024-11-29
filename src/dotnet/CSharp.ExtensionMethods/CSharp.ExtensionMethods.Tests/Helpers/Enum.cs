@@ -3,7 +3,7 @@
 namespace CSharp.ExtensionMethods.Tests.Helpers
 {
     /// <summary>
-    /// Generic Enum Class (.NET Framework doesnot support Generic Enum Type so far, however revisit this code once its part of.NET Framework)
+    /// Generic Enum Class (.NET Framework does not support Generic Enum Type so far, however revisit this code once its part of.NET Framework)
     /// </summary>
     /// <typeparam name="T">Generic Type Parameter</typeparam>
     public class Enum<T> where T : struct, IConvertible

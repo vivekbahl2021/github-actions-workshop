@@ -141,7 +141,7 @@ namespace CSharp.ExtensionMethods.Tests
         }
 
         [Test]
-        public void IsWeekday_Thrusday_Test()
+        public void IsWeekday_Thursday_Test()
         {
             var isWeekday = new DateTime(2018, 01, 04).IsWeekday();
             Assert.IsTrue(isWeekday);
