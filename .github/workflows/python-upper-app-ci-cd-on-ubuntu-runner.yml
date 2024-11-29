@@ -1,37 +1,37 @@
-name: Python Upper App Unit Test and Upload Artifact
-
+name: Python Upper App CI/CD on Ubuntu Runner
 on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/python-unit-test-and-upload-artifact.yml'
+      - '.github/workflows/python-upper-app-ci-cd-on-ubuntu-runner.yml'
       - 'src/python/upper_project/**'
-
 jobs:
   test:
-    runs-on: self-hosted
-    defaults:
-      run:
-        working-directory: ./src/python/upper_project
-        shell: pwsh # Using PowerShell shell
+    runs-on: windows-latest
     steps:
+      - name: Get all the files in current directory before checkout
+        run: pwd && ls -al
+
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: List Files In Directory
+        run: pwd && ls -al
+
       - name: Print Python Version
-        run: |
-          python --version  # Run Python version check in PowerShell
+        run: python --version
 
       - name: Print pip Version
-        run: |
-          python -m pip --version  # Run pip version check in PowerShell
+        run: python -m pip --version
+
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
 
       - name: Unit Test
-        run: |
-          python -m unittest discover tests  # Run unit tests in PowerShell
-
+        run: python -m unittest discover tests
+        working-directory: src/python/upper_project
   upload:
-    runs-on: self-hosted
+    runs-on: windows-latest
     needs: test
     defaults:
       run:
@@ -64,3 +64,9 @@ jobs:
           name: upper-executable
           path: ./src/python/upper_project/dist/upper.exe # Use full path to the executable
 
+      - name: Release Artifact
+        uses: softprops/action-gh-release@v2
+        with:
+          files: src/python/upper_project/dist/*
+          body: 'Binaries for the upper (python) command line tool!!!'
+          tag_name: 'python-upper-${{ github.ref_name }}'
