@@ -1,4 +1,4 @@
-name: WebApi Build Self-Hosted Runner
+name: ASP.NET Weather Web Api Build Self Hosted Runner
 on:
   workflow_dispatch:
   push:
@@ -10,8 +10,9 @@ jobs:
     name: build
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v4
-      - run: dotnet --list-runtimes
-      - run: dotnet --list-sdks
-      - run: dotnet build
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build ASP.NET Weather Web API
+        run: dotnet build
         working-directory: ./src/dotnet/Weather.WebApi

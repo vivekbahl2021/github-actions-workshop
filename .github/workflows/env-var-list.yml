@@ -1,10 +1,10 @@
-name: Display Environment Variables
+name: Env Var List
 
 on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/display-environment-variables.yml'
+      - '.github/workflows/env-var-list.yml'
 
 jobs:
   ubuntu:

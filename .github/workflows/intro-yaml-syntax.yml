@@ -2,7 +2,9 @@ name: YAML Syntax
 
 on:
   workflow_dispatch:
-
+  push:
+    paths:
+      - '.github/workflows/intro-yaml-syntax.yml'
 jobs:
   initial:
     runs-on: ubuntu-latest

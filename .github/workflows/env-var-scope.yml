@@ -1,10 +1,10 @@
-name: Environment Variables Scope
+name: Env Var Scope
 
 on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/environment-variables-scope.yml'
+      - '.github/workflows/env-var-scope.yml'
 
 env:
   WORKFLOW_ENV_VAR: 'Workflow Environment Variable'
