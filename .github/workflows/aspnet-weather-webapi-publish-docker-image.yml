@@ -5,6 +5,10 @@ on:
     paths:
       - '.github/workflows/aspnet-weather-webapi-publish-docker-image.yml'
       - 'src/dotnet/Weather.WebApi/**'
+
+env:
+  DOCKER_IMAGE: prasadhonrao/aspnet-weather-webapi
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,7 +17,6 @@ jobs:
         working-directory: ./src/dotnet/Weather.WebApi
     permissions:
       contents: read
-      packages: write # Required for creating packages
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -22,7 +25,7 @@ jobs:
         run: dotnet build
 
       - name: Build Local Docker Image
-        run: docker image build -t weather-webapi .
+        run: docker image build -t aspnet-weather-webapi .
 
       - name: List Docker Images
         run: docker image ls
@@ -34,7 +37,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Tag Image to latest
-        run: docker tag weather-webapi prasadhonrao/weather-webapi:latest
+        run: docker tag aspnet-weather-webapi ${{ env.DOCKER_IMAGE }}:latest
 
       - name: Push Image with latest tag to Docker Hub Registry
-        run: docker push prasadhonrao/weather-webapi:latest
+        run: docker push ${{ env.DOCKER_IMAGE }}:latest
+
+      - name: List Docker Images
+        run: docker image ls
