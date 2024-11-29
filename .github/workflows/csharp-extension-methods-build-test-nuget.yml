@@ -1,0 +1,32 @@
+name: CSharp Extension Methods Build - Test - NuGet
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Build CSharp.ExtensionMethods
+        run: dotnet build --configuration Release
+        working-directory: ./src/dotnet/CSharp.ExtensionMethods/CSharp.ExtensionMethods
+
+      - name: Build CSharp.ExtensionMethods.Tests
+        run: dotnet build --configuration Release
+        working-directory: ./src/dotnet/CSharp.ExtensionMethods/CSharp.ExtensionMethods.Tests
+
+      - name: Run Unit Tests
+        run: dotnet test --no-restore --verbosity normal
+        working-directory: ./src/dotnet/CSharp.ExtensionMethods/CSharp.ExtensionMethods.Tests
+
+      - name: Create NuGet Package
+        run: dotnet pack --configuration Release
+        working-directory: ./src/dotnet/CSharp.ExtensionMethods/CSharp.ExtensionMethods
