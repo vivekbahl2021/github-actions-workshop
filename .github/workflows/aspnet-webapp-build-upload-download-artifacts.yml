@@ -1,20 +1,20 @@
-name: WebApp Build - Upload Artifacts
+name: ASP.NET Web App Build - Upload - Download Artifacts
 
 on:
   push:
     paths:
-      - '.github/workflows/webapp-build-upload-artifacts.yml'
+      - '.github/workflows/aspnet-webapp-build-upload-download-artifacts.yml'
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 
 jobs:
-  build:
+  build-and-upload:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./src/dotnet/WebApp
     steps:
-      - name: checkout code
+      - name: Checkout Code
         uses: actions/checkout@v4.1.7
 
       - name: Set up .NET Core
@@ -22,10 +22,10 @@ jobs:
         with:
           dotnet-version: '8.x'
 
-      - name: Build code
+      - name: Build Code
         run: dotnet build --configuration Release
 
-      - name: Publish code
+      - name: Publish Code
         run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}/webapp"
 
       - name: Upload Artifact
@@ -33,3 +33,16 @@ jobs:
         with:
           name: .net-web-app # Artifact name
           path: ${{runner.temp}}/webapp
+
+  download:
+    runs-on: ubuntu-latest
+    needs: build-and-upload
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v4.1.8
+        with:
+          name: .net-web-app # Artifact name
+      - name: List Files in Artifact
+        run: |
+          ls -al
+        shell: bash

@@ -1,15 +1,18 @@
-name: ASP.NET Web App Build Mac Runner
+name: ASP.NET Web App Build Multiple OS Strategy
 
 on:
   push:
     paths:
-      - '.github/workflows/aspnet-webapp-build.yml'
+      - '.github/workflows/aspnet-webapp-build-multiple-os-strategy.yml'
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: macos-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
     defaults:
       run:
         working-directory: ./src/dotnet/WebApp

@@ -1,18 +1,15 @@
-name: ASP.NET Web App Build Multiple OS Strategy
+name: ASP.NET Web App Build - Upload Artifacts
 
 on:
   push:
     paths:
-      - '.github/workflows/aspnet-webapp-build.yml'
+      - '.github/workflows/aspnet-webapp-build-upload-artifacts.yml'
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 
 jobs:
-  build:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
+  build-and-upload:
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./src/dotnet/WebApp
@@ -30,3 +27,9 @@ jobs:
 
       - name: Publish Code
         run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}/webapp"
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4.3.6
+        with:
+          name: .net-web-app # Artifact name
+          path: ${{runner.temp}}/webapp

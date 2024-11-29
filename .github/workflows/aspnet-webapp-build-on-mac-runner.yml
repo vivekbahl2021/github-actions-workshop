@@ -1,15 +1,15 @@
-name: ASP.NET Web App Build Self-Hosted Runner
+name: ASP.NET Web App Build Mac Runner
 
 on:
   push:
     paths:
-      - '.github/workflows/aspnet-webapp-build.yml'
+      - '.github/workflows/aspnet-webapp-build-mac-runner.yml'
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: macos-latest
     defaults:
       run:
         working-directory: ./src/dotnet/WebApp

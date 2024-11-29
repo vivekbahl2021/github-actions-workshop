@@ -1,14 +1,14 @@
-name: WebApp Build - Upload - Download Artifacts Multiple OS
+name: ASP.NET Web App Build - Upload - Download Artifacts Multiple OS
 
 on:
   push:
     paths:
-      - '.github/workflows/webapp-build-upload-download-artifacts-multiple-os.yml'
+      - '.github/workflows/aspnet-webapp-build-upload-download-artifacts-multiple-os.yml'
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 
 jobs:
-  upload:
+  build-and-upload:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
@@ -18,7 +18,7 @@ jobs:
         working-directory: ./src/dotnet/WebApp
         shell: bash # Use Bash shell for all steps
     steps:
-      - name: checkout code
+      - name: Checkout Code
         uses: actions/checkout@v4.1.7
 
       - name: Set up .NET Core
@@ -26,7 +26,7 @@ jobs:
         with:
           dotnet-version: '8.x'
 
-      - name: Build code
+      - name: Build Code
         run: dotnet build --configuration Release
 
       - name: Publish Code
@@ -57,7 +57,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
-    needs: upload
+    needs: build-and-upload
     defaults:
       run:
         shell: bash # Consistent shell for all OSes
@@ -67,7 +67,7 @@ jobs:
         with:
           name: '.net-web-app-${{ runner.os }}'
 
-      - name: List downloaded files
+      - name: List Files in Artifact
         run: |
           echo "Listing files in the downloaded directory:"
           ls -R $GITHUB_WORKSPACE
