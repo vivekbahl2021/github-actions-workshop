@@ -31,7 +31,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4.3.6
         with:
-          name: .net-web-app # Artifact name
+          name: aspnet-web-app # Artifact name
           path: ${{runner.temp}}/webapp
 
   download:
@@ -41,7 +41,7 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v4.1.8
         with:
-          name: .net-web-app # Artifact name
+          name: aspnet-web-app # Artifact name
       - name: List Files in Artifact
         run: |
           ls -al
