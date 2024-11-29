@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will create a simple workflow that runs on every push to the repository. The workflow will echo a message to the console.
+In this lab, you will use a `simple workflow` built-in template that triggers a workflow on every push to the repository. The workflow will echo a message to the console.
 
 > Duration: 10-15 minutes
 
@@ -60,13 +60,13 @@ on:
 
 # Triggers the workflow on push or pull request events but only for the "main" branch
 
-# push:
+push:
 
-# branches: ['main']
+   branches: ['main']
 
-# pull_request:
+pull_request:
 
-# branches: ['main']
+   branches: ['main']
 
 # Allows you to run this workflow manually from the Actions tab
 
@@ -100,7 +100,7 @@ runs-on: ubuntu-latest
 
 ## Summary
 
-In this lab, you created a simple workflow that runs on every push to the repository. The workflow echoed a message to the console.
+In this lab, you created a simple workflow that runs on every push to the repository. The workflow echoed the messages to the console.
 
 ## Additional Resources
 
