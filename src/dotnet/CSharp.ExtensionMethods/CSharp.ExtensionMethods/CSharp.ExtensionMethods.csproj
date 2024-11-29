@@ -5,6 +5,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Version>1.0.1</Version>
+    <Description>A set of useful C# extension methods.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>Extensions;Utilities;CSharp</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
