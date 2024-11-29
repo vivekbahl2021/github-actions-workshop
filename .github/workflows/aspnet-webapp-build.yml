@@ -1,9 +1,9 @@
-name: WebApp Build
+name: ASP.NET Web App Build
 
 on:
   push:
     paths:
-      - '.github/workflows/webapp-build.yml'
+      - '.github/workflows/aspnet-webapp-build.yml'
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 
@@ -14,7 +14,7 @@ jobs:
       run:
         working-directory: ./src/dotnet/WebApp
     steps:
-      - name: checkout code
+      - name: Checkout Code
         uses: actions/checkout@v4.1.7
 
       - name: Set up .NET Core
@@ -22,8 +22,8 @@ jobs:
         with:
           dotnet-version: '8.x'
 
-      - name: Build code
+      - name: Build Code
         run: dotnet build --configuration Release
 
-      - name: Publish code
+      - name: Publish Code
         run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}/webapp"
