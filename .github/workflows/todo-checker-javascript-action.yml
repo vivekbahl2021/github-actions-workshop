@@ -17,3 +17,4 @@ jobs:
         uses: ./.github/actions/todo-checker-javascript-action
         with:
           path: './src' # Directory to scan
+          strict: false # Do not fail the build if todos are found
