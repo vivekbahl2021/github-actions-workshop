@@ -5,8 +5,9 @@ on:
     paths:
       - '.github/workflows/aspnet-weather-webapi-publish-github-package.yml'
       - 'src/dotnet/Weather.WebApi/**'
+
 env:
-  DOCKER_IMAGE: ghcr.io/prasadhonrao/aspnet-weather-webapi
+  GITHUB_PACKAGE_NAME: ghcr.io/prasadhonrao/aspnet-weather-webapi
 
 jobs:
   build:
@@ -35,17 +36,17 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Tag Image to latest
-        run: docker tag aspnet-weather-webapi ${{ env.DOCKER_IMAGE }}:latest
+        run: docker tag aspnet-weather-webapi ${{ env.GITHUB_PACKAGE_NAME }}:latest
 
       - name: Tag Image to branch
         run: |
           BRANCH_NAME=${{ github.ref_name }}
-          docker tag aspnet-weather-webapi ${{ env.DOCKER_IMAGE }}:$BRANCH_NAME
+          docker tag aspnet-weather-webapi ${{ env.GITHUB_PACKAGE_NAME }}:$BRANCH_NAME
 
       - name: Push Image with latest tag to GitHub Container Registry
-        run: docker push ${{ env.DOCKER_IMAGE }}:latest
+        run: docker push ${{ env.GITHUB_PACKAGE_NAME }}:latest
 
       - name: Push Image with branch tag to GitHub Container Registry
         run: |
           BRANCH_NAME=${{ github.ref_name}}
-          docker push ${{ env.DOCKER_IMAGE }}:$BRANCH_NAME
+          docker push ${{ env.GITHUB_PACKAGE_NAME }}:$BRANCH_NAME
