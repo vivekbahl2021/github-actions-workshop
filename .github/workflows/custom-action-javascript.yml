@@ -1,4 +1,4 @@
-name: Custom Action Workflow
+name: Custom Action JavaScript
 on:
   workflow_dispatch:
 jobs:
@@ -9,8 +9,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Install dependencies
         run: npm install
-        working-directory: ./.github/say-hello-custom-action
+        working-directory: ./.github/custom-action-javascript
       - name: Say Hello Custom Action
-        uses: ./.github/say-hello-custom-action
+        uses: ./.github/custom-action-javascript
         with:
           who-to-greet: 'Bill'

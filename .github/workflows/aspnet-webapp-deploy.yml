@@ -1,4 +1,4 @@
-name: WebApp Build and Deploy
+name: ASP.NET Web App Build and Deploy
 
 on:
   push:

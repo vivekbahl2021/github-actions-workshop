@@ -1,4 +1,4 @@
-name: Reusable Workflow
+name: ASP.NET Deploy Reusable Workflow
 
 on:
   workflow_call:
