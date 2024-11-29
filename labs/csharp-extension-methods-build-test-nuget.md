@@ -35,7 +35,8 @@ This lab will show you how to create a GitHub Actions workflow to test a C# Exte
        runs-on: ubuntu-latest
 
        steps:
-         - uses: actions/checkout@v4
+         - name: Check out repository code
+           uses: actions/checkout@v4
 
          - name: Setup .NET Core
            uses: actions/setup-dotnet@v1
@@ -75,13 +76,11 @@ This lab will show you how to create a GitHub Actions workflow to test a C# Exte
 
 12. Click on the latest workflow run to view the details.
 
-13. Next, we will publish the NuGet package to GitHub Packages. Add the following steps to the existing workflow:
+13. Next, we will publish the NuGet package to GitHub Packages. Add the following steps to the existing workflow.
 
     ```yaml
-    - name: Publish NuGet Package
-      run: dotnet nuget push ./src/dotnet/CSharp.ExtensionMethods/CSharp.ExtensionMethods/bin/Release/*.nupkg --source "github"
-      env:
-        NUGET_API_KEY: ${{ secrets.GITHUB_TOKEN }}
+    - name: Publish NuGet Package to GitHub Packages
+      run: dotnet nuget push ./src/dotnet/CSharp.ExtensionMethods/CSharp.ExtensionMethods/bin/Release/*.nupkg --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" --api-key ${{ secrets.GITHUB_TOKEN }} --skip-duplicate
     ```
 
 14. Commit the changes and push them to the repository.
@@ -90,22 +89,28 @@ This lab will show you how to create a GitHub Actions workflow to test a C# Exte
 
 16. Click on the latest workflow run to view the details.
 
-17. Next, we will publish the NuGet package to NuGet.org. Add the following steps to the existing workflow:
+17. Next, we will publish the NuGet package to NuGet.org. Create a new NuGet API key by following the instructions [here](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli#publish-the-package). Add the NuGet API key as a secret named `NUGET_API_KEY` in the repository.
+
+18. Add the following steps to the existing workflow:
 
     ```yaml
-    - name: Publish NuGet Package
-      run: dotnet nuget push ./src/dotnet/CSharp.ExtensionMethods/CSharp.ExtensionMethods/bin/Release/*.nupkg --source "nuget.org"
-      env:
-        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+    - name: Publish NuGet Package to NuGet.org
+      run: dotnet nuget push ./src/dotnet/CSharp.ExtensionMethods/CSharp.ExtensionMethods/bin/Release/*.nupkg --source "https://api.nuget.org/v3/index.json" --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate
     ```
 
-18. Commit the changes and push them to the repository.
+19. Commit the changes and push them to the repository.
 
-19. Navigate to the "Actions" tab in your repository to view the workflow runs.
+20. Navigate to the "Actions" tab in your repository to view the workflow runs.
 
-20. Click on the latest workflow run to view the details.
+21. Click on the latest workflow run to view the details.
 
-21. You have successfully created a GitHub Actions workflow to test a C# Extension Methods project, create a NuGet package, and publish it to both GitHub Packages and NuGet.org.
+22. You have successfully created a GitHub Actions workflow to test a C# Extension Methods project, create a NuGet package, and publish it to both GitHub Packages and NuGet.org.
+
+23. Go to the "Packages" tab in your repository to view the published NuGet package.
+
+24. Navigate to the NuGet.org website to view the published NuGet package.
+
+25. You can now use the published NuGet package in your projects.
 
 ## Summary
 
