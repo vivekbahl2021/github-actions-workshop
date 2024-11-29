@@ -1,4 +1,4 @@
-name: Custom Workflow
+name: Intro - Custom Workflow
 on:
   workflow_dispatch:
   push:

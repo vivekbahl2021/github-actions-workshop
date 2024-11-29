@@ -1,4 +1,4 @@
-name: Scheduled Workflow
+name: Intro - Scheduled Workflow
 
 on:
   workflow_dispatch:

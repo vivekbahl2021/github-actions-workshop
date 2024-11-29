@@ -1,4 +1,4 @@
-name: YAML Syntax
+name: Intro - YAML Syntax
 
 on:
   workflow_dispatch:
