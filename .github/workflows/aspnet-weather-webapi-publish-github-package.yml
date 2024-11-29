@@ -1,9 +1,9 @@
-name: WebAPI Publish GitHub Package
+name: ASP.NET Weather Web Api Publish GitHub Package
 on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/package-artifact.yml'
+      - '.github/workflows/aspnet-weather-webapi-publish-github-package.yml'
       - 'src/dotnet/Weather.WebApi/**'
 jobs:
   build:
@@ -12,13 +12,10 @@ jobs:
       contents: read
       packages: write # Required for creating packages
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: List .NET Runtimes
-        run: dotnet --list-runtimes
-
-      - name: Build .NET WebApi
+      - name: Build ASP.NET Weather Web API
         run: dotnet build
         working-directory: ./src/dotnet/Weather.WebApi
 
@@ -32,7 +29,7 @@ jobs:
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
         with:
-          registry: ghcr.io
+          registry: ghcr.io # GitHub Container Registry. Default is docker.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
