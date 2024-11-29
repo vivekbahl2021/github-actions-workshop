@@ -30,3 +30,8 @@ jobs:
       - name: Create NuGet Package
         run: dotnet pack --configuration Release
         working-directory: ./src/dotnet/CSharp.ExtensionMethods/CSharp.ExtensionMethods
+
+      - name: Publish NuGet Package to GitHub
+        run: dotnet nuget push ./src/dotnet/CSharp.ExtensionMethods/CSharp.ExtensionMethods/bin/Release/*.nupkg --source "github"
+        env:
+          NUGET_API_KEY: ${{ secrets.GITHUB_TOKEN }}

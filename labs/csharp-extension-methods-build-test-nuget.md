@@ -25,7 +25,7 @@ This lab will show you how to create a GitHub Actions workflow to test a C# Exte
 5. Now we will create a GitHub Actions workflow to build and test the project. Create a new file named `dotnet.yml` in the `.github/workflows` directory and add the following content:
 
    ```yaml
-   name: CSharp Extension Methods CI
+   name: CSharp Extension Methods Build - Test - NuGet
 
    on:
      workflow_dispatch:
