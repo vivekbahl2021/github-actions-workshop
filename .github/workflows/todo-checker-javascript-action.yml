@@ -14,6 +14,6 @@ jobs:
 
       # Run the custom JavaScript action
       - name: Run TODO Checker
-        uses: ./.github/actions/todo-checker-javascript-action
+        uses: ./.github/todo-checker-javascript-action
         with:
           path: './src' # Directory to scan
