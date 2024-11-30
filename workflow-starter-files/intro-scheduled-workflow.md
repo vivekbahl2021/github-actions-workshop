@@ -1,3 +1,6 @@
+## Scheduled Workflow Starter File
+
+```yaml
 name: Intro - Scheduled Workflow
 
 on:
@@ -13,3 +16,4 @@ jobs:
     steps:
       - name: Display current date and time
         run: echo "The current date and time is $(date)"
+```

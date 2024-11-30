@@ -1,3 +1,6 @@
+## Custom Workflow Solution File
+
+```yaml
 name: Intro - Custom Workflow
 on:
   workflow_dispatch:
@@ -38,3 +41,4 @@ jobs:
         # This step prints an output (time) from the previous step's action.
       - name: Echo Greeting's Time
         run: echo 'The time was ${{ steps.hello.outputs.time }}.'
+```

@@ -1,3 +1,6 @@
+# YAML Syntax Starter File
+
+```yaml
 name: Intro - YAML Syntax
 
 on:
@@ -30,3 +33,4 @@ jobs:
     needs: [fanout1, fanout2]
     steps:
       - run: echo "This job will run after fanout1 and fanout2 have finished."
+```

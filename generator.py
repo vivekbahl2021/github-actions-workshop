@@ -23,6 +23,31 @@ data = [
         "[View Solution](./workflow-solution-files/intro-simple-workflow.md)", 
         "[![Intro - Simple Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-simple-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-simple-workflow.yml)"
     ),
+    (
+        "[Custom Workflow](./labs/intro-custom-workflow.md)", 
+        "[Start Here](./workflow-starter-files/intro-custom-workflow.md)", 
+        "[View Solution](./workflow-solution-files/intro-custom-workflow.md)", 
+        "[![Intro - Custom Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-custom-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-custom-workflow.yml)"
+    ),
+    (
+        "[Scheduled Workflow](./labs/intro-scheduled-workflow.md)", 
+        "[Start Here](./workflow-starter-files/intro-scheduled-workflow.md)", 
+        "[View Solution](./workflow-solution-files/intro-scheduled-workflow.md)", 
+        "[![Intro - Scheduled Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-scheduled-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-scheduled-workflow.yml)"
+    ),
+    (
+        "[YAML Syntax](./labs/intro-yaml-syntax.md)", 
+        "[Start Here](./workflow-starter-files/intro-yaml-syntax.md)", 
+        "[View Solution](./workflow-solution-files/intro-yaml-syntax.md)", 
+        "[![Intro - YAML Syntax](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-yaml-syntax.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-yaml-syntax.yml)"
+    ),
+    (
+        "",  # This row will be a blank row (no ID, no content)
+        "",
+        "",
+        ""
+    ),
+        
 ]
 
 # Generate the markdown table header with renamed 'Status' column
