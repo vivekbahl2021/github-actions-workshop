@@ -1,4 +1,4 @@
-name: Echo Reusable Workflow
+name: Reusable Workflow Echo
 on:
   workflow_call:
     inputs:
