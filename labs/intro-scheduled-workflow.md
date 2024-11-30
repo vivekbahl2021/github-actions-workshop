@@ -1,4 +1,4 @@
-# Scheduled Workflow
+# Scheduled Workflow Lab
 
 ## Introduction
 

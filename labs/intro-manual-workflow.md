@@ -1,4 +1,4 @@
-# Manual Workflow
+# Manual Workflow Lab
 
 ## Introduction
 

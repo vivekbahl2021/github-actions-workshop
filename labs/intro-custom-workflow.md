@@ -1,4 +1,4 @@
-# Custom Workflow
+# Custom Workflow Lab
 
 ## Introduction
 
