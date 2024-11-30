@@ -11,42 +11,42 @@ In this lab, you will learn how to use YAML syntax to define workflows in GitHub
 1. Open the workflow file [yaml-syntax.yml](/.github/workflows/yaml-syntax.yml)
 2. Edit the file and copy the following YAML content at the end of the file:
 
-```YAML
-  build:
-    runs-on: windows-latest
-    steps:
-      - run: echo "This job will be run in parallel with the initial job."
-  test:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - run: echo "This job will be run after the build job."
-  ring01:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - run: echo "This job will be run after the test job."
-  ring02:
-    runs-on: macos-latest
-    needs: test
-    steps:
-      - run: echo "This job will be run after the test job."
-  ring03:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - run: echo "This job will be run after the test job."
-  ring04:
-    runs-on: ubuntu-latest
-    needs: [ring01,ring02,ring03]
-    steps:
-      - run: echo "This job will be run after the ring01,ring02,ring03 jobs."
-  prod:
-    runs-on: ubuntu-latest
-    needs: [ring04]
-    steps:
-      - run: echo "This job will be run after the ring04 job."
-```
+   ```YAML
+     build:
+       runs-on: windows-latest
+       steps:
+         - run: echo "This job will be run in parallel with the initial job."
+     test:
+       runs-on: ubuntu-latest
+       needs: build
+       steps:
+         - run: echo "This job will be run after the build job."
+     ring01:
+       runs-on: ubuntu-latest
+       needs: test
+       steps:
+         - run: echo "This job will be run after the test job."
+     ring02:
+       runs-on: macos-latest
+       needs: test
+       steps:
+         - run: echo "This job will be run after the test job."
+     ring03:
+       runs-on: ubuntu-latest
+       needs: test
+       steps:
+         - run: echo "This job will be run after the test job."
+     ring04:
+       runs-on: ubuntu-latest
+       needs: [ring01,ring02,ring03]
+       steps:
+         - run: echo "This job will be run after the ring01,ring02,ring03 jobs."
+     prod:
+       runs-on: ubuntu-latest
+       needs: [ring04]
+       steps:
+         - run: echo "This job will be run after the ring04 job."
+   ```
 
 3. Commit the changes into the `main` branch
 4. Go to `Actions` and manually trigger the workflow by clicking on `Run Workflow` button
@@ -56,25 +56,25 @@ In this lab, you will learn how to use YAML syntax to define workflows in GitHub
 
 1. Using the same file as step 2.1, copy the following YAML content and replace the `build` job
 
-```YAML
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        configuration: [debug, release]
-    steps:
-    - run: echo "This job builds the configuration ${{ matrix.configuration }}."
-```
+   ```YAML
+     build:
+       runs-on: ubuntu-latest
+       strategy:
+         matrix:
+           configuration: [debug, release]
+       steps:
+       - run: echo "This job builds the configuration ${{ matrix.configuration }}."
+   ```
 
 2. Update the workflow to run on push events
 
-```YAML
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-```
+   ```YAML
+   on:
+     workflow_dispatch:
+     push:
+       branches:
+         - main
+   ```
 
 3. Commit the changes into the `main` branch
 
