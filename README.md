@@ -37,6 +37,14 @@ Follow the instructions in the labs to start experimenting with GitHub Actions w
 
 ## Workshop Labs
 
+The core of this workshop is built around a set of labs that walk you through the process of automating your software development workflows using GitHub Actions.
+
+To get started, navigate to the [Workshop Labs](./workshop-labs.md) page where you'll find all the exercises, instructions, and challenges designed to help you understand and implement GitHub Actions step by step.
+
+Feel free to explore the labs and start working through them at your own pace!
+
+## Workshop Labs
+
 - [Lab 1: Creating Manual Workflow](./labs/intro-manual-workflow.md)
 - [Lab 2: Creating Workflow using `Simple Workflow` Template](./labs/intro-simple-workflow.md)
 - [Lab 3: Creating Custom Workflow](./labs/intro-custom-workflow.md)
