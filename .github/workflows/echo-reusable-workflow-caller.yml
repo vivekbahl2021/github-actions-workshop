@@ -1,4 +1,4 @@
-name: Echo Reusable Workflow
+name: Echo Reusable Workflow Caller
 
 on:
   workflow_dispatch:
