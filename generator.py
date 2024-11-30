@@ -13,15 +13,21 @@ data = [
     ),
     (
         "[Manual Workflow](./labs/intro-manual-workflow.md)", 
-        "[Starter File](./workflow-starter-files/intro-manual-workflow.md)", 
-        "[Solution](./workflow-solution-files/intro-manual-workflow.md)", 
+        "[Start Here](./workflow-starter-files/intro-manual-workflow.md)", 
+        "[View Solution](./workflow-solution-files/intro-manual-workflow.md)", 
         "[![Intro - Manual Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-manual-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-manual-workflow.yml)"
+    ),
+    (
+        "[Simple Workflow](./labs/intro-simple-workflow.md)", 
+        "[Start Here](./workflow-starter-files/intro-simple-workflow.md)", 
+        "[View Solution](./workflow-solution-files/intro-simple-workflow.md)", 
+        "[![Intro - Simple Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-simple-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-simple-workflow.yml)"
     ),
 ]
 
-# Generate the markdown table header
-markdown_table = "| ID  | Lab                                                | Starter File                           | Solution                                | Status                                                                                         |\n"
-markdown_table += "|-----|----------------------------------------------------|------------------------------------------------|------------------------------------------------|------------------------------------------------------------------------------------------------|\n"
+# Generate the markdown table header with renamed 'Status' column
+markdown_table = "| ID  | Lab                                                | Starter File                                     | Solution                                      | Workflow Status                                                                                      |\n"
+markdown_table += "|-----|----------------------------------------------------|-------------------------------------------------|------------------------------------------------|-------------------------------------------------------------------------------------------------------|\n"
 
 # Initialize ID counter
 current_id = 1

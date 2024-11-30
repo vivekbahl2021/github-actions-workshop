@@ -1,3 +1,6 @@
+# Simple Workflow Starter File
+
+```yaml
 # This is a basic workflow to help you get started with Actions
 
 name: Intro - Simple Workflow
@@ -34,3 +37,4 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+```
