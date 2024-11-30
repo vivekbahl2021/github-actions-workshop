@@ -1,4 +1,4 @@
-name: GitHub CLI Integration
+name: Misc - GitHub CLI Integration
 on:
   workflow_dispatch:
   push:

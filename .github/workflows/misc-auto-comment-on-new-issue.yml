@@ -1,4 +1,4 @@
-name: Auto Comment on New Issue
+name: Misc - Auto Comment on New Issue
 
 on:
   issues:
