@@ -1,0 +1,45 @@
+name: ASP.NET WebApp Deploy using Shared Workflow
+
+on:
+  push:
+    paths:
+      - '.github/workflows/aspnet-webapp-deploy-using-shared-workflow.yml'
+      - 'src/dotnet/WebApp/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src/dotnet/WebApp
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4.1.7
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v4.0.1
+        with:
+          dotnet-version: '8.x'
+
+      - name: Build code
+        run: dotnet build --configuration Release
+
+      - name: Publish code
+        run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}/webapp"
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4.3.6
+        with:
+          name: .net-web-app # Artifact name
+          path: ${{runner.temp}}/webapp
+
+  call-shared-deploy-workflow:
+    needs: build
+    uses: prasadhonrao/github-actions-workshop-shared-repo/.github/workflows/deploy.yml@main
+    with:
+      package-name: .net-web-app
+      app-name: github-actions-webapp-shared
+      deployment-slot: production
+    secrets:
+      azure-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}

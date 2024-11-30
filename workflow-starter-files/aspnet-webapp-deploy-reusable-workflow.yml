@@ -1,0 +1,38 @@
+name: ASP.NET Deploy Reusable Workflow
+
+on:
+  workflow_call:
+    inputs:
+      package-name:
+        required: true
+        type: string
+      app-name:
+        required: true
+        type: string
+      deployment-slot:
+        required: true
+        type: string
+    secrets:
+      azure-profile:
+        required: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v4.1.8
+        with:
+          name: ${{ inputs.package-name }}
+
+      - name: List files in root directory
+        run: |
+          ls -al
+        shell: bash
+
+      - name: Secret Information
+        run: echo "Value of secret matches - ${{ secrets.azure-profile  == 'AZ_PRROFILE' }}"
+
+      - name: Print name of App Service to deploy to
+        run: echo "App will be deployed to ${{ inputs.app-name }}"
