@@ -1,4 +1,4 @@
-name: Todo Checker JavaScript Action
+name: Custom JavaScript Action - TODO Checker
 
 on:
   workflow_dispatch:
