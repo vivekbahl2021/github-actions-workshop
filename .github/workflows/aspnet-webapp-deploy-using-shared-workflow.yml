@@ -1,9 +1,9 @@
-name: WebApp Build - Call Shared Workflow
+name: ASP.NET WebApp Deploy using Shared Workflow
 
 on:
   push:
     paths:
-      - '.github/workflows/webapp-build-and-call-shared-workflow.yml'
+      - '.github/workflows/aspnet-webapp-deploy-using-shared-workflow.yml'
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 

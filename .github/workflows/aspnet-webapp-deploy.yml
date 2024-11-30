@@ -3,7 +3,7 @@ name: ASP.NET Web App Build and Deploy
 on:
   push:
     paths:
-      - '.github/workflows/webapp-build-and-deploy.yml'
+      - '.github/workflows/aspnet-webapp-deploy.yml'
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 
