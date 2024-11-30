@@ -13,8 +13,8 @@ data = [
     ),
     (
         "[Manual Workflow](./labs/intro-manual-workflow.md)", 
-        "[Starter File](./workflow-starter-files/intro-manual-workflow.yml)", 
-        "[Solution](./workflow-solution-files/intro-manual-workflow.yml)", 
+        "[Starter File](./workflow-starter-files/intro-manual-workflow.md)", 
+        "[Solution](./workflow-solution-files/intro-manual-workflow.md)", 
         "[![Intro - Manual Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-manual-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-manual-workflow.yml)"
     ),
 ]

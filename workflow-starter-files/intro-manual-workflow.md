@@ -1,3 +1,6 @@
+### Starter File: intro-manual-workflow.yml
+
+```yaml
 name: Intro - Manual Workflow
 
 on:
@@ -11,3 +14,4 @@ jobs:
     steps:
       - name: Hows GitHub Actions?
         run: echo "Awesome!!"
+```
