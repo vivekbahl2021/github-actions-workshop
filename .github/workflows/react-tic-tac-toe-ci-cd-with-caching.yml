@@ -1,4 +1,4 @@
-name: Caching Workflow
+name: React Tic-Tac-Toe CI/CD with Caching
 
 on:
   workflow_dispatch:
