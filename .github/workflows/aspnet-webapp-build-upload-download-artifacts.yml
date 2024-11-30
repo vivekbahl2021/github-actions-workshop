@@ -33,6 +33,7 @@ jobs:
         with:
           name: aspnet-web-app # Artifact name
           path: ${{runner.temp}}/webapp
+          retention-days: 7 # Number of days to keep the artifact. Default is 90 days or configured value in the repository settings -> Actions permissions -> Artifact and logs retention
 
   download:
     runs-on: ubuntu-latest
