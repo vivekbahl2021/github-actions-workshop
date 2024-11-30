@@ -33,11 +33,13 @@ By the end of this workshop, you will learn how to:
 
 Follow the instructions in the labs to start experimenting with GitHub Actions workflows. Each lab is designed to teach you a specific aspect of GitHub Actions.
 
-## Workshop Labs:
+## Workshop Labs
 
-- [Lab 1: Introduction to Workflows](./labs/intro-manual-workflow.md)
-- [Lab 2: Simple Workflow](./labs/intro-simple-workflow.md)
-- [Lab 3: Custom Workflows](./labs/intro-custom-workflow.md)
+- [Lab 1: Creating Manual Workflow](./labs/intro-manual-workflow.md)
+- [Lab 2: Creating Workflow using `Simple Workflow` Template](./labs/intro-simple-workflow.md)
+- [Lab 3: Creating Custom Workflow](./labs/intro-custom-workflow.md)
+- [Lab 4: Scheduled Workflow](./labs/intro-custom-workflow.md)
+- [Lab 5: YAML Syntax](./labs/intro-yaml-syntax.md)
 
 ## Resources
 

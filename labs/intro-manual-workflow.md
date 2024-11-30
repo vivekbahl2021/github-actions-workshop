@@ -8,7 +8,7 @@ In this lab you will create a manual workflow that runs on a manual trigger. The
 
 ## Instructions
 
-1. Navigate to the repository you created in the previous lab.
+1. Navigate to the repository you created in the previous lab. If you have not completed the previous lab, you can clone the repository from [here](./create-repository-using-template-repository.md).
 
 2. Navigate to `Actions` tab.
 
@@ -38,11 +38,19 @@ In this lab you will create a manual workflow that runs on a manual trigger. The
 
 7. We have given `Intro - Manual Workflow` as the name of the workflow. The workflow runs on two events - `workflow_dispatch` and `push`. The `workflow_dispatch` event is a manual trigger event. The workflow runs on push event only if the file `.github/workflows/intro-manual-workflow.yml` is modified. The workflow runs on `ubuntu-latest` runner and has a single job `run`. The job has a single step that echos a message `Awesome!!`.
 
-8. This will create a new file `.github/workflows/intro-manual-workflow.yml` in your repository. Navigate to Actions tab and you will see the workflow in the list. Click on `Run workflow` button and select `main` branch and click on `Run workflow` button. This will trigger the workflow and you will see the workflow running.
+8. This will create a new file `.github/workflows/intro-manual-workflow.yml` in your repository.
 
-9. Click on the workflow run to see the details of the workflow run.
+9. Navigate to Actions tab and you will see the workflow in the list. If the workflow is not running, you can manually trigger the workflow.
 
-10. Click on the job to see the details of the job.
+10. Click on `Run workflow` button and select `main` branch and click on `Run workflow` button. This will trigger the workflow and you will see the workflow running.
+
+11. Click on the workflow run to see the details of the workflow run.
+
+12. Click on the job to see the details of the job.
+
+13. Expand the `How GitHub Actions?` step to see the output of the step.
+
+14. You will see the message `Awesome!!` in the output of the step.
 
 ## Lab Solution
 
