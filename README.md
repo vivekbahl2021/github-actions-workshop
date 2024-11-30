@@ -1,6 +1,6 @@
-# Welcome to the GitHub Actions Workshop!
+# Welcome to the GitHub Actions Workshop
 
-This repository contains all the necessary materials to help you get started with GitHub Actions. In this hands-on workshop, you'll learn how to automate software development tasks, from continuous integration to deployment, using GitHub's powerful automation platform.
+This hands-on workshop is designed to help you master GitHub Actions by teaching you how to automate workflows, run tests, deploy applications, and more. It includes all the necessary labs, exercises, and example workflows to get you started with continuous integration and continuous deployment, using GitHub's powerful automation platform.
 
 ## Prerequisites
 
