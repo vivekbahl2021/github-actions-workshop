@@ -1,0 +1,12 @@
+name: Echo Reusable Workflow
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/echo-reusable-workflow.yml'
+jobs:
+  call:
+    uses: ./.github/workflows/echo-reusable-workflow.yml
+    with:
+      my-input: 'Hello, world!'
