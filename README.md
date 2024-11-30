@@ -1,6 +1,6 @@
-# GitHub Actions Workshop
+# Welcome to the GitHub Actions Workshop!
 
-This repository contains the code for the GitHub Actions Workshop. The workshop is designed to help you get started with GitHub Actions and learn how to use them to automate your software development workflow.
+This repository contains all the necessary materials to help you get started with GitHub Actions. In this hands-on workshop, you'll learn how to automate software development tasks, from continuous integration to deployment, using GitHub's powerful automation platform.
 
 ## Prerequisites
 
@@ -28,6 +28,16 @@ By the end of this workshop, you will learn how to:
 - Workflow templates and reusable workflows.
 - Integrate GitHub Actions with other tools and services.
 - Follow best practices for using GitHub Actions.
+
+## Getting Started
+
+Follow the instructions in the labs to start experimenting with GitHub Actions workflows. Each lab is designed to teach you a specific aspect of GitHub Actions.
+
+## Workshop Labs:
+
+- [Lab 1: Introduction to Workflows](./labs/intro-manual-workflow.md)
+- [Lab 2: Simple Workflow](./labs/intro-simple-workflow.md)
+- [Lab 3: Custom Workflows](./labs/intro-custom-workflow.md)
 
 ## Resources
 
