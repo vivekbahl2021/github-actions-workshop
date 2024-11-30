@@ -1,4 +1,4 @@
-### Starter File: intro-manual-workflow.yml
+## Manual Workflow Starter File
 
 ```yaml
 name: Intro - Manual Workflow

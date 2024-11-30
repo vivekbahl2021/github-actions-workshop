@@ -52,25 +52,6 @@ In this lab you will create a manual workflow that runs on a manual trigger. The
 
 14. You will see the message `Awesome!!` in the output of the step.
 
-## Lab Solution
-
-The complete solution is provided below.
-
-```YAML
-name: Manual Workflow
-on:
-  workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/manual-workflow.yml'
-jobs:
-  run:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Hows GitHub Actions?
-        run: echo "Awesome!!"
-```
-
 ## Summary
 
 In this lab, you created a manual workflow that runs on a manual trigger. The workflow echoed a message to the console.
