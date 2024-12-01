@@ -10,7 +10,7 @@ In this lab, you will learn how to build a web application using GitHub Actions.
 
 ## Prerequisites
 
-Before starting this lab, ensure that you have completed the [Create ASP.NET Web App](./create-aspnet-webapp-lab.md) lab to have your .NET Core web application ready for this lab.
+Before starting this lab, ensure that you have completed the [Create ASP.NET Web App](../create-aspnet-webapp.md) lab to have your .NET Core web application ready for this lab.
 
 ---
 

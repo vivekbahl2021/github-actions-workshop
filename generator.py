@@ -90,7 +90,7 @@ data = [
         ""
     ),
     (
-        "[Create ASP.NET Web App](./labs/aspnet-webapp/create-aspnet-webapp-lab.md)", 
+        "[Create ASP.NET Web App](./labs/create-aspnet-webapp.md)", 
         "N/A", 
         "N/A", 
         "N/A"
@@ -142,6 +142,18 @@ data = [
         "N/A", 
         "[View Solution](./labs/aspnet-webapp/upload-download-artifact-multiple-os-solution.md)", 
         "[![ASP.NET Web App Upload Download Artifact Multiple OS](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-upload-download-artifact-multiple-os.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-upload-download-artifact-multiple-os.yml)"
+    ),
+    (
+        "N/A",
+        "N/A", 
+        "N/A", 
+        "N/A"
+    ),
+    (
+        "[Create ASP.NET Web Api](./labs/create-aspnet-webapi.md)", 
+        "N/A", 
+        "N/A", 
+        "N/A"
     ),    
 ]
 
