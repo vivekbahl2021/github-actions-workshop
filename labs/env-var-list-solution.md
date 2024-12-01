@@ -1,4 +1,4 @@
-# Environment Variable List Solution File
+# Environment Variable List Solution
 
 ```YAML
 

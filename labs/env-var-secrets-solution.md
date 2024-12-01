@@ -1,4 +1,4 @@
-# Environment Variables and Secrets Solution File
+# Environment Variables and Secrets Solution
 
 ```YAML
 name: Env Var and Secrets

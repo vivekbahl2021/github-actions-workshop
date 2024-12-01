@@ -1,4 +1,4 @@
-## Manual Workflow Solution File
+## Manual Workflow Solution
 
 ```yaml
 name: Intro - Manual Workflow

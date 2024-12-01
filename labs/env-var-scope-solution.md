@@ -1,4 +1,4 @@
-# Environment Variable Scope Solution File
+# Environment Variable Scope Solution
 
 ```YAML
 name: Env Var Scope
