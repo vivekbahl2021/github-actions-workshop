@@ -1,14 +1,17 @@
-name: ASP.NET Web App Build - Upload Artifacts
+## ASP.NET Web App Upload Artifact Starter
+
+```yaml
+name: ASP.NET Web App Upload Artifact
 
 on:
   push:
     paths:
-      - '.github/workflows/aspnet-webapp-build-upload-artifacts.yml'
+      - '.github/workflows/aspnet-webapp-upload-artifacts.yml'
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 
 jobs:
-  build-and-upload:
+  build:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -27,9 +30,4 @@ jobs:
 
       - name: Publish Code
         run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}/webapp"
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4.3.6
-        with:
-          name: aspnet-web-app # Artifact name
-          path: ${{runner.temp}}/webapp
+```

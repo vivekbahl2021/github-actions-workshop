@@ -1,4 +1,4 @@
-# WebApp Build, Upload and Download Artifacts
+# ASP.NET Web App - Download Artifact Starter
 
 ## Introduction
 
@@ -93,4 +93,4 @@ In this lab, you learned how to upload and download artifacts in GitHub Actions 
 ## Additional Resources
 
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [GitHub Actions: Artifacts](https://docs.github.com/en/actions/guides/storing-workflow-data-as-artifacts)
+- [GitHub Actions: Artifact](https://docs.github.com/en/actions/guides/storing-workflow-data-as-artifacts)

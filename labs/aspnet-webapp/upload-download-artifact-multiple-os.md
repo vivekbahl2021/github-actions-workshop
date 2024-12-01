@@ -1,4 +1,4 @@
-# WebApp Build, Upload and Download Artifacts for Multiple OS
+# WebApp Build, Upload and Download Artifact for Multiple OS
 
 ## Introduction
 
