@@ -1,17 +1,1 @@
-## Manual Workflow Starter File
-
-```yaml
-name: Intro - Manual Workflow
-
-on:
-  workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/intro-manual-workflow.yml'
-jobs:
-  run:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Hows GitHub Actions?
-        run: echo "Awesome!!"
-```
+<!-- This file is intentionally left blank. You will create a manual workflow here by following the instructions provided in the lab. -->
