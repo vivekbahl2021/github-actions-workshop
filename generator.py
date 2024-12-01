@@ -12,37 +12,37 @@ data = [
         ""
     ),
     (
-        "[Manual Workflow](./labs/intro-manual-workflow.md)", 
-        "[Start Here](./workflow-starter-files/intro-manual-workflow.md)", 
-        "[View Solution](./workflow-solution-files/intro-manual-workflow.md)", 
+        "[Manual Workflow](./labs/intro-manual-workflow-lab.md)", 
+        "[Start Here](./labs/intro-manual-workflow-starter.md)", 
+        "[View Solution](./labs/intro-manual-workflow-solution.md)", 
         "[![Intro - Manual Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-manual-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-manual-workflow.yml)"
     ),
     (
-        "[Simple Workflow](./labs/intro-simple-workflow.md)", 
-        "[Start Here](./workflow-starter-files/intro-simple-workflow.md)", 
-        "[View Solution](./workflow-solution-files/intro-simple-workflow.md)", 
+        "[Simple Workflow](./labs/intro-simple-workflow-lab.md)", 
+        "[Start Here](./labs/intro-simple-workflow-starter.md)", 
+        "[View Solution](./labs/intro-simple-workflow-solution.md)", 
         "[![Intro - Simple Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-simple-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-simple-workflow.yml)"
     ),
     (
-        "[Custom Workflow](./labs/intro-custom-workflow.md)", 
-        "[Start Here](./workflow-starter-files/intro-custom-workflow.md)", 
-        "[View Solution](./workflow-solution-files/intro-custom-workflow.md)", 
+        "[Custom Workflow](./labs/intro-custom-workflow-lab.md)", 
+        "[Start Here](./labs/intro-custom-workflow-starter.md)", 
+        "[View Solution](./labs/intro-custom-workflow-solution.md)", 
         "[![Intro - Custom Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-custom-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-custom-workflow.yml)"
     ),
     (
-        "[Scheduled Workflow](./labs/intro-scheduled-workflow.md)", 
-        "[Start Here](./workflow-starter-files/intro-scheduled-workflow.md)", 
-        "[View Solution](./workflow-solution-files/intro-scheduled-workflow.md)", 
+        "[Scheduled Workflow](./labs/intro-scheduled-workflow-lab.md)", 
+        "[Start Here](./labs/intro-scheduled-workflow-starter.md)", 
+        "[View Solution](./labs/intro-scheduled-workflow-solution.md)", 
         "[![Intro - Scheduled Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-scheduled-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-scheduled-workflow.yml)"
     ),
     (
-        "[YAML Syntax](./labs/intro-yaml-syntax.md)", 
-        "[Start Here](./workflow-starter-files/intro-yaml-syntax.md)", 
-        "[View Solution](./workflow-solution-files/intro-yaml-syntax.md)", 
+        "[YAML Syntax](./labs/intro-yaml-syntax-lab.md)", 
+        "[Start Here](./labs/intro-yaml-syntax-starter.md)", 
+        "[View Solution](./labs/intro-yaml-syntax-solution.md)", 
         "[![Intro - YAML Syntax](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-yaml-syntax.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-yaml-syntax.yml)"
     ),
     (
-        "[Disabling a Workflow](./labs/disabling-a-workflow.md)", 
+        "[Disabling a Workflow](./labs/disabling-a-workflow-lab.md)", 
         "N/A", 
         "N/A", 
         "N/A"
@@ -54,21 +54,21 @@ data = [
         ""
     ),
     (
-        "[Environment Variables and Secrets](./labs/env-var-secrets.md)", 
-        "[Start Here](./workflow-starter-files/env-var-secrets.md)", 
-        "[View Solution](./workflow-solution-files/env-var-secrets.md)", 
+        "[Environment Variables and Secrets](./labs/env-var-secrets-lab.md)", 
+        "[Start Here](./labs/env-var-secrets-starter.md)", 
+        "[View Solution](./labs/env-var-secrets-solution.md)", 
         "[![Environment Variables and Secrets](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-secrets.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-secrets.yml)"
     ),
     (
-        "[Environment Variables Scope](./labs/env-var-scope.md)", 
-        "[Start Here](./workflow-starter-files/env-var-scope.md)", 
-        "[View Solution](./workflow-solution-files/env-var-scope.md)", 
+        "[Environment Variables Scope](./labs/env-var-scope-lab.md)", 
+        "[Start Here](./labs/env-var-scope-starter.md)", 
+        "[View Solution](./labs/env-var-scope-solution.md)", 
         "[![Environment Variables Scope](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-scope.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-scope.yml)"
     ),
     (
-        "[Environment Variables List](./labs/env-var-list.md)", 
-        "[Start Here](./workflow-starter-files/env-var-list.md)", 
-        "[View Solution](./workflow-solution-files/env-var-list.md)", 
+        "[Environment Variables List](./labs/env-var-list-lab.md)", 
+        "[Start Here](./labs/env-var-list-starter.md)", 
+        "[View Solution](./labs/env-var-list-solution.md)", 
         "[![Environment Variables List](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-list.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-list.yml)"
     ),
         
