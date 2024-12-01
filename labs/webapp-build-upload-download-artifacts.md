@@ -8,7 +8,7 @@ In this lab, you will learn how to upload and download artifacts in GitHub Actio
 
 ## Prerequisites
 
-Create a new Web App by following the instructions in the [Create a Web App](./create-webapp.md) lab.
+Create a new Web App by following the instructions in the [Create a Web App](./create-aspnet-webapp.md) lab.
 
 ## Instructions
 
