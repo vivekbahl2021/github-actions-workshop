@@ -138,7 +138,7 @@ data = [
         "[![ASP.NET Web App Download Artifact](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-download-artifact.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-download-artifact.yml)"
     ),    
     (
-        "[ASP.NET Web App Upload - Download Artifact Multiple OS](./labs/aspnet-webapp/upload-download-artifact-lab.md)", 
+        "[ASP.NET Web App Upload - Download Artifact Multiple OS](./labs/aspnet-webapp/upload-download-artifact-multiple-os-lab.md)", 
         "N/A", 
         "[View Solution](./labs/aspnet-webapp/upload-download-artifact-multiple-os-solution.md)", 
         "[![ASP.NET Web App Upload Download Artifact Multiple OS](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-upload-download-artifact-multiple-os.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-upload-download-artifact-multiple-os.yml)"
