@@ -60,42 +60,6 @@ Create a new Web App by following the instructions in the [Create a Web App](./c
 
 9. Verify that the workflow has built and published the application successfully.
 
-## Lab Solution
-
-The complete solution is provided below.
-
-```yaml
-name: WebApp Build
-
-on:
-  push:
-    paths:
-      - '.github/workflows/webapp-build.yml'
-      - 'src/dotnet/WebApp/**'
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./src/dotnet/WebApp
-    steps:
-      - name: checkout code
-        uses: actions/checkout@v4.1.7
-
-      - name: Set up .NET Core
-        uses: actions/setup-dotnet@v4.0.1
-        with:
-          dotnet-version: '8.x'
-
-      - name: Build code
-        run: dotnet build --configuration Release
-
-      - name: Publish code
-        run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}/webapp"
-```
-
 ## Summary
 
 In this lab, you learned how to build a web application using GitHub Actions. You created a workflow that builds the application and used the `actions/setup-dotnet` action to set up the .NET Core SDK.

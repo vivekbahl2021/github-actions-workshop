@@ -69,48 +69,6 @@ Create a new Web App by following the instructions in the [Create a Web App](./c
 
 10. Verify that the workflow has built and published the application successfully.
 
-## Lab Solution
-
-The complete solution is provided below.
-
-```yaml
-name: WebApp Build - Upload Artifacts
-
-on:
-  push:
-    paths:
-      - '.github/workflows/webapp-build-upload-artifacts.yml'
-      - 'src/dotnet/WebApp/**'
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./src/dotnet/WebApp
-    steps:
-      - name: checkout code
-        uses: actions/checkout@v4.1.7
-
-      - name: Set up .NET Core
-        uses: actions/setup-dotnet@v4.0.1
-        with:
-          dotnet-version: '8.x'
-
-      - name: Build code
-        run: dotnet build --configuration Release
-
-      - name: Publish code
-        run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}/webapp"
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4.3.6
-        with:
-          name: .net-web-app # Artifact name
-          path: ${{runner.temp}}/webapp
-```
-
 ## Summary
 
 In this lab, you created a GitHub Actions workflow to build a web application and upload the artifacts. You learned how to use the `actions/setup-dotnet` and `actions/upload-artifact` actions to build and upload the artifacts.

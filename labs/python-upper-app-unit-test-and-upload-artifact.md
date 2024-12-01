@@ -62,46 +62,6 @@ The Python application is a simple console based application that converts the i
 
 1. Once the workflow is completed, navigate to the Docker Hub repository to see the docker image pushed.
 
-## Lab Solution
-
-The complete solution is provided below.
-
-```YAML
-  name: Python Upper Test
-  on:
-    workflow_dispatch:
-    push:
-      paths:
-        - '.github/workflows/python-upper-test.yml'
-        - 'src/python/upper_project/**'
-  jobs:
-    run:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Get all the files in current directory before checkout
-          run: pwd && ls -al
-
-        - name: Checkout Code
-          uses: actions/checkout@v4
-
-        - name: Get all the files in current directory after checkout
-          run: pwd && ls -al
-
-        - name: Print Python version
-          run: python --version
-
-        - name: Print pip version
-          run: python -m pip --version
-
-        - name: Upgrade pip
-          run: python -m pip install --upgrade pip
-
-        - name: Unit test
-          run: python -m unittest discover tests
-          working-directory: src/python/upper_project
-
-```
-
 ## Summary
 
 In this lab, you created a GitHub Actions workflow to build and unit test a Python application. The workflow was triggered manually and ran on a ubuntu-latest runner.

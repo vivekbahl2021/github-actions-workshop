@@ -86,30 +86,6 @@ In this lab, you will create a workflow to build ASP.NET Core Web API project us
 3. Go to `Actions` and manually trigger the workflow by clicking on `Run Workflow` button
 4. See the details of your running workflow and verify the build is running on MacOS runner
 
-## Lab Solution
-
-The complete solution is provided below.
-
-```YAML
-name: .NET Weather WebApi Build
-on:
-  workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/webapi-build.yml'
-      - 'src/dotnet/Weather.WebApi/**'
-jobs:
-  build:
-    name: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: dotnet --list-runtimes
-      - run: dotnet --list-sdks
-      - run: dotnet build
-        working-directory: ./src/dotnet/Weather.WebApi
-```
-
 ## Summary
 
 Congratulations! You have successfully created a workflow to build ASP.NET Core Web API project using GitHub Actions.
