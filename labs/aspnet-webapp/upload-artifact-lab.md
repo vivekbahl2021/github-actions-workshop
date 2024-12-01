@@ -15,7 +15,7 @@ Before starting this lab, ensure that:
 1. You have completed the [ASP.NET Web App Build with Ubuntu Runner](./build-ubuntu-runner-lab.md) lab.
 2. The **ASP.NET Web App Build on Ubuntu Runner Workflow** is functional and capable of generating build artifacts.
 
-Refer to the [ASP.NET Web App Upload Artifact Starter](./upload-artifacts-starter.md) file for the initial workflow content.
+Refer to the [ASP.NET Web App Upload Artifact Starter](./upload-artifact-starter.md) file for the initial workflow content.
 
 ---
 
