@@ -101,6 +101,30 @@ data = [
         "[View Solution](./labs/aspnet-webapp/build-ubuntu-runner-solution.md)", 
         "[![Environment Variables List](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-build-ubuntu-runner.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-build-ubuntu-runner.yml)"
     ),    
+    (
+        "[ASP.NET Web App Build Windows Runner](./labs/aspnet-webapp/build-windows-runner-lab.md)", 
+        "[Start Here](./labs/aspnet-webapp/build-windows-runner-starter.md)", 
+        "[View Solution](./labs/aspnet-webapp/build-windows-runner-solution.md)", 
+        "[![Environment Variables List](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-build-windows-runner.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-build-windows-runner.yml)"
+    ),    
+    (
+        "[ASP.NET Web App Build Mac Runner](./labs/aspnet-webapp/build-mac-runner-lab.md)", 
+        "[Start Here](./labs/aspnet-webapp/build-mac-runner-starter.md)", 
+        "[View Solution](./labs/aspnet-webapp/build-mac-runner-solution.md)", 
+        "[![Environment Variables List](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-build-mac-runner.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-build-mac-runner.yml)"
+    ),
+    (
+        "[Create Self Hosted Runner](./labs/create-self-hosted-runner.md)", 
+        "N/A", 
+        "N/A", 
+        "N/A"
+    ),
+    (
+        "[ASP.NET Web App Build Self Hosted Runner](./labs/aspnet-webapp/build-self-hosted-runner-lab.md)", 
+        "[Start Here](./labs/aspnet-webapp/build-self-hosted-runner-starter.md)", 
+        "[View Solution](./labs/aspnet-webapp/build-self-hosted-runner-solution.md)", 
+        "[![Environment Variables List](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-build-self-hosted-runner.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-build-self-hosted-runner.yml)"
+    ),    
 ]
 
 # Generate the markdown table header with renamed 'Status' column

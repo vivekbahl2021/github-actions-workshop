@@ -1,4 +1,4 @@
-## ASP.NET Web App Build on Ubuntu Runner Solution
+## ASP.NET Web App Build on Mac Runner Solution
 
 ```yaml
 name: ASP.NET Web App Build on Ubuntu Runner
@@ -6,13 +6,13 @@ name: ASP.NET Web App Build on Ubuntu Runner
 on:
   push:
     paths:
-      - '.github/workflows/aspnet-webapp-build-ubuntu-runner.yml'
+      - '.github/workflows/aspnet-webapp-build-mac-runner.yml'
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     defaults:
       run:
         working-directory: ./src/dotnet/WebApp

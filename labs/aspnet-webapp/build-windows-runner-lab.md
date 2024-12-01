@@ -1,4 +1,4 @@
-# ASP.NET Web App Build with Ubuntu Runner Lab
+# ASP.NET Web App Build with Windows Runner Lab
 
 ## Introduction
 
@@ -22,46 +22,46 @@ Ah, I see! You're asking to use the same format from the **"YAML Syntax Starter 
 
 ### Step 1: Create a YAML Workflow Using the Starter File
 
-1. Refer to the [**ASP.NET Web App Build on Ubuntu Runner Starter File**](./build-ubuntu-runner-starter.md).
+1. Refer to the [**ASP.NET Web App Build on Ubuntu Runner Starter File**](./build-windows-runner-starter.md).
 2. Copy the content from the starter file:
 
    ```yaml
    # This file is intentionally left blank. You will create a workflow by following the instructions provided in the lab.
    ```
 
-3. In your repository, create a new file under `.github/workflows` and name it `aspnet-webapp-build-on-ubuntu-runner.yml`.
-4. Paste the copied content into the new `aspnet-webapp-build-on-ubuntu-runner.yml` file.
+3. In your repository, create a new file under `.github/workflows` and name it `aspnet-webapp-build-windows-runner.yml`.
+4. Paste the copied content into the new `aspnet-webapp-build-windows-runner.yml` file.
 5. Commit the changes and push the workflow file to the `main` branch.
 
 ---
 
 ### Step 2: Define the Workflow Name and Event Triggers
 
-1. In the `aspnet-webapp-build-on-ubuntu-runner.yml` file, define the name of the workflow and the events that will trigger it. Use the following code to trigger the workflow on a push to specific files or manually using `workflow_dispatch`:
+1. In the `aspnet-webapp-build-windows-runner.yml` file, define the name of the workflow and the events that will trigger it. Use the following code to trigger the workflow on a push to specific files or manually using `workflow_dispatch`:
 
    ```yaml
    name: ASP.NET Web App Build on Ubuntu Runner
    on:
      push:
        paths:
-         - '.github/workflows/aspnet-webapp-build-ubuntu-runner.yml'
+         - '.github/workflows/aspnet-webapp-build-windows-runner.yml'
          - 'src/dotnet/WebApp/**'
      workflow_dispatch:
    ```
 
-   This ensures that the workflow will run when changes are made to the `aspnet-webapp-build-ubuntu-runner.yml` file or to the application code under `src/dotnet/WebApp/`.
+   This ensures that the workflow will run when changes are made to the `aspnet-webapp-build-windows-runner.yml` file or to the application code under `src/dotnet/WebApp/`.
 
 ---
 
 ### Step 3: Add the Build Job
 
-1. Below the `on` section, define the job that will run the build process. This job will run on an `ubuntu-latest` runner and will include the necessary steps for building and publishing the application.
+1. Below the `on` section, define the job that will run the build process. This job will run on an `windows-latest` runner and will include the necessary steps for building and publishing the application.
 2. Add the following steps to the `build` job:
 
    ```yaml
    jobs:
      build:
-       runs-on: ubuntu-latest
+       runs-on: windows-latest
        steps:
          - name: Checkout code
            uses: actions/checkout@v4.1.7
@@ -82,7 +82,7 @@ Ah, I see! You're asking to use the same format from the **"YAML Syntax Starter 
 
 ### Step 4: Understanding the Workflow
 
-1. The workflow contains a single job named `build` that runs on an `ubuntu-latest` runner.
+1. The workflow contains a single job named `build` that runs on an `windows-latest` runner.
 
 2. The job has four key steps:
    - **Checkout code**: This step uses the `actions/checkout` action to retrieve the latest code from the repository.
@@ -94,7 +94,7 @@ Ah, I see! You're asking to use the same format from the **"YAML Syntax Starter 
 
 ### Step 5: Commit and Push the Workflow File
 
-1. Save and commit the changes to the `aspnet-webapp-build-ubuntu-runner.yml` file in your repository.
+1. Save and commit the changes to the `aspnet-webapp-build-windows-runner.yml` file in your repository.
 2. Push the changes to the repository.
 
 ---
