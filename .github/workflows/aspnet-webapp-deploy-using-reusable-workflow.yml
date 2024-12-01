@@ -32,14 +32,14 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4.3.6
         with:
-          name: .net-web-app # Artifact name
+          name: aspnet-web-app # Artifact name
           path: ${{runner.temp}}/webapp
 
   call-reusable-deploy-workflow:
     needs: build
     uses: ./.github/workflows/aspnet-webapp-deploy-reusable-workflow.yml
     with:
-      package-name: .net-web-app
+      package-name: aspnet-web-app
       app-name: github-actions-webapp-reusable
       deployment-slot: development
     secrets:
