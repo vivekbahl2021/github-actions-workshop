@@ -99,7 +99,6 @@ In this lab, you will learn how to set up different environments in GitHub and h
 2. Copy the content of the starter file:
 
    ```yaml
-   Copy code
    name: Env Var and Secrets
    ```
 
