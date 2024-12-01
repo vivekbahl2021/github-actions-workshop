@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will create a new repository using the GitHub Actions Workshop template. The template contains the code for the GitHub Actions Workshop and is designed to help you get started with GitHub Actions.
+In this lab, you will create a new repository using the `GitHub Actions Workshop` template GitHub repository which contains a set of labs, workflow starter files, solutions and other resources to help you learn GitHub Actions.
 
 > Duration: 10-15 minutes
 
@@ -10,7 +10,7 @@ In this lab, you will create a new repository using the GitHub Actions Workshop 
 
 1. Login to your GitHub account
 
-2. Go to [GitHub Actions Workshop Template Repository](https://prasadhonrao/github-actions-workshop/generate)
+2. Go to [GitHub Actions Workshop Template Repository](https://github.com/prasadhonrao/github-actions-workshop)
 
    ![Navigate to Template Repository](../images/template-repository/1.png)
 
@@ -29,6 +29,14 @@ In this lab, you will create a new repository using the GitHub Actions Workshop 
 6. Once the repository is created, you will see the repository page
 
    ![Repository Created](../images/template-repository/5.png)
+
+7. Your repository now contains all the necessary files to get started with GitHub Actions.
+
+8. The `labs` folder contains the markdown files for workflow labs, starter files and solution files.
+
+9. The `src` folder contains the source code for the sample application.
+
+10. The repository includes utility scripts like `generator.py` and `remove-workflow.sh`. These scripts are used for maintaining the workshop content, such as generating the table of contents for workshop labs in markdown format and deleting all workflows from the `.github/workflows` folder. These are supporting files for repository management and are not required for the workshop. You can safely ignore them during your exercises.
 
 ## Summary
 
