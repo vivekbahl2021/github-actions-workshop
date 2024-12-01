@@ -19,7 +19,7 @@ In this lab, you will learn how to create a GitHub Actions workflow that uploads
 
 ### Step 1: Create a New Workflow File
 
-1. Open your GitHub repository directory in **Visual Studio Code**.
+1. Open your project directory in **Visual Studio Code**.
 2. Navigate to the `.github/workflows` directory in the root of your repository.
 3. Create a new file named `upload-and-download-artifact-multiple-os.yml`.
 
@@ -35,7 +35,7 @@ In this lab, you will learn how to create a GitHub Actions workflow that uploads
    on:
      push:
        paths:
-         - '.github/workflows/upload-download-artifact-multiple-os.yml'
+         - '.github/workflows/upload-and-download-artifact-multiple-os.yml'
          - 'src/dotnet/WebApp/**'
      workflow_dispatch:
    ```
@@ -88,7 +88,7 @@ In this lab, you will learn how to create a GitHub Actions workflow that uploads
          - name: Upload Artifact
            uses: actions/upload-artifact@v4.3.6
            with:
-             name: 'aspnet-web-app-${{ runner.os }}'
+             name: '.net-web-app-${{ runner.os }}'
              path: ${{ runner.temp }}/webapp
    ```
 
@@ -115,7 +115,7 @@ In this lab, you will learn how to create a GitHub Actions workflow that uploads
        - name: Download Artifact
          uses: actions/download-artifact@v4.1.8
          with:
-           name: 'aspnet-web-app-${{ runner.os }}'
+           name: '.net-web-app-${{ runner.os }}'
 
        - name: List Downloaded Files
          run: ls -R ./downloaded-artifacts
