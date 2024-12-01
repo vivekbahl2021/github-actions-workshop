@@ -47,6 +47,24 @@ data = [
         "",
         ""
     ),
+    (
+        "[Environment Variables and Secrets](./labs/env-var-secrets.md)", 
+        "[Start Here](./workflow-starter-files/env-var-secrets.md)", 
+        "[View Solution](./workflow-solution-files/env-var-secrets.md)", 
+        "[![Environment Variables and Secrets](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-secrets.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-secrets.yml)"
+    ),
+    (
+        "[Environment Variables Scope](./labs/env-var-scope.md)", 
+        "[Start Here](./workflow-starter-files/env-var-scope.md)", 
+        "[View Solution](./workflow-solution-files/env-var-scope.md)", 
+        "[![Environment Variables Scope](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-scope.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-scope.yml)"
+    ),
+    (
+        "[Environment Variables List](./labs/env-var-list.md)", 
+        "[Start Here](./workflow-starter-files/env-var-list.md)", 
+        "[View Solution](./workflow-solution-files/env-var-list.md)", 
+        "[![Environment Variables List](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-list.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-list.yml)"
+    ),
         
 ]
 

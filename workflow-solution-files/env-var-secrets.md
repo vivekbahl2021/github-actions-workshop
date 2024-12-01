@@ -1,3 +1,6 @@
+# Environment Variables and Secrets Solution File
+
+```YAML
 name: Env Var and Secrets
 
 on:
@@ -34,3 +37,4 @@ jobs:
       - name: Display Repository Variable
         run: |
           echo "REPOSITORY_VARIABLE: ${{ vars.REPOSITORY_VARIABLE }}"
+```

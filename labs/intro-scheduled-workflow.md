@@ -32,29 +32,6 @@ Scheduled workflows are workflows that are triggered on a schedule. You can use 
 
 6. Commit the changes to the repository and observe the scheduled workflow running every 5 minutes.
 
-## Lab Solution
-
-The complete workflow code is shown below:
-
-```YAML
-  name: Scheduled Workflow
-
-    on:
-      workflow_dispatch:
-      schedule:
-        - cron: '*/5 * * * *' # Every 5 minutes. You can use https://crontab.guru/ to generate cron expressions
-      push:
-        paths:
-          - '.github/workflows/scheduled-workflow.yml'
-    jobs:
-      execute:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Display current date and time
-            run: echo "The current date and time is $(date)"
-
-```
-
 ## Summary
 
 Congratulations! You have successfully created a scheduled workflow that displays the current date and time in the logs every 5 minutes. You can use scheduled workflows to automate tasks that need to run on a schedule, such as sending reminders, cleaning up data, or syncing data between systems.

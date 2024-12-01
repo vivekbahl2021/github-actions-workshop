@@ -1,3 +1,7 @@
+# Environment Variables List Starter File
+
+```YAML
+
 name: Env Var List
 
 on:
@@ -35,3 +39,4 @@ jobs:
 #       - name: Display Environment Variables
 #         run: printenv | sort
 #         shell: bash
+```

@@ -1,3 +1,6 @@
+# Environment Variable Scope Solution File
+
+```YAML
 name: Env Var Scope
 
 on:
@@ -24,3 +27,4 @@ jobs:
           echo "WORKFLOW_ENV_VAR: $WORKFLOW_ENV_VAR"
           echo "JOB_ENV_VAR: $JOB_ENV_VAR"
           echo "STEP_ENV_VAR: $STEP_ENV_VAR"
+```
