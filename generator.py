@@ -66,21 +66,21 @@ data = [
         ""
     ),
     (
-        "[Environment Variables and Secrets](./labs/env/env-var-secrets-lab.md)", 
-        "[Start Here](./labs/env/env-var-secrets-starter.md)", 
-        "[View Solution](./labs/env/env-var-secrets-solution.md)", 
+        "[Environment Variables and Secrets](./labs/env-var/env-var-secrets-lab.md)", 
+        "[Start Here](./labs/env-var/env-var-secrets-starter.md)", 
+        "[View Solution](./labs/env-var/env-var-secrets-solution.md)", 
         "[![Environment Variables and Secrets](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-secrets.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-secrets.yml)"
     ),
     (
-        "[Environment Variables Scope](./labs/env/env-var-scope-lab.md)", 
-        "[Start Here](./labs/env/env-var-scope-starter.md)", 
-        "[View Solution](./labs/env/env-var-scope-solution.md)", 
+        "[Environment Variables Scope](./labs/env-var/env-var-scope-lab.md)", 
+        "[Start Here](./labs/env-var/env-var-scope-starter.md)", 
+        "[View Solution](./labs/env-var/env-var-scope-solution.md)", 
         "[![Environment Variables Scope](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-scope.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-scope.yml)"
     ),
     (
-        "[Environment Variables List](./labs/env/env-var-list-lab.md)", 
-        "[Start Here](./labs/env/env-var-list-starter.md)", 
-        "[View Solution](./labs/env/env-var-list-solution.md)", 
+        "[Environment Variables List](./labs/env-var/env-var-list-lab.md)", 
+        "[Start Here](./labs/env-var/env-var-list-starter.md)", 
+        "[View Solution](./labs/env-var/env-var-list-solution.md)", 
         "[![Environment Variables List](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-list.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-list.yml)"
     ),
     (
