@@ -25,19 +25,19 @@ Before starting this lab, ensure that you have completed the [Create ASP.NET Web
 
 ### Step 2: Define the Workflow Name and Event Triggers
 
-1. In the `aspnet-webapi-build.yml` file, define the name of the workflow and the events that will trigger it. Use the following code to trigger the workflow on a push to specific files or manually using `workflow_dispatch`:
+1. In the `aspnet-webapi-build.yml` file, define the name of the workflow and the events that will trigger it. Use the following code to trigger the workflow on a push to specific files or manually using `workflow_dispatch`.
 
    ```yaml
    name: ASP.NET Web Api Build
    on:
-   	workflow_dispatch:
-   	push:
-   		paths:
-   			- '.github/workflows/aspnet-webapi-build.yml'
-   			- 'src/dotnet/Weather.WebApi/**'
+     workflow_dispatch:
+     push:
+       paths:
+         - '.github/workflows/aspnet-webapi-build.yml'
+         - 'src/dotnet/Weather.WebApi/**'
    ```
 
-This ensures that the workflow will run when changes are made to the `aspnet-webapi-build.yml` file or to the application code under `src/dotnet/Weather.WebApi/`.
+2. This ensures that the workflow will run when changes are made to the `aspnet-webapi-build.yml` file or to the application code under `src/dotnet/Weather.WebApi/`.
 
 ---
 
@@ -48,19 +48,19 @@ This ensures that the workflow will run when changes are made to the `aspnet-web
 
    ```yaml
    jobs:
-   	 build:
-   		runs-on: ubuntu-latest
-   		steps:
-   			- name: Checkout code
-   				uses: actions/checkout@v4.1.7
+     build:
+     runs-on: ubuntu-latest
+     steps:
+      - name: Checkout code
+       uses: actions/checkout@v4.1.7
 
-   			- name: Set up .NET Core
-   				uses: actions/setup-dotnet@v4.0.1
-   				with:
-   					dotnet-version: '8.x'
+      - name: Set up .NET Core
+       uses: actions/setup-dotnet@v4.0.1
+       with:
+        dotnet-version: '8.x'
 
-   			- name: Build code
-   				run: dotnet build --configuration Release
+      - name: Build code
+       run: dotnet build --configuration Release
    ```
 
 ---
