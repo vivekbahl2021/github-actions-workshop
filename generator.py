@@ -12,33 +12,33 @@ data = [
         ""
     ),
     (
-        "[Manual Workflow](./labs/intro-manual-workflow-lab.md)", 
-        "[Start Here](./labs/intro-manual-workflow-starter.md)", 
-        "[View Solution](./labs/intro-manual-workflow-solution.md)", 
+        "[Manual Workflow](./labs/intro/intro-manual-workflow-lab.md)", 
+        "[Start Here](./labs/intro/intro-manual-workflow-starter.md)", 
+        "[View Solution](./labs/intro/intro-manual-workflow-solution.md)", 
         "[![Intro - Manual Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-manual-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-manual-workflow.yml)"
     ),
     (
-        "[Simple Workflow](./labs/intro-simple-workflow-lab.md)", 
-        "[Start Here](./labs/intro-simple-workflow-starter.md)", 
-        "[View Solution](./labs/intro-simple-workflow-solution.md)", 
+        "[Simple Workflow](./labs/intro/intro-simple-workflow-lab.md)", 
+        "[Start Here](./labs/intro/intro-simple-workflow-starter.md)", 
+        "[View Solution](./labs/intro/intro-simple-workflow-solution.md)", 
         "[![Intro - Simple Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-simple-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-simple-workflow.yml)"
     ),
     (
-        "[Custom Workflow](./labs/intro-custom-workflow-lab.md)", 
-        "[Start Here](./labs/intro-custom-workflow-starter.md)", 
-        "[View Solution](./labs/intro-custom-workflow-solution.md)", 
+        "[Custom Workflow](./labs/intro/intro-custom-workflow-lab.md)", 
+        "[Start Here](./labs/intro/intro-custom-workflow-starter.md)", 
+        "[View Solution](./labs/intro/intro-custom-workflow-solution.md)", 
         "[![Intro - Custom Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-custom-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-custom-workflow.yml)"
     ),
     (
-        "[Scheduled Workflow](./labs/intro-scheduled-workflow-lab.md)", 
-        "[Start Here](./labs/intro-scheduled-workflow-starter.md)", 
-        "[View Solution](./labs/intro-scheduled-workflow-solution.md)", 
+        "[Scheduled Workflow](./labs/intro/intro-scheduled-workflow-lab.md)", 
+        "[Start Here](./labs/intro/intro-scheduled-workflow-starter.md)", 
+        "[View Solution](./labs/intro/intro-scheduled-workflow-solution.md)", 
         "[![Intro - Scheduled Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-scheduled-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-scheduled-workflow.yml)"
     ),
     (
-        "[YAML Syntax](./labs/intro-yaml-syntax-lab.md)", 
-        "[Start Here](./labs/intro-yaml-syntax-starter.md)", 
-        "[View Solution](./labs/intro-yaml-syntax-solution.md)", 
+        "[YAML Syntax](./labs/intro/intro-yaml-syntax-lab.md)", 
+        "[Start Here](./labs/intro/intro-yaml-syntax-starter.md)", 
+        "[View Solution](./labs/intro/intro-yaml-syntax-solution.md)", 
         "[![Intro - YAML Syntax](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-yaml-syntax.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-yaml-syntax.yml)"
     ),
     (
@@ -48,13 +48,13 @@ data = [
         ""
     ),
     (
-        "[Disabling a Workflow](./labs/disabling-a-workflow-lab.md)", 
+        "[Disabling a Workflow](./labs/misc/disabling-a-workflow-lab.md)", 
         "N/A", 
         "N/A", 
         "N/A"
     ),
     (
-        "[Displaying Workflow Status Badge](./labs/displaying-workflow-status-badge-lab.md)", 
+        "[Displaying Workflow Status Badge](./labs/misc/displaying-workflow-status-badge-lab.md)", 
         "N/A", 
         "N/A", 
         "N/A"
@@ -66,21 +66,21 @@ data = [
         ""
     ),
     (
-        "[Environment Variables and Secrets](./labs/env-var-secrets-lab.md)", 
-        "[Start Here](./labs/env-var-secrets-starter.md)", 
-        "[View Solution](./labs/env-var-secrets-solution.md)", 
+        "[Environment Variables and Secrets](./labs/env/env-var-secrets-lab.md)", 
+        "[Start Here](./labs/env/env-var-secrets-starter.md)", 
+        "[View Solution](./labs/env/env-var-secrets-solution.md)", 
         "[![Environment Variables and Secrets](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-secrets.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-secrets.yml)"
     ),
     (
-        "[Environment Variables Scope](./labs/env-var-scope-lab.md)", 
-        "[Start Here](./labs/env-var-scope-starter.md)", 
-        "[View Solution](./labs/env-var-scope-solution.md)", 
+        "[Environment Variables Scope](./labs/env/env-var-scope-lab.md)", 
+        "[Start Here](./labs/env/env-var-scope-starter.md)", 
+        "[View Solution](./labs/env/env-var-scope-solution.md)", 
         "[![Environment Variables Scope](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-scope.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-scope.yml)"
     ),
     (
-        "[Environment Variables List](./labs/env-var-list-lab.md)", 
-        "[Start Here](./labs/env-var-list-starter.md)", 
-        "[View Solution](./labs/env-var-list-solution.md)", 
+        "[Environment Variables List](./labs/env/env-var-list-lab.md)", 
+        "[Start Here](./labs/env/env-var-list-starter.md)", 
+        "[View Solution](./labs/env/env-var-list-solution.md)", 
         "[![Environment Variables List](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-list.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-list.yml)"
     ),
     (
@@ -89,7 +89,18 @@ data = [
         "",
         ""
     ),
-        
+    (
+        "[Create ASP.NET Web App](./labs/aspnet-webapp/create-aspnet-webapp-lab.md)", 
+        "N/A", 
+        "N/A", 
+        "N/A"
+    ),
+    (
+        "[ASP.NET Web App Build Ubuntu Runner](./labs/aspnet-webapp/build-ubuntu-runner-lab.md)", 
+        "[Start Here](./labs/aspnet-webapp/build-ubuntu-runner-starter.md)", 
+        "[View Solution](./labs/aspnet-webapp/build-ubuntu-runner-solution.md)", 
+        "[![Environment Variables List](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-build-ubuntu-runner.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-build-ubuntu-runner.yml)"
+    ),    
 ]
 
 # Generate the markdown table header with renamed 'Status' column
