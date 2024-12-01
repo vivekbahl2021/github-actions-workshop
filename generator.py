@@ -144,10 +144,10 @@ data = [
         "[![ASP.NET Web App Upload Download Artifact Multiple OS](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-upload-download-artifact-multiple-os.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-upload-download-artifact-multiple-os.yml)"
     ),
     (
-        "N/A",
-        "N/A", 
-        "N/A", 
-        "N/A"
+        "",  # This row will be a blank row (no ID, no content)
+        "",
+        "",
+        ""
     ),
     (
         "[Create ASP.NET Web Api](./labs/create-aspnet-webapi.md)", 
