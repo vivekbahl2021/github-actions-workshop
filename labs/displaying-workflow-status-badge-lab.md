@@ -1,4 +1,4 @@
-# Display Workflow Status Badge
+# Display Workflow Status Badge Lab
 
 ## Introduction
 
@@ -49,7 +49,7 @@ In this section, you will learn how to display the workflow status badge on the 
 ```markdown
 # GitHub Actions Workshop
 
-[![Simple Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/simple-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/simple-workflow.yml)
+[![Intro - Simple Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-simple-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-simple-workflow.yml)
 
 ## About
 
@@ -58,7 +58,7 @@ GitHub Actions Workshop is designed to help you get started with GitHub Actions 
 
 Here’s an example of what a workflow badge might look like in a `README.md`:
 
-[![Simple Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/simple-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/simple-workflow.yml)
+[![Intro - Simple Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-simple-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-simple-workflow.yml)
 
 The badge will automatically update whenever the workflow runs, showing the latest status.
 

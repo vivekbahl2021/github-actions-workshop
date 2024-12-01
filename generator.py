@@ -42,7 +42,19 @@ data = [
         "[![Intro - YAML Syntax](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-yaml-syntax.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-yaml-syntax.yml)"
     ),
     (
+        "",  # This row will be a blank row (no ID, no content)
+        "",
+        "",
+        ""
+    ),
+    (
         "[Disabling a Workflow](./labs/disabling-a-workflow-lab.md)", 
+        "N/A", 
+        "N/A", 
+        "N/A"
+    ),
+    (
+        "[Displaying Workflow Status Badge](./labs/displaying-workflow-status-badge-lab.md)", 
         "N/A", 
         "N/A", 
         "N/A"
@@ -70,6 +82,12 @@ data = [
         "[Start Here](./labs/env-var-list-starter.md)", 
         "[View Solution](./labs/env-var-list-solution.md)", 
         "[![Environment Variables List](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-list.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-list.yml)"
+    ),
+    (
+        "",  # This row will be a blank row (no ID, no content)
+        "",
+        "",
+        ""
     ),
         
 ]
