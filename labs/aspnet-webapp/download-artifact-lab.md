@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn how to upload and download artifacts in GitHub Actions workflow. You will create a simple workflow that builds a .NET Core application and uploads the build artifact to GitHub. You will then extend the workflow to download the artifact and display the contents.
+In this lab, you will learn how to upload and download artifact in GitHub Actions workflow. You will create a simple workflow that builds a .NET Core application and uploads the build artifact to GitHub. You will then extend the workflow to download the artifact and display the contents.
 
 > Duration: 20-30 minutes
 
@@ -16,14 +16,14 @@ Create a new Web App by following the instructions in the [Create a Web App](./c
 
 2. Open the existing directory `.github/workflows` in the root of the project.
 
-3. Create a new file named `webapp-build-upload-download-artifacts.yml` and provide workflow name and event trigger information as shown below.
+3. Create a new file named `webapp-build-upload-download-artifact.yml` and provide workflow name and event trigger information as shown below.
 
    ```yaml
    name: WebApp Build
    on:
      push:
        paths:
-         - '.github/workflows/webapp-build-upload-download-artifacts.yml'
+         - '.github/workflows/webapp-build-upload-download-artifact.yml'
          - 'src/dotnet/WebApp/**'
      workflow_dispatch:
    ```
@@ -50,16 +50,16 @@ Create a new Web App by following the instructions in the [Create a Web App](./c
            run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}/webapp"
    ```
 
-5. Add a new step to upload the artifacts.
+5. Add a new step to upload the artifact.
 
    ```yaml
-   - name: Upload artifacts
+   - name: Upload artifact
      uses: actions/upload-artifact@v2
      with:
-       name: webapp-artifacts
+       name: webapp-artifact
    ```
 
-6. Add a new job to download the artifacts and display the contents.
+6. Add a new job to download the artifact and display the contents.
 
    ```yaml
    download:
@@ -88,7 +88,7 @@ Create a new Web App by following the instructions in the [Create a Web App](./c
 
 ## Summary
 
-In this lab, you learned how to upload and download artifacts in GitHub Actions workflow. You created a simple workflow that builds a .NET Core application and uploads the build artifact to GitHub. You then extended the workflow to download the artifact and display the contents.
+In this lab, you learned how to upload and download artifact in GitHub Actions workflow. You created a simple workflow that builds a .NET Core application and uploads the build artifact to GitHub. You then extended the workflow to download the artifact and display the contents.
 
 ## Additional Resources
 

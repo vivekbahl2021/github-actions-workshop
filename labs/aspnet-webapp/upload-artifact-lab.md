@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will create a GitHub Actions workflow to upload artifacts generated during the build process of an ASP.NET Web Application. This lab demonstrates the use of the `actions/upload-artifact` action to store build outputs for later use.
+In this lab, you will create a GitHub Actions workflow to upload artifact generated during the build process of an ASP.NET Web Application. This lab demonstrates the use of the `actions/upload-artifact` action to store build outputs for later use.
 
 > **Duration**: 15-20 minutes
 
@@ -13,7 +13,7 @@ In this lab, you will create a GitHub Actions workflow to upload artifacts gener
 Before starting this lab, ensure that:
 
 1. You have completed the [ASP.NET Web App Build with Ubuntu Runner](./build-ubuntu-runner-lab.md) lab.
-2. The **ASP.NET Web App Build on Ubuntu Runner Workflow** is functional and capable of generating build artifacts.
+2. The **ASP.NET Web App Build on Ubuntu Runner Workflow** is functional and capable of generating build artifact.
 
 Refer to the [ASP.NET Web App Upload Artifact Starter](./upload-artifact-starter.md) file for the initial workflow content.
 
@@ -23,7 +23,7 @@ Refer to the [ASP.NET Web App Upload Artifact Starter](./upload-artifact-starter
 
 ### Step 1: Create a YAML Workflow Using the Starter File
 
-1. Refer to the [**ASP.NET Web App Upload Artifact Starter File**](./upload-artifacts-starter.md).
+1. Refer to the [**ASP.NET Web App Upload Artifact Starter File**](./upload-artifact-starter.md).
 2. Copy the content of the starter file:
 
    ```yaml
@@ -58,7 +58,7 @@ Refer to the [ASP.NET Web App Upload Artifact Starter](./upload-artifact-starter
            run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}/webapp"
    ```
 
-3. In your repository, create a new workflow file under `.github/workflows` and name it `aspnet-webapp-upload-artifacts.yml`.
+3. In your repository, create a new workflow file under `.github/workflows` and name it `aspnet-webapp-upload-artifact.yml`.
 4. Paste the copied content into the new file.
 5. Commit and push the changes to your repository.
 
@@ -66,8 +66,8 @@ Refer to the [ASP.NET Web App Upload Artifact Starter](./upload-artifact-starter
 
 ### Step 2: Add the Upload Artifact Step
 
-1. Open the `aspnet-webapp-build-upload-artifacts.yml` file in your repository.
-2. Add a step to upload the generated artifacts after the `Publish Code` step. Update the `jobs` section to include the following:
+1. Open the `aspnet-webapp-build-upload-artifact.yml` file in your repository.
+2. Add a step to upload the generated artifact after the `Publish Code` step. Update the `jobs` section to include the following:
 
    ```yaml
    - name: Upload Artifact
@@ -84,7 +84,7 @@ Refer to the [ASP.NET Web App Upload Artifact Starter](./upload-artifact-starter
 
 ### Step 3: Verify the Complete Workflow File
 
-Ensure your `aspnet-webapp-upload-artifacts.yml` file matches the following:
+Ensure your `aspnet-webapp-upload-artifact.yml` file matches the following:
 
 ```yaml
 name: ASP.NET Web App - Upload Artifact
@@ -92,7 +92,7 @@ name: ASP.NET Web App - Upload Artifact
 on:
   push:
     paths:
-      - '.github/workflows/aspnet-webapp-upload-artifacts.yml'
+      - '.github/workflows/aspnet-webapp-upload-artifact.yml'
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 
@@ -128,8 +128,8 @@ jobs:
 
 ### Step 4: Commit and Push the Workflow File
 
-1. Save the changes to the `aspnet-webapp-upload-artifacts.yml` file.
-2. Commit the updated file with a descriptive message, e.g., `"Added workflow for uploading build artifacts"`.
+1. Save the changes to the `aspnet-webapp-upload-artifact.yml` file.
+2. Commit the updated file with a descriptive message, e.g., `"Added workflow for uploading build artifact"`.
 3. Push the changes to your repository.
 
 ---
@@ -152,7 +152,7 @@ jobs:
 
 ## Summary
 
-In this lab, you extended the ASP.NET Web App build workflow to upload artifacts using the `actions/upload-artifact` action. You learned how to configure and trigger a new workflow for uploading build outputs and verified the artifacts in GitHub Actions.
+In this lab, you extended the ASP.NET Web App build workflow to upload artifact using the `actions/upload-artifact` action. You learned how to configure and trigger a new workflow for uploading build outputs and verified the artifact in GitHub Actions.
 
 ---
 

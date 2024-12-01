@@ -6,7 +6,7 @@ name: ASP.NET Web App Upload Artifact
 on:
   push:
     paths:
-      - '.github/workflows/aspnet-webapp-upload-artifacts.yml'
+      - '.github/workflows/aspnet-webapp-upload-artifact.yml'
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 

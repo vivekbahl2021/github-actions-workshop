@@ -88,7 +88,7 @@ Ah, I see! You're asking to use the same format from the **"YAML Syntax Starter 
    - **Checkout code**: This step uses the `actions/checkout` action to retrieve the latest code from the repository.
    - **Set up .NET Core**: The `actions/setup-dotnet` action installs the required version of the .NET SDK (`8.x` in this case) to the runner.
    - **Build code**: This step compiles the application using `dotnet build` in **Release** configuration.
-   - **Publish code**: This step runs `dotnet publish` to generate the application's publish-ready artifacts, storing the output in a temporary directory.
+   - **Publish code**: This step runs `dotnet publish` to generate the application's publish-ready artifact, storing the output in a temporary directory.
 
 ---
 

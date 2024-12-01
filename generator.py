@@ -131,6 +131,12 @@ data = [
         "[View Solution](./labs/aspnet-webapp/upload-artifact-solution.md)", 
         "[![ASP.NET Web App Upload Artifact](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-upload-artifact.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-upload-artifact.yml)"
     ),    
+    (
+        "[ASP.NET Web App Download Artifact](./labs/aspnet-webapp/download-artifact-lab.md)", 
+        "[Start Here](./labs/aspnet-webapp/download-artifact-starter.md)", 
+        "[View Solution](./labs/aspnet-webapp/download-artifact-solution.md)", 
+        "[![ASP.NET Web App Download Artifact](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-download-artifact.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-download-artifact.yml)"
+    ),    
 ]
 
 # Generate the markdown table header with renamed 'Status' column

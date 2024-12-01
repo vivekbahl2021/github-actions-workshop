@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn how to create a GitHub Actions workflow that uploads and downloads artifacts on multiple operating systems. You will create a workflow that builds a .NET Core application and uploads the build artifacts for Windows, Ubuntu, and macOS. You will then create a workflow that downloads the artifacts and displays the contents of the artifacts.
+In this lab, you will learn how to create a GitHub Actions workflow that uploads and downloads artifact on multiple operating systems. You will create a workflow that builds a .NET Core application and uploads the build artifact for Windows, Ubuntu, and macOS. You will then create a workflow that downloads the artifact and displays the contents of the artifact.
 
 > Duration: 30-45 minutes
 
@@ -110,13 +110,13 @@ Create a new Web App by following the instructions in the [Create a Web App](./c
 
 8. Click on the `Upload and Download Artifact on Multiple Operating Systems` workflow and click on the `Run workflow` button.
 
-9. Once the workflow is complete, notice that the artifacts are uploaded and downloaded for Windows, Ubuntu, and macOS.
+9. Once the workflow is complete, notice that the artifact are uploaded and downloaded for Windows, Ubuntu, and macOS.
 
 10. Click on the `Download Artifact` job to view the details.
 
 ## Summary
 
-In this lab, you learned how to create a GitHub Actions workflow that uploads and downloads artifacts on multiple operating systems. You created a workflow that builds a .NET Core application and uploads the build artifacts for Windows, Ubuntu, and macOS. You then created a workflow that downloads the artifacts and displays the contents of the artifacts.
+In this lab, you learned how to create a GitHub Actions workflow that uploads and downloads artifact on multiple operating systems. You created a workflow that builds a .NET Core application and uploads the build artifact for Windows, Ubuntu, and macOS. You then created a workflow that downloads the artifact and displays the contents of the artifact.
 
 ## Additional Resources
 
