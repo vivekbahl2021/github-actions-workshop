@@ -16,10 +16,6 @@ Before starting this lab, ensure that you have completed the [Create ASP.NET Web
 
 ## Instructions
 
-Ah, I see! You're asking to use the same format from the **"YAML Syntax Starter File"** instructions for **Step 1** in the lab you mentioned earlier. Here's the updated version of **Step 1** in the format you've requested:
-
----
-
 ### Step 1: Create a YAML Workflow Using the Starter File
 
 1. Refer to the [**ASP.NET Web App Build on Ubuntu Runner Starter File**](./build-self-hosted-runner-starter.md).

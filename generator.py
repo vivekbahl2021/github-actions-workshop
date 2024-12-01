@@ -154,7 +154,13 @@ data = [
         "N/A", 
         "N/A", 
         "N/A"
-    ),    
+    ),
+    (
+        "[ASP.NET Web Api Build](./labs/aspnet-webapi/build-lab.md)", 
+        "N/A",
+        "[View Solution](./labs/aspnet-webapi/build-solution.md)", 
+        "[![ASP.NET Web Api Build](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapi-build.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapi-build.yml)"
+    ),        
 ]
 
 # Generate the markdown table header with renamed 'Status' column

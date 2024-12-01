@@ -1,9 +1,9 @@
-name: ASP.NET Weather Web Api Publish Docker Image
+name: ASP.NET Web Api Publish Docker Image
 on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/aspnet-weather-webapi-publish-docker-image.yml'
+      - '.github/workflows/aspnet-webapi-publish-docker-image.yml'
       - 'src/dotnet/Weather.WebApi/**'
 
 env:

@@ -1,9 +1,9 @@
-name: ASP.NET Weather Web Api Publish GitHub Package
+name: ASP.NET Web Api Publish GitHub Package
 on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/aspnet-weather-webapi-publish-github-package.yml'
+      - '.github/workflows/aspnet-webapi-publish-github-package.yml'
       - 'src/dotnet/Weather.WebApi/**'
 
 env:
