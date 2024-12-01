@@ -42,6 +42,12 @@ data = [
         "[![Intro - YAML Syntax](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-yaml-syntax.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/intro-yaml-syntax.yml)"
     ),
     (
+        "[Disabling a Workflow](./labs/disabling-a-workflow.md)", 
+        "N/A", 
+        "N/A", 
+        "N/A"
+    ),
+    (
         "",  # This row will be a blank row (no ID, no content)
         "",
         "",

@@ -1,4 +1,4 @@
-# Display Environment Variables
+# List Environment Variables Lab
 
 ## Introduction
 
@@ -8,7 +8,7 @@ GitHub Actions allows you to display environment variables in the logs. This can
 
 ## Instructions
 
-1. Create a new workflow file called `display-environment-variables.yml` in the `.github/workflows` directory.
+1. Create a new workflow file called `env-var-list.yml` in the `.github/workflows` directory.
 2. Edit the file and copy the following YAML content:
 
    ```YAML
@@ -44,37 +44,7 @@ GitHub Actions allows you to display environment variables in the logs. This can
 8. Click on the `Display Environment Variables` job to see the environment variables for the Linux, MacOS and Windows operating systems.
 9. Review the environment variables displayed in the logs.
 10. Note that there are few operating system specific environment variables that are displayed and some common environment variables that are displayed across all operating systems.
-
-## Lab Solution
-
-The complete solution is provided below.
-
-```YAML
-  name: Display Environment Variables
-
-  on:
-  workflow_dispatch:
-
-  jobs:
-  ubuntu:
-      runs-on: ubuntu-latest
-      steps:
-      - name: Display Environment Variables
-          run: printenv | sort
-  mac:
-      runs-on: macos-latest
-      steps:
-      - name: Display Environment Variables
-          run: printenv | sort
-  windows:
-      runs-on: windows-latest
-      steps:
-      - name: Display Environment Variables
-          run: printenv | sort
-          shell: bash
-```
-
-Additionally, you can also use matrix strategy to run the same job across multiple operating systems. The matrix strategy allows you to run the same job across multiple operating systems in parallel. The matrix strategy is useful when you want to test your code across multiple operating systems.
+11. Additionally, you can also use matrix strategy to run the same job across multiple operating systems. The matrix strategy allows you to run the same job across multiple operating systems in parallel. The matrix strategy is useful when you want to test your code across multiple operating systems.
 
 ```YAML
 name: Display Environment Variables

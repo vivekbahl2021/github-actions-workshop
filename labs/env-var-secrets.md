@@ -1,4 +1,4 @@
-# Environments, Variables and Secrets
+# Environments, Variables and Secrets Lab
 
 ## Introduction
 
