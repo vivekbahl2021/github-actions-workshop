@@ -1,8 +1,10 @@
 name: ASP.NET Web App Deploy
 on:
   push:
-    branches:
-      - main
+    paths:
+      - '.github/workflows/aspnet-webapp-deploy.yml'
+      - 'src/dotnet/WebApp/**'
+
 env:
   AZURE_WEBAPP_NAME: github-actions-workshop-aspnet-webapp
   AZURE_WEBAPP_PACKAGE_PATH: ./published
