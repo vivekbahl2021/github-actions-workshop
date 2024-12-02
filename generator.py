@@ -216,9 +216,9 @@ data = [
         ""
     ),
     (
-        "[Introduction to Reusable Workflows](./labs/reusable-workflow-lab.md)", 
+        "[Introduction to Reusable Workflows](./labs/reusable-workflow/reusable-workflow-lab.md)", 
         "N/A", 
-        "[View Solution](./labs/reusable-workflow-solution.md)", 
+        "[View Solution](./labs/reusable-workflow/reusable-workflow-solution.md)", 
         "[![Reusable Workflow Echo Caller](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/reusable-workflow-echo-caller.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/reusable-workflow-echo-caller.yml)"
     ),
     (
