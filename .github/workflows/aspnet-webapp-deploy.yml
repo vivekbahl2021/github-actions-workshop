@@ -18,6 +18,10 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: ${{ env.DOTNET_CORE_VERSION }}
+      - name: Verify Working Directory
+        run: |
+          echo "Current Directory: $(pwd)"
+          ls ${{ env.WORKING_DIRECTORY }}
       - name: Build
         run: dotnet build "${{ env.WORKING_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --no-restore
       - name: Publish
