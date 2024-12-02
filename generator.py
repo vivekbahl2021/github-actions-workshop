@@ -216,6 +216,18 @@ data = [
         ""
     ),
     (
+        "[Introduction to Reusable Workflows](./labs/reusable-workflow-lab.md)", 
+        "N/A", 
+        "[View Solution](./labs/reusable-workflow-solution.md)", 
+        "[![Reusable Workflow Echo Caller](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/reusable-workflow-echo-caller.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/reusable-workflow-echo-caller.yml)"
+    ),
+    (
+        "",  # This row will be a blank row (no ID, no content)
+        "",
+        "",
+        ""
+    ),
+    (
         "[ASP.NET Web App Deploy to Azure](./labs/aspnet-webapp/deploy-to-azure-lab.md)", 
         "N/A", 
         "[View Solution](./labs/aspnet-webapp/deploy-to-azure-solution.md)", 
