@@ -159,7 +159,3 @@ In the next lab, you will add advanced deployment steps and explore reusable wor
 
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - [Azure App Service Documentation](https://learn.microsoft.com/en-us/azure/app-service/)
-
----
-
-This update reflects the changes in the workflow file and ensures all steps are aligned with the current setup.
