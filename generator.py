@@ -207,7 +207,7 @@ data = [
         "[React Tic Tac Toe CI/CD](./labs/react-tic-tac-toe/react-tic-tac-toe-ci-cd-lab.md)", 
         "N/A", 
         "[View Solution](./labs/react-tic-tac-toe/react-tic-tac-toe-ci-cd-solution.md)", 
-        "[![Python Upper App CI/CD](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/python-upper-app-ci-cd.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/python-upper-app-ci-cd.yml)"
+        "[![React Tic-Tac-Toe CI/CD](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/react-tic-tac-toe-ci-cd.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/react-tic-tac-toe-ci-cd.yml)"
     ),
     (
         "",  # This row will be a blank row (no ID, no content)
