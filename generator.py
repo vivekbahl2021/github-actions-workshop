@@ -179,6 +179,18 @@ data = [
         "",
         ""
     ),        
+    (
+        "[Python Upper App Overview](./labs/python-upper-app-overview.md)", 
+        "N/A", 
+        "N/A", 
+        "N/A"
+    ),
+    (
+        "[Python Upper App CI/CD](./labs/python-upper/python-upper-app-ci-cd-lab.md)", 
+        "N/A", 
+        "[View Solution](./labs/python-upper/python-upper-app-ci-cd-solution.md)", 
+        "N/A"
+    )
 ]
 
 # Generate the markdown table header with renamed 'Status' column
