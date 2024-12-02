@@ -1,4 +1,7 @@
-name: React Tic-Tac-Toe CI/CD with Caching
+# React Tic-Tac-Toe CI / CD Workflow Solution
+
+```yaml
+name: React Tic-Tac-Toe CI/CD
 
 on:
   workflow_dispatch:
@@ -54,3 +57,4 @@ jobs:
           docker build -t ${{ env.DOCKER_IMAGE }}:$TAG -t ${{ env.DOCKER_IMAGE }}:latest .
           docker push ${{ env.DOCKER_IMAGE }}:$TAG
           docker push ${{ env.DOCKER_IMAGE }}:latest
+```

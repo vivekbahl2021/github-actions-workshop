@@ -190,7 +190,31 @@ data = [
         "N/A", 
         "[View Solution](./labs/python-upper/python-upper-app-ci-cd-solution.md)", 
         "[![Python Upper App CI/CD](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/python-upper-app-ci-cd.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/python-upper-app-ci-cd.yml)"
-    )
+    ),
+    (
+        "",  # This row will be a blank row (no ID, no content)
+        "",
+        "",
+        ""
+    ),        
+    (
+        "React Tic Tac Toe Game Live Demo", 
+        "N/A", 
+        "N/A", 
+        "N/A"
+    ),
+    (
+        "[React Tic Tac Toe CI/CD](./labs/react-tic-tac-toe/react-tic-tac-toe-ci-cd-lab.md)", 
+        "N/A", 
+        "[View Solution](./labs/react-tic-tac-toe/react-tic-tac-toe-ci-cd-solution.md)", 
+        "[![Python Upper App CI/CD](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/python-upper-app-ci-cd.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/python-upper-app-ci-cd.yml)"
+    ),
+    (
+        "",  # This row will be a blank row (no ID, no content)
+        "",
+        "",
+        ""
+    ),  
 ]
 
 # Generate the markdown table header with renamed 'Status' column
