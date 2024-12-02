@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v4.3.6
         with:
           name: aspnet-web-app # Artifact name
-          path: ${{runner.temp}}/aspnet-web-app
+          path: ${{ runner.temp }}/webapp
 
   deploy:
     runs-on: ubuntu-latest
