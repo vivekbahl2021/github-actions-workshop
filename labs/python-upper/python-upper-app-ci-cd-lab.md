@@ -15,7 +15,7 @@ This lab will guide you through creating a CI/CD pipeline for the Python Upper A
 
 ## Prerequisites
 
-Before starting this lab, ensure that you have read the [Python Upper App Overview](../python-upper-app-overview.md) to have your Python Upper App ready for this lab.
+Before starting this lab, ensure that you have read the [Python Upper App Overview](./python-upper-app-overview.md) to have your Python Upper App ready for this lab.
 
 ---
 

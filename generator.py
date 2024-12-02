@@ -90,7 +90,7 @@ data = [
         ""
     ),
     (
-        "[Create ASP.NET Web App](./labs/create-aspnet-webapp.md)", 
+        "[Create ASP.NET Web App](./labs/aspnet-webapp/create-aspnet-webapp.md)", 
         "N/A", 
         "N/A", 
         "N/A"
@@ -150,7 +150,7 @@ data = [
         ""
     ),
     (
-        "[Create ASP.NET Web API](./labs/create-aspnet-webapi.md)", 
+        "[Create ASP.NET Web API](./labs/aspnet-webapi/create-aspnet-webapi.md)", 
         "N/A", 
         "N/A", 
         "N/A"
@@ -180,7 +180,7 @@ data = [
         ""
     ),        
     (
-        "[Python Upper App Overview](./labs/python-upper-app-overview.md)", 
+        "[Python Upper App Overview](./labs/python-upper/python-upper-app-overview.md)", 
         "N/A", 
         "N/A", 
         "N/A"

@@ -10,7 +10,7 @@ In this lab, you will learn how to build a ASP.NET Web API using GitHub Actions.
 
 ## Prerequisites
 
-Before starting this lab, ensure that you have completed the [Create ASP.NET Web API](../create-aspnet-webapi.md) lab to have your ASP.NET Web API ready for this lab.
+Before starting this lab, ensure that you have completed the [Create ASP.NET Web API](./create-aspnet-webapi.md) lab to have your ASP.NET Web API ready for this lab.
 
 ---
 
