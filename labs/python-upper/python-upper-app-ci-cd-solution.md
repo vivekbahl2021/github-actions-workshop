@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
-        python-version: [3.8, 3.9, 3.10, 3.11]
+        python-version: ['3.10', '3.11']
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout Code
@@ -49,6 +49,17 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: upper-executable-${{ matrix.os }}
+          name: upper-executable-${{ matrix.os }}-${{ matrix.python-version }}
           path: src/python/upper_project/dist/*
+
+      - name: Test Executable
+        run: |
+          if [[ "$RUNNER_OS" == "Windows" ]]; then
+            ./dist/upper.exe Hello World
+          else
+            ./dist/upper Hello World
+          fi
+        working-directory: src/python/upper_project
+        shell: bash
+
 ```

@@ -189,7 +189,7 @@ data = [
         "[Python Upper App CI/CD](./labs/python-upper/python-upper-app-ci-cd-lab.md)", 
         "N/A", 
         "[View Solution](./labs/python-upper/python-upper-app-ci-cd-solution.md)", 
-        "N/A"
+        "[![Python Upper App CI/CD](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/python-upper-app-ci-cd.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/python-upper-app-ci-cd.yml)"
     )
 ]
 
