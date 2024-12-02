@@ -18,7 +18,7 @@ jobs:
         run: echo ${{ inputs.my-input }}
 ```
 
-## Echo Caller Workflow
+## Reusable Workflow Echo Caller
 
 ```yaml
 name: Reusable Workflow Echo Caller
@@ -29,8 +29,12 @@ on:
     paths:
       - '.github/workflows/reusable-workflow-echo-caller.yml'
 jobs:
-  call:
+  say-hello:
     uses: ./.github/workflows/reusable-workflow-echo.yml
     with:
       my-input: 'Hello, world!'
+  say-goodbye:
+    uses: ./.github/workflows/reusable-workflow-echo.yml
+    with:
+      my-input: 'Goodbye!'
 ```
