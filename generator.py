@@ -198,7 +198,7 @@ data = [
         ""
     ),        
     (
-        "React Tic Tac Toe Game Live Demo", 
+        "[Run React Tic Tac Toe Using Docker](./labs/react-tic-tac-toe/run-react-tic-tac-toe-using-docker.md)", 
         "N/A", 
         "N/A", 
         "N/A"
