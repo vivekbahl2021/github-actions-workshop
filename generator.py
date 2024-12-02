@@ -214,6 +214,12 @@ data = [
         "",
         "",
         ""
+    ),
+    (
+        "[ASP.NET Web App Deploy to Azure](./labs/aspnet-webapp/deploy-to-azure-lab.md)", 
+        "N/A", 
+        "[View Solution](./labs/aspnet-webapp/deploy-to-azure-solution.md)", 
+        "[![ASP.NET Web App Deploy to Azure](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-deploy-to-azure.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-deploy-to-azure.yml)"
     ),  
 ]
 
