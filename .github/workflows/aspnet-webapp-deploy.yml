@@ -14,7 +14,7 @@ jobs:
       run:
         working-directory: ./src/dotnet/WebApp
     steps:
-      - name: Checkout code
+      - name: checkout code
         uses: actions/checkout@v4.1.7
 
       - name: Set up .NET Core
@@ -31,25 +31,23 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4.3.6
         with:
-          name: aspnet-web-app # Artifact name
-          path: ${{ runner.temp }}/webapp # Correct path to the published web app
+          name: aspnet-web-app
+          path: ${{ runner.temp }}/webapp
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
     env:
-      package-name: aspnet-web-app
-      app-name: github-actions-workshop-aspnet-webapp # Your Azure App Service name
+      app-name: github-actions-workshop-aspnet-webapp # Azure App Service name
 
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4.1.8
         with:
-          name: aspnet-web-app # This should match the artifact name uploaded in the build job
+          name: aspnet-web-app # Ensure artifact name matches the one uploaded in the build job
 
-      - name: Set up Azure Web App Deploy Action
+      - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{ env.app-name }} # Name of your Azure Web App
-          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }} # Your Azure publish profile secret
-          package: ${{ runner.temp }}/aspnet-web-app # Path to the artifact generated from the build job
+          app-name: ${{ env.app-name }} # Azure Web App name
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }} # Azure publish profile secret
