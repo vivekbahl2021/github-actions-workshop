@@ -1,3 +1,6 @@
+# Publish ASP.NET Web API as a GitHub Package Solution
+
+```yaml
 name: ASP.NET Web API Publish GitHub Package
 on:
   workflow_dispatch:
@@ -50,3 +53,4 @@ jobs:
         run: |
           BRANCH_NAME=${{ github.ref_name}}
           docker push ${{ env.GITHUB_PACKAGE_NAME }}:$BRANCH_NAME
+```

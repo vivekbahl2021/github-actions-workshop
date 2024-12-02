@@ -1,8 +1,8 @@
-# ASP.NET Web Api Build Lab
+# ASP.NET Web API Build Lab
 
 ## Introduction
 
-In this lab, you will learn how to build a ASP.NET Web Api using GitHub Actions. You will create a workflow that builds the api on an Ubuntu runner.
+In this lab, you will learn how to build a ASP.NET Web API using GitHub Actions. You will create a workflow that builds the api on an Ubuntu runner.
 
 > **Duration**: 15-20 minutes
 
@@ -10,7 +10,7 @@ In this lab, you will learn how to build a ASP.NET Web Api using GitHub Actions.
 
 ## Prerequisites
 
-Before starting this lab, ensure that you have completed the [Create ASP.NET Web Api](../create-aspnet-webapi.md) lab to have your ASP.NET Web Api ready for this lab.
+Before starting this lab, ensure that you have completed the [Create ASP.NET Web API](../create-aspnet-webapi.md) lab to have your ASP.NET Web API ready for this lab.
 
 ---
 
@@ -28,7 +28,7 @@ Before starting this lab, ensure that you have completed the [Create ASP.NET Web
 1. In the `aspnet-webapi-build.yml` file, define the name of the workflow and the events that will trigger it. Use the following code to trigger the workflow on a push to specific files or manually using `workflow_dispatch`.
 
    ```yaml
-   name: ASP.NET Web Api Build
+   name: ASP.NET Web API Build
    on:
      workflow_dispatch:
      push:
@@ -100,4 +100,4 @@ Before starting this lab, ensure that you have completed the [Create ASP.NET Web
 
 ## Summary
 
-In this lab, you created a GitHub Actions workflow to build an ASP.NET Core Web Api using an Ubuntu runner. You used the `actions/setup-dotnet` action to install the necessary .NET Core SDK, then built and published the Api. Additionally, you learned how the workflow is structured, how it is triggered, and how to monitor the workflow runs in GitHub Actions.
+In this lab, you created a GitHub Actions workflow to build an ASP.NET Core Web API using an Ubuntu runner. You used the `actions/setup-dotnet` action to install the necessary .NET Core SDK, then built and published the API. Additionally, you learned how the workflow is structured, how it is triggered, and how to monitor the workflow runs in GitHub Actions.

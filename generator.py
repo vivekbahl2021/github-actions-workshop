@@ -150,16 +150,34 @@ data = [
         ""
     ),
     (
-        "[Create ASP.NET Web Api](./labs/create-aspnet-webapi.md)", 
+        "[Create ASP.NET Web API](./labs/create-aspnet-webapi.md)", 
         "N/A", 
         "N/A", 
         "N/A"
     ),
     (
-        "[ASP.NET Web Api Build](./labs/aspnet-webapi/build-lab.md)", 
+        "[ASP.NET Web API Build](./labs/aspnet-webapi/build-lab.md)", 
         "N/A",
         "[View Solution](./labs/aspnet-webapi/build-solution.md)", 
-        "[![ASP.NET Web Api Build](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapi-build.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapi-build.yml)"
+        "[![ASP.NET Web API Build](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapi-build.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapi-build.yml)"
+    ),        
+    (
+        "[Publish ASP.NET Web API as a Docker Image](./labs/aspnet-webapi/publish-docker-image-lab.md)", 
+        "N/A",
+        "[View Solution](./labs/aspnet-webapi/publish-docker-image-solution.md)", 
+        "[![ASP.NET Web API Publish Docker Image](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapi-publish-docker-image.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapi-publish-docker-image.yml)"
+    ),        
+    (
+        "[Publish ASP.NET Web API as a GitHub Package](./labs/aspnet-webapi/publish-github-package-lab.md)", 
+        "N/A",
+        "[View Solution](./labs/aspnet-webapi/publish-github-package-solution.md)", 
+        "[![ASP.NET Web API Publish GitHub Package](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapi-publish-github-package.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapi-publish-github-package.yml)"
+    ),
+    (
+        "",  # This row will be a blank row (no ID, no content)
+        "",
+        "",
+        ""
     ),        
 ]
 

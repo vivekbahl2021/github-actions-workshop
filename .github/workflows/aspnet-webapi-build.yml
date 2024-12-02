@@ -1,4 +1,4 @@
-name: ASP.NET Web Api Build
+name: ASP.NET Web API Build
 on:
   workflow_dispatch:
   push:

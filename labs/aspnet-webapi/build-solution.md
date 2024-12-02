@@ -1,7 +1,7 @@
-# ASP.NET Web Api Build Solution
+# ASP.NET Web API Build Solution
 
 ```yaml
-name: ASP.NET Web Api Build
+name: ASP.NET Web API Build
 on:
   workflow_dispatch:
   push:
