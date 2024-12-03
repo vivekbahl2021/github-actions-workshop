@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
+      - '.github/workflows/csharp-extension-methods-release-artifacts.yml'
       - 'src/dotnet/CSharp.ExtensionMethods/**'
 jobs:
   build:
