@@ -321,7 +321,7 @@ data = [
         "[Misc - Auto Comment on New Issues](./labs/misc/auto-comment-on-new-issues-lab.md)", 
         "N/A", 
         "[View Solution](./labs/misc/auto-comment-on-new-issues-solution.md)", 
-        "[![Misc - Git CLI Integration](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/misc-git-cli-integration.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/misc-git-cli-integration.yml)", 
+        "[![Misc - Auto Comment on New Issues](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/misc-auto-comment-on-new-issues.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/misc-auto-comment-on-new-issues.yml)", 
     ),    
 ]
 
