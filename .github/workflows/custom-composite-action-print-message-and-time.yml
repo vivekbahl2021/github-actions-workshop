@@ -13,7 +13,7 @@ jobs:
     steps:
       # Checkout the repository
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.1.7
 
       # Use the composite action
       - name: Run the custom composite action
