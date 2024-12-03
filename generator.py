@@ -287,6 +287,12 @@ data = [
         "N/A", 
         "N/A", 
     ),    
+    (
+        "[Custom JavaScript Action - ToDo Checker](./labs/custom-actions/todo-checker-javascript-action-lab.md)", 
+        "N/A", 
+        "[View Solution](./labs/custom-actions/todo-checker-javascript-action-solution.md)", 
+        "[![Custom JavaScript Action - TODO Checker](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-javascript-action-todo-checker.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-javascript-action-todo-checker.yml)", 
+    ),    
 ]
 
 # Generate the markdown table header with renamed 'Status' column
