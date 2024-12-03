@@ -15,6 +15,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4.1.7
 
+      - name: List the files in print-message-and-time-composite-action directory
+        run: ls -R .github/actions/print-message-and-time-composite-action
+
       # Use the composite action
       - name: Run the custom composite action
         uses: ./github/actions/print-message-and-time-composite-action
