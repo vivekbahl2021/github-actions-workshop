@@ -1,4 +1,4 @@
-# ASP.NET Web App Download Artifact Solution
+## Solution: ASP.NET Web App Download Artifact
 
 ```yaml
 name: ASP.NET Web App - Download Artifact

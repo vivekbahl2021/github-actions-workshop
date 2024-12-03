@@ -1,4 +1,4 @@
-# React Tic-Tac-Toe CI / CD Workflow Lab
+## Lab: React Tic-Tac-Toe CI / CD Workflow
 
 ## Introduction
 

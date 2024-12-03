@@ -1,4 +1,4 @@
-## ASP.NET Web App Build on Mac Runner Solution
+## Solution: ASP.NET Web App Build on Mac Runner
 
 ```yaml
 name: ASP.NET Web App Build on Ubuntu Runner

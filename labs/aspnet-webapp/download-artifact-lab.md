@@ -1,4 +1,4 @@
-# ASP.NET Web App Download Artifact Lab
+## Lab: ASP.NET Web App Download Artifact
 
 ## Introduction
 

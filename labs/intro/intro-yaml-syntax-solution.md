@@ -1,4 +1,4 @@
-# YAML Syntax Solution
+## Solution: YAML Syntax
 
 ```yaml
 name: YAML Syntax

@@ -1,4 +1,4 @@
-# Environment Variable Scope Solution
+## Solution: Environment Variable Scope
 
 ```yaml
 name: Env Var Scope

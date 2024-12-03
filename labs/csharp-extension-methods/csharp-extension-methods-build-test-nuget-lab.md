@@ -1,4 +1,4 @@
-# C# Extension Methods - Build, Test, and Publish NuGet Package
+## Lab: C# Extension Methods - Build, Test, and Publish NuGet Package
 
 This lab will show you how to create a GitHub Actions workflow to test a C# Extension Methods project, create a NuGet package, and publish it to both GitHub Packages and NuGet.org.
 

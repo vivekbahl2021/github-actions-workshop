@@ -1,4 +1,4 @@
-# Publish ASP.NET Web API as a GitHub Package Lab
+## Lab: Publish ASP.NET Web API as a GitHub Package
 
 ## Introduction
 
@@ -8,7 +8,7 @@ In this lab, you will learn how to publish an **ASP.NET Core Web API** as a Dock
 - Create a local Docker image.
 - Push the Docker image as a package to GitHub Container Registry.
 
-If you haven’t created the **ASP.NET Web API Project**, refer to the **[Create an ASP.NET Core Web API Project](./create-aspnet-webapi.md)** lab instructions before proceeding.
+If you haven’t created the **ASP.NET Web API Project**, refer to the **[Create an ASP.NET Core Web API Project](./create-aspnet-webapi-lab.md)** lab instructions before proceeding.
 
 > **Duration**: 30–40 minutes
 

@@ -1,4 +1,4 @@
-# Create an ASP.NET Core Web API Project
+## Lab: Create an ASP.NET Core Web API Project
 
 ## Introduction
 

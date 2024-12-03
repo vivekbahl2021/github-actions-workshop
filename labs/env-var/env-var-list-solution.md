@@ -1,4 +1,4 @@
-# Environment Variable List Solution
+## Solution: Environment Variable List
 
 ```yaml
 name: Env Var List

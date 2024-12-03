@@ -1,4 +1,4 @@
-# Python Upper App CI/CD Solution
+## Solution: Python Upper App CI/CD
 
 ```yaml
 name: Python Upper App CI/CD

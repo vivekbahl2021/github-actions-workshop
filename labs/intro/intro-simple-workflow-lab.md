@@ -1,4 +1,4 @@
-# Simple Workflow Lab
+## Lab: Simple Workflow
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# GitHub CLI Integration
+# Lab: GitHub CLI Integration
 
 ## Introduction
 

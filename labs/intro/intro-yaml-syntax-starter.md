@@ -1,4 +1,4 @@
-# YAML Syntax Starter File
+## Starter File: YAML Syntax
 
 ```yaml
 name: Intro - YAML Syntax

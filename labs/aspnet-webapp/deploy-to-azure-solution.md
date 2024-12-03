@@ -1,4 +1,4 @@
-# ASP.NET Web App Deploy to Azure Solution
+## Solution: ASP.NET Web App Deploy to Azure
 
 ```yaml
 name: ASP.NET Web App Deploy to Azure

@@ -1,4 +1,4 @@
-# Introduction to Reusable Workflows
+## Lab: Introduction to Reusable Workflows
 
 ---
 

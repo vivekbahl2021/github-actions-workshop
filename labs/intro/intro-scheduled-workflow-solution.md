@@ -1,4 +1,4 @@
-## Scheduled Workflow Solution
+## Solution: Scheduled Workflow
 
 ```yaml
 name: Intro - Scheduled Workflow

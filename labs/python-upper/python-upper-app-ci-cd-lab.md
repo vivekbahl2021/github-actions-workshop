@@ -1,4 +1,4 @@
-# Python Upper App CI/CD Lab
+## Lab: Python Upper App CI/CD
 
 This lab will guide you through creating a CI/CD pipeline for the Python Upper App using GitHub Actions. The pipeline tests the app and packages it into platform-specific executables for Windows, macOS, and Linux.
 

@@ -1,4 +1,4 @@
-## ASP.NET Web App Build on Windows Runner Solution
+## Solution: ASP.NET Web App Build on Windows Runner
 
 ```yaml
 name: ASP.NET Web App Build on Windows Runner

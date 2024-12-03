@@ -1,6 +1,6 @@
 data = [
     (
-        "[Create Repository Using Template Repository](./labs/create-repository-using-template-repository.md)", 
+        "[Create Repository Using Template Repository](./labs/create-repository-using-template-repository-lab.md)", 
         "N/A", 
         "N/A", 
         "N/A"
@@ -90,7 +90,7 @@ data = [
         ""
     ),
     (
-        "[Create ASP.NET Web App](./labs/aspnet-webapp/create-aspnet-webapp.md)", 
+        "[Create ASP.NET Web App](./labs/aspnet-webapp/create-aspnet-webapp-lab.md)", 
         "N/A", 
         "N/A", 
         "N/A"
@@ -114,7 +114,7 @@ data = [
         "[![ASP.NET Web App Build Mac Runner](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-build-mac-runner.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-build-mac-runner.yml)"
     ),
     (
-        "[Create Self Hosted Runner](./labs/create-self-hosted-runner.md)", 
+        "[Create Self Hosted Runner](./labs/create-self-hosted-runner-lab.md)", 
         "N/A", 
         "N/A", 
         "N/A"
@@ -150,7 +150,7 @@ data = [
         ""
     ),
     (
-        "[Create ASP.NET Web API](./labs/aspnet-webapi/create-aspnet-webapi.md)", 
+        "[Create ASP.NET Web API](./labs/aspnet-webapi/create-aspnet-webapi-lab.md)", 
         "N/A", 
         "N/A", 
         "N/A"
@@ -208,6 +208,18 @@ data = [
         "N/A", 
         "[View Solution](./labs/react-tic-tac-toe/react-tic-tac-toe-ci-cd-solution.md)", 
         "[![React Tic-Tac-Toe CI/CD](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/react-tic-tac-toe-ci-cd.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/react-tic-tac-toe-ci-cd.yml)"
+    ),
+    (
+        "",  # This row will be a blank row (no ID, no content)
+        "",
+        "",
+        ""
+    ),
+    (
+        "[Build and Publish CSharp.ExtensionMethods as a Nuget package ](./labs/csharp-extension-methods/csharp-extension-methods-build-test-nuget.md)", 
+        "N/A", 
+        "[View Solution](./labs/csharp-extension-methods/csharp-extension-methods-build-test-nuget-solution.md)", 
+        "[![CSharp Extension Methods Build - Test - NuGet](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/csharp-extension-methods-build-test-nuget.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/csharp-extension-methods-build-test-nuget.yml)"
     ),
     (
         "",  # This row will be a blank row (no ID, no content)

@@ -1,4 +1,4 @@
-## ASP.NET Web App Build on Ubuntu Runner Solution
+## Solution: ASP.NET Web App Build on Ubuntu Runner
 
 ```yaml
 name: ASP.NET Web App Build on Ubuntu Runner

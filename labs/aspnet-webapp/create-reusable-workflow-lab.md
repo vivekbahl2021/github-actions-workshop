@@ -1,4 +1,4 @@
-# Creating a Reusable Workflow Lab
+## Lab: Creating a Reusable Workflow
 
 ## Objective
 

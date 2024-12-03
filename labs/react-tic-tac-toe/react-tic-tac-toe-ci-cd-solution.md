@@ -1,4 +1,4 @@
-# React Tic-Tac-Toe CI / CD Workflow Solution
+## Solution: React Tic-Tac-Toe CI / CD Workflow
 
 ```yaml
 name: React Tic-Tac-Toe CI/CD

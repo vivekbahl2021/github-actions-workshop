@@ -1,4 +1,4 @@
-# List Environment Variables Lab
+## Lab: List Environment Variables
 
 ## Introduction
 

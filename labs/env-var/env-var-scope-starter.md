@@ -1,4 +1,4 @@
-# Environment Variable Scope Starter File
+## Starter File: Environment Variable Scope
 
 ```yaml
 name: Env Var Scope

@@ -1,4 +1,4 @@
-# Disabling a Workflow Lab
+## Lab: Disabling a Workflow
 
 ## Introduction
 

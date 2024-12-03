@@ -1,4 +1,4 @@
-# Display Workflow Status Badge Lab
+## Lab: Display Workflow Status Badge
 
 ## Introduction
 

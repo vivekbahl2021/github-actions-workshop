@@ -1,4 +1,4 @@
-# Auto Comment on New Issue Using GitHub Script
+## Lab: Auto Comment on New Issue Using GitHub Script
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-## ASP.NET Web App Build on Self Hosted Runner Solution
+## Solution: ASP.NET Web App Build on Self Hosted Runner
 
 ```yaml
 name: ASP.NET Web App Build on Windows Runner

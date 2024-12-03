@@ -1,4 +1,4 @@
-# YAML Syntax Lab
+## Lab: YAML Syntax
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Publish ASP.NET Web API as a Docker Image Solution
+## Solution: Publish ASP.NET Web API as a Docker Image
 
 ```yaml
 name: ASP.NET Web API Publish Docker Image

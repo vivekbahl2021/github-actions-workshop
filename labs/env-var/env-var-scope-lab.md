@@ -1,4 +1,4 @@
-# Environment Variable Scope Lab
+## Lab: Environment Variable Scope
 
 ## Introduction
 

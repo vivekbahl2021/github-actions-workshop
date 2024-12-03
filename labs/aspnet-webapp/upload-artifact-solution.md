@@ -1,4 +1,4 @@
-## ASP.NET Web App Upload Artifact Solution
+## Solution: ASP.NET Web App Upload Artifact
 
 ```yaml
 name: ASP.NET Web App - Upload Artifact

@@ -1,4 +1,4 @@
-# Create ASP.NET Web App
+## Lab: Create ASP.NET Web App
 
 ## Introduction
 

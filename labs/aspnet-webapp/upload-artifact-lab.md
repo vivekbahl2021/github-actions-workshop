@@ -1,4 +1,4 @@
-# ASP.NET Web App Upload Artifact Lab
+## Lab: ASP.NET Web App Upload Artifact
 
 ## Introduction
 

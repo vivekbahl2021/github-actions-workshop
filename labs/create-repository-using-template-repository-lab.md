@@ -1,4 +1,4 @@
-# Create Repository Using Template Repository
+## Lab: Create Repository Using Template Repository
 
 ## Introduction
 

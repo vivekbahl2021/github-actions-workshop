@@ -1,4 +1,4 @@
-# Environment Variables and Secrets Solution
+## Solution: Environment Variables and Secrets
 
 ```yaml
 name: Env Var and Secrets

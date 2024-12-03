@@ -1,4 +1,4 @@
-# Creating a Shared Workflow for Deploying an ASP.NET Web App to Azure Lab
+## Lab: Creating a Shared Workflow for Deploying an ASP.NET Web App to Azure
 
 ## Objective
 

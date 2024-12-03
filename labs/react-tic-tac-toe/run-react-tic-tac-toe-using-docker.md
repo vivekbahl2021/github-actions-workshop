@@ -1,4 +1,4 @@
-# Run React Tic-Tac-Toe Using Docker
+## Run React Tic-Tac-Toe Using Docker
 
 ## Objective
 

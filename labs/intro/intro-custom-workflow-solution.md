@@ -1,4 +1,4 @@
-## Custom Workflow Solution
+## Solution: Custom Workflow
 
 ```yaml
 name: Intro - Custom Workflow

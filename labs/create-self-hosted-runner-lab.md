@@ -1,4 +1,4 @@
-# Create a Self-Hosted Runner
+## Lab: Create a Self-Hosted Runner
 
 ## Introduction
 

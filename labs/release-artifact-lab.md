@@ -1,4 +1,4 @@
-# Release Artifact
+## Lab: Release Artifact
 
 ## Introduction
 

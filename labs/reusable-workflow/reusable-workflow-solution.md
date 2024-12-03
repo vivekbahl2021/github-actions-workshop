@@ -1,4 +1,4 @@
-# Reusable Workflow Solution
+## Solution: Reusable Workflow
 
 ## Reusable Echo Workflow
 
