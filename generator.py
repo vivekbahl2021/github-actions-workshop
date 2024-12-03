@@ -299,6 +299,12 @@ data = [
         "[View Solution](./labs/custom-actions/print-message-docker-action-solution.md)", 
         "[![Custom Docker Action - Print Message](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-docker-action-print-message.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-docker-action-print-message.yml)", 
     ),    
+    (
+        "[Composite Action - Print Message and Time](./labs/custom-actions/print-message-and-time-composite-action-lab.md)", 
+        "N/A", 
+        "[View Solution](./labs/custom-actions/print-message-and-time-composite-action-solution.md)", 
+        "[[![Custom Composite Action - Print Message and Time](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-composite-action-print-message-and-time.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-composite-action-print-message-and-time.yml)", 
+    ),    
 ]
 
 # Generate the markdown table header with renamed 'Status' column
