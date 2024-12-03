@@ -44,6 +44,6 @@ jobs:
     uses: ./.github/workflows/aspnet-webapp-deploy-reusable-workflow.yml
     with:
       AZURE_WEBAPP_PACKAGE_PATH: webapp
-      AZURE_WEBAPP_NAME: ${{ env.AZURE_WEBAPP_NAME }}
+      AZURE_WEBAPP_NAME: github-actions-workshop-aspnet-webapp # Azure WebApp name cannot be passed using the environment variable, hence hardcoding it here
     secrets:
       AZURE_SERVICE_PRINCIPAL: ${{ secrets.AZURE_SERVICE_PRINCIPAL }}
