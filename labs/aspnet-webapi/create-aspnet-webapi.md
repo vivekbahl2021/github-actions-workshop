@@ -15,7 +15,7 @@ In this section, you will create a new ASP.NET Core Web API project using Visual
 1. Open **Visual Studio** on your computer.
 2. On the welcome screen, click **Create a new project**.
 
-   ![Launch Visual Studio](../images/webapi/1.png)
+   ![Launch Visual Studio](../../images/webapi/1.png)
 
 ---
 
@@ -25,7 +25,7 @@ In this section, you will create a new ASP.NET Core Web API project using Visual
 2. Select the **ASP.NET Core Web API** template from the results.
 3. Click **Next** to proceed.
 
-   ![Select ASP.NET Core Web API](../images/webapi/2.png)
+   ![Select ASP.NET Core Web API](../../images/webapi/2.png)
 
 ---
 
@@ -35,19 +35,19 @@ In this section, you will create a new ASP.NET Core Web API project using Visual
 2. Select a suitable location for your project files using the **Location** field.
 3. Click **Next**.
 
-   ![Enter Project Name](../images/webapi/3.png)
+   ![Enter Project Name](../../images/webapi/3.png)
 
 ---
 
 ### Step 4: Configure Project Settings
 
 1. In the **Additional Information** screen:
-   - Ensure the target framework is set to `.NET 6 (Long-term support)` or the latest version.
+   - Ensure the target framework is set to `.NET 8 (Long-term support)` or the latest version.
    - Confirm the **Authentication Type** is set to **None**.
    - Uncheck **Enable Docker Support** (unless you need it).
 2. Click **Create** to finalize the project configuration.
 
-   ![Provide Additional Information](../images/webapi/4.png)
+   ![Provide Additional Information](../../images/webapi/4.png)
 
 ---
 
@@ -56,7 +56,7 @@ In this section, you will create a new ASP.NET Core Web API project using Visual
 1. Once the project is created, the solution will open in Visual Studio.
 2. The project structure, including controllers and program files, will be visible in the **Solution Explorer**.
 
-   ![Project Created](../images/webapi/5.png)
+   ![Project Created](../../images/webapi/5.png)
 
 ---
 
@@ -65,7 +65,7 @@ In this section, you will create a new ASP.NET Core Web API project using Visual
 1. Locate and click the **Run** button in Visual Studio (it will display an `http` or `https` URL).
 2. The project will compile, and the API will launch in your default web browser.
 
-   ![Run Project](../images/webapi/6.png)
+   ![Run Project](../../images/webapi/6.png)
 
 ---
 
@@ -74,7 +74,7 @@ In this section, you will create a new ASP.NET Core Web API project using Visual
 1. When the browser opens, the API’s default Swagger documentation interface will be displayed.
 2. Swagger provides an interactive UI to test your API endpoints.
 
-   ![Project Launched](../images/webapi/7.png)
+   ![Project Launched](../../images/webapi/7.png)
 
 ---
 
@@ -84,7 +84,7 @@ In this section, you will create a new ASP.NET Core Web API project using Visual
 2. Click the **Try it out** button, followed by **Execute** to send a test request.
 3. Verify the API’s response in the **Response Body** section.
 
-   ![Test API](../images/webapi/8.png)
+   ![Test API](../../images/webapi/8.png)
 
 ---
 
