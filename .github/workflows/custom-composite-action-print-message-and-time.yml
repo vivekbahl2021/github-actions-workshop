@@ -1,0 +1,24 @@
+name: Custom Composite Action - Print Message and Time
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-composite-action:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Use the composite action
+      - name: Run the custom composite action
+        uses: ./github/actions/composite-action-print-message-and-time
+        with:
+          message: "Hello from Composite Action!"
+
+      # Access the output of the composite action
+      - name: Print the timestamp
+        run: echo "The timestamp is: ${{ steps.composite-action.outputs.timestamp }}"
