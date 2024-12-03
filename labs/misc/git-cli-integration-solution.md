@@ -1,9 +1,12 @@
-name: Misc - GitHub CLI Integration
+## Solution: Using Git CLI in GitHub Actions
+
+```yaml
+name: Misc - Git CLI Integration
 on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/workflows/github-cli-integration.yml'
+      - '.github/workflows/misc-misc-misc-git-cli-integration.yml'
 jobs:
   run-on-ubuntu-latest:
     runs-on: ubuntu-latest
@@ -49,3 +52,4 @@ jobs:
       - run: gh auth status
       - run: gh repo list
       - run: gh workflow list
+```

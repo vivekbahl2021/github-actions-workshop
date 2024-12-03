@@ -303,7 +303,19 @@ data = [
         "[Composite Action - Print Message and Time](./labs/custom-actions/print-message-and-time-composite-action-lab.md)", 
         "N/A", 
         "[View Solution](./labs/custom-actions/print-message-and-time-composite-action-solution.md)", 
-        "[[![Custom Composite Action - Print Message and Time](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-composite-action-print-message-and-time.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-composite-action-print-message-and-time.yml)", 
+        "[![Custom Composite Action - Print Message and Time](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-composite-action-print-message-and-time.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-composite-action-print-message-and-time.yml)", 
+    ),
+    (
+        "",  # This row will be a blank row (no ID, no content)
+        "",
+        "",
+        ""
+    ),
+    (
+        "[Misc - Git Cli Integration](./labs/misc/git-cli-integration-lab.md)", 
+        "N/A", 
+        "[View Solution](./labs/misc/git-cli-integration--solution.md)", 
+        "[![Misc - Git CLI Integration](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/misc-git-cli-integration.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/misc-git-cli-integration.yml)", 
     ),    
 ]
 

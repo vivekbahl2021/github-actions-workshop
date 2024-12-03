@@ -130,15 +130,20 @@ setup(
 #### **Install and Use as CLI Tool**:
 
 1. Install the project:
+
    ```bash
    pip install .
    ```
+
 2. Use the `upper` command-line tool:
+
    ```bash
    upper hello world
    ```
+
    **Output**:
-   ```
+
+   ```bash
    HELLO WORLD
    ```
 
@@ -146,7 +151,7 @@ setup(
 
 ## Directory Structure
 
-```
+```bash
 src/
 └── python/
     └── upper_project/
