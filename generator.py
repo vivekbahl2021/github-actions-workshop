@@ -222,6 +222,12 @@ data = [
         "[![CSharp Extension Methods Build - Test - NuGet](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/csharp-extension-methods-build-test-nuget.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/csharp-extension-methods-build-test-nuget.yml)"
     ),
     (
+        "[CSharp.ExtensionMethods Release Artifacts ](./labs/csharp-extension-methods/csharp-extension-methods-release-artifacts.md)", 
+        "N/A", 
+        "[View Solution](./labs/csharp-extension-methods/csharp-extension-methods-release-artifacts-solution.md)", 
+        "[[![CSharp Extension Methods Release Artifacts](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/csharp-extension-methods-release-artifacts.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/csharp-extension-methods-release-artifacts.yml)"
+    ),
+    (
         "",  # This row will be a blank row (no ID, no content)
         "",
         "",
