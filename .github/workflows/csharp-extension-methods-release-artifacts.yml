@@ -59,12 +59,3 @@ jobs:
           body: 'Release of CSharp.ExtensionMethods NuGet package'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # Upload NuGet Package to GitHub Release
-      - name: Upload NuGet Package as Release Asset
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./src/dotnet/CSharp.ExtensionMethods/CSharp.ExtensionMethods/bin/Release/*.nupkg
-          asset_name: CSharp.ExtensionMethods.${{ github.run_number }}.nupkg
-          asset_content_type: application/octet-stream
