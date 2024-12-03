@@ -1,10 +1,10 @@
-name: ASP.NET WebApp Deploy using Reusable Workflow
+name: ASP.NET Web App Deploy using Reusable Workflow
 
 on:
   push:
     paths:
-      - '.github/workflows/aspnet-webapp-deploy-using-reusable-workflow.yml'
-      - '.github/workflows/aspnet-webapp-deploy-reusable-workflow.yml'
+      - '.github/workflows/aspnet-webapp-deploy-to-azure-using-reusable-workflow.yml'
+      - '.github/workflows/reusable-workflow-azure-webapp-deploy.yml'
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 
@@ -41,7 +41,7 @@ jobs:
 
   call-reusable-deploy-workflow:
     needs: build
-    uses: ./.github/workflows/aspnet-webapp-deploy-reusable-workflow.yml
+    uses: ./.github/workflows/reusable-workflow-azure-webapp-deploy.yml
     with:
       AZURE_WEBAPP_PACKAGE_PATH: webapp
       AZURE_WEBAPP_NAME: github-actions-workshop-aspnet-webapp # Azure WebApp name cannot be passed using the environment variable, hence hardcoding it here

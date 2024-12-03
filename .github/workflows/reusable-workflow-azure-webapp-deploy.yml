@@ -1,4 +1,4 @@
-name: ASP.NET Deploy Reusable Workflow
+name: Reusable Workflow Azure Web App Deploy
 
 on:
   workflow_call:
