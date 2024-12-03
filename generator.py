@@ -233,6 +233,30 @@ data = [
         "[View Solution](./labs/aspnet-webapp/deploy-to-azure-solution.md)", 
         "[![ASP.NET Web App Deploy to Azure](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-deploy-to-azure.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-deploy-to-azure.yml)"
     ),  
+    (
+        "[Create Reusable Workflow](./labs/aspnet-webapp/create-reusable-workflow-lab.md)", 
+        "N/A", 
+        "[View Solution](./labs/aspnet-webapp/create-reusable-workflow-solution.md)", 
+        "N/A", 
+    ),
+    (
+        "[ASP.NET Web App Deploy to Azure Using Reusable Workflow](./labs/aspnet-webapp/deploy-to-azure-reusable-workflow-lab.md)", 
+        "[Start Here](./labs/aspnet-webapp/deploy-to-azure-reusable-workflow-starter.md)", 
+        "[View Solution](./labs/aspnet-webapp/deploy-to-azure-reusable-workflow-solution.md)", 
+        "[![ASP.NET Web App Deploy using Reusable Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-deploy-to-azure-using-reusable-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-deploy-to-azure-using-reusable-workflow.yml)"
+    ),    
+    (
+        "[Create Shared Workflow](./labs/aspnet-webapp/create-shared-workflow-lab.md)", 
+        "N/A", 
+        "[View Solution](./labs/aspnet-webapp/create-shared-workflow-solution.md)", 
+        "N/A", 
+    ),
+    (
+        "[ASP.NET Web App Deploy to Azure Using Shared Workflow](./labs/aspnet-webapp/deploy-to-azure-shared-workflow-lab.md)", 
+        "[Start Here](./labs/aspnet-webapp/deploy-to-azure-shared-workflow-starter.md)", 
+        "[View Solution](./labs/aspnet-webapp/deploy-to-azure-shared-workflow-solution.md)", 
+        "[![ASP.NET Web App Deploy using Shared Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-deploy-to-azure-using-shared-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-deploy-to-azure-using-shared-workflow.yml)"
+    ),    
 ]
 
 # Generate the markdown table header with renamed 'Status' column

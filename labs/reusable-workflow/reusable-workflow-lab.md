@@ -54,7 +54,7 @@ This lab covers:
              run: echo ${{ inputs.my-input }}
      ```
 
-   **Explanation**:
+   #### Explanation
 
    - **`workflow_call`**: Specifies that this is a reusable workflow.
    - **`inputs`**: The `my-input` parameter is required and will accept a string.
@@ -97,7 +97,7 @@ This lab covers:
            my-input: 'Hello, world!'
      ```
 
-   **Explanation**:
+   #### Explanation
 
    - **`workflow_dispatch`**: Allows manual execution of this workflow.
    - **`push`**: Automatically triggers the workflow if changes are made to the caller workflow file.
