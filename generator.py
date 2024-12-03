@@ -274,6 +274,18 @@ data = [
         "[Start Here](./labs/aspnet-webapp/deploy-to-azure-shared-workflow-starter.md)", 
         "[View Solution](./labs/aspnet-webapp/deploy-to-azure-shared-workflow-solution.md)", 
         "[![ASP.NET Web App Deploy using Shared Workflow](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-deploy-to-azure-using-shared-workflow.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/aspnet-webapp-deploy-to-azure-using-shared-workflow.yml)"
+    ),
+    (
+        "",  # This row will be a blank row (no ID, no content)
+        "",
+        "",
+        ""
+    ),
+    (
+        "[Create Workflow Template](./labs/workflow-template/create-workflow-templates-lab.md)", 
+        "N/A", 
+        "N/A", 
+        "N/A", 
     ),    
 ]
 
