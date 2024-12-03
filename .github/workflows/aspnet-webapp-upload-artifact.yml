@@ -1,4 +1,4 @@
-name: ASP.NET Web App - Upload Artifact
+name: ASP.NET Web App Upload Artifact
 
 on:
   push:

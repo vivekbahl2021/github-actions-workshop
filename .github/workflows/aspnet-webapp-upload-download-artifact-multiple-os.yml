@@ -1,4 +1,4 @@
-name: ASP.NET Web App - Upload - Download Artifact Multiple OS
+name: ASP.NET Web App Upload - Download Artifact Multiple OS
 
 on:
   push:
