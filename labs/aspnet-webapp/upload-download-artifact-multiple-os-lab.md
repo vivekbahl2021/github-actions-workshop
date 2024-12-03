@@ -10,7 +10,7 @@ In this lab, you will learn how to create a GitHub Actions workflow that uploads
 
 ## Prerequisites
 
-1. Complete the [Create ASP.NET Web App](./create-aspnet-webapp-lab.md) lab to set up your ASP.NET Core project.
+1. Complete the [Create ASP.NET Web App](./create-aspnet-webapp.md) lab to set up your ASP.NET Core project.
 2. Ensure you have a basic understanding of GitHub Actions workflows, including uploading and downloading artifacts.
 
 ---
