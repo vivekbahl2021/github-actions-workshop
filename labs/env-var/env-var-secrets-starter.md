@@ -1,7 +1,5 @@
 # Env Var and Secrets Starter File
 
-```YAML
-
+```yaml
 name: Env Var and Secrets
-
 ```

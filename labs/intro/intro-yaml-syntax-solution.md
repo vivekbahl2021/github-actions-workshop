@@ -1,6 +1,6 @@
 # YAML Syntax Solution
 
-```YAML
+```yaml
 name: YAML Syntax
 on:
   workflow_dispatch:
@@ -43,7 +43,7 @@ jobs:
       matrix:
         configuration: [debug, release]
     steps:
-    - run: echo "This job builds the cofiguration ${{ matrix.configuration }}."
+      - run: echo "This job builds the cofiguration ${{ matrix.configuration }}."
 
   test:
     runs-on: ubuntu-latest
@@ -71,7 +71,7 @@ jobs:
 
   ring04:
     runs-on: ubuntu-latest
-    needs: [ring01,ring02,ring03]
+    needs: [ring01, ring02, ring03]
     steps:
       - run: echo "This job will be run after the ring01,ring02,ring03 jobs."
 

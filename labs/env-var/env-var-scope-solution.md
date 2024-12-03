@@ -1,6 +1,6 @@
 # Environment Variable Scope Solution
 
-```YAML
+```yaml
 name: Env Var Scope
 
 on:

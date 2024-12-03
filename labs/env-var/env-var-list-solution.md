@@ -1,7 +1,6 @@
 # Environment Variable List Solution
 
-```YAML
-
+```yaml
 name: Env Var List
 
 on:

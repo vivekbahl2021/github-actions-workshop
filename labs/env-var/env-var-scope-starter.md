@@ -1,6 +1,6 @@
 # Environment Variable Scope Starter File
 
-```YAML
+```yaml
 name: Env Var Scope
 
 on:
@@ -8,6 +8,4 @@ on:
   push:
     paths:
       - '.github/workflows/env-var-scope.yml'
-
-
 ```

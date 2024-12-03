@@ -1,6 +1,6 @@
 # Python Upper App CI/CD Solution
 
-```YAML
+```yaml
 name: Python Upper App CI/CD
 on:
   workflow_dispatch:
@@ -61,5 +61,4 @@ jobs:
           fi
         working-directory: src/python/upper_project
         shell: bash
-
 ```

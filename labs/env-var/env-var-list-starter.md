@@ -1,7 +1,6 @@
 # Environment Variables List Starter File
 
-```YAML
-
+```yaml
 name: Env Var List
 
 on:
@@ -9,5 +8,4 @@ on:
   push:
     paths:
       - '.github/workflows/env-var-list.yml'
-
 ```
