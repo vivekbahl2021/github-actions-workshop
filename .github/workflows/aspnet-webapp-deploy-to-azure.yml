@@ -4,6 +4,7 @@ on:
     paths:
       - '.github/workflows/aspnet-webapp-deploy.yml'
       - 'src/dotnet/WebApp/**'
+  workflow_dispatch:
 
 env:
   AZURE_WEBAPP_NAME: github-actions-workshop-aspnet-webapp
