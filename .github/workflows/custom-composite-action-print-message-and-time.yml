@@ -2,8 +2,10 @@ name: Custom Composite Action - Print Message and Time
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - '.github/actions/print-message-and-time-composite-action/**'
+      - '.github/workflows/custom-composite-action-print-message-and-time.yml'
+  workflow_dispatch:
 
 jobs:
   test-composite-action:
@@ -17,8 +19,9 @@ jobs:
       - name: Run the custom composite action
         uses: ./github/actions/composite-action-print-message-and-time
         with:
-          message: "Hello from Composite Action!"
+          message: 'Hello from Composite Action!'
 
       # Access the output of the composite action
       - name: Print the timestamp
-        run: echo "The timestamp is: ${{ steps.composite-action.outputs.timestamp }}"
+        run: |
+          echo "The timestamp is: ${{ steps.composite-action.outputs.timestamp }}"
