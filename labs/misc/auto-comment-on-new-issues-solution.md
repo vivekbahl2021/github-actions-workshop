@@ -1,4 +1,7 @@
-name: Misc - Auto Comment on New Issue
+## Solution: Automatically Comment and Label Issues
+
+```yaml
+name: Misc - Auto Comment on New Issues
 
 on:
   issues:
@@ -46,3 +49,4 @@ jobs:
             return comment.data.id;
 
       - run: echo 'comment id=${{ steps.issue_script.outputs.result }}'
+```
