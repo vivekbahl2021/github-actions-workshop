@@ -8,39 +8,42 @@ on:
       - 'src/dotnet/WebApp/**'
   workflow_dispatch:
 
+env:
+  AZURE_WEBAPP_NAME: github-actions-workshop-aspnet-webapp
+  AZURE_WEBAPP_PACKAGE_PATH: ./published
+  CONFIGURATION: Release
+  DOTNET_CORE_VERSION: 8.0.x
+  WORKING_DIRECTORY: 'src/dotnet/WebApp'
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./src/dotnet/WebApp
     steps:
-      - name: checkout code
-        uses: actions/checkout@v4.1.7
-
-      - name: Set up .NET Core
-        uses: actions/setup-dotnet@v4.0.1
+      - uses: actions/checkout@v4
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.x'
-
-      - name: Build code
-        run: dotnet build --configuration Release
-
-      - name: Publish code
-        run: dotnet publish -c Release --property:PublishDir="${{runner.temp}}/webapp"
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4.3.6
+          dotnet-version: ${{ env.DOTNET_CORE_VERSION }}
+      - name: Verify Working Directory
+        run: |
+          echo "Current Directory: $(pwd)"
+          ls ${{ env.WORKING_DIRECTORY }}
+      - name: Restore dependencies
+        run: dotnet restore ${{ env.WORKING_DIRECTORY }}
+      - name: Build
+        run: dotnet build "${{ env.WORKING_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --no-restore
+      - name: Publish
+        run: dotnet publish "${{ env.WORKING_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --output "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
+      - name: Publish Artifacts
+        uses: actions/upload-artifact@v4
         with:
-          name: aspnet-web-app # Artifact name
-          path: ${{runner.temp}}/webapp
+          name: webapp
+          path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
   call-reusable-deploy-workflow:
     needs: build
     uses: ./.github/workflows/aspnet-webapp-deploy-reusable-workflow.yml
     with:
-      package-name: aspnet-web-app
-      app-name: github-actions-webapp-reusable
-      deployment-slot: development
+      AZURE_WEBAPP_PACKAGE_PATH: webapp
+      AZURE_WEBAPP_NAME: ${{ env.AZURE_WEBAPP_NAME }}
     secrets:
-      azure-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+      AZURE_SERVICE_PRINCIPAL: ${{ secrets.AZURE_SERVICE_PRINCIPAL }}
