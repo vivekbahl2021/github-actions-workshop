@@ -38,14 +38,14 @@ jobs:
       - run: gh auth status
       - run: gh repo list
       - run: gh workflow list
-  run-on-self-hosted:
-    runs-on: self-hosted
-    env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    steps:
-      - uses: actions/checkout@v4
-      # - run: env # Code commented as env command is not available in Windows
-      - run: gh --version
-      - run: gh auth status
-      - run: gh repo list
-      - run: gh workflow list
+  # run-on-self-hosted:
+  #   runs-on: self-hosted
+  #   env:
+  #     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     # - run: env # Code commented as env command is not available in Windows
+  #     - run: gh --version
+  #     - run: gh auth status
+  #     - run: gh repo list
+  #     - run: gh workflow list
