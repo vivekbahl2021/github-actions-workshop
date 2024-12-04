@@ -1,14 +1,19 @@
-<div align="center">
+<p align="center">
+  <img src="./images/logo.png" alt="GitHub Actions Workshop Logo" height="128">
+</p>
 
-<img src="./images/logo.png" alt="" align="center" height="128" />
+<h1 align="center">GitHub Actions Workshop</h1>
 
-# GitHub Actions Workshop
+<p align="center">⭐ If you like this repo, star it on GitHub — it helps a lot! ⭐</p>
 
-⭐ If you like this repo, star it on GitHub — it helps a lot!
-
-[Overview](#overview) • [Prerequisites](#prerequisites) • [Objectives](#objectives) • [Labs](#labs) • [Resources](#resources) • [License](#license)
-
-</div>
+<p align="center">
+  <a href="#overview">Overview</a> • 
+  <a href="#prerequisites">Prerequisites</a> • 
+  <a href="#objectives">Objectives</a> • 
+  <a href="#labs">Labs</a> • 
+  <a href="#resources">Resources</a> • 
+  <a href="#license">License</a>
+</p>
 
 ---
 
