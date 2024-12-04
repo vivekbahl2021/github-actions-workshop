@@ -1,4 +1,16 @@
-# Introduction
+<div align="center">
+
+<img src="./images/logo.png" alt="" align="center" height="128" />
+
+# GitHub Actions Workshop
+
+⭐ If you like this repo, star it on GitHub — it helps a lot!
+
+[Overview](#overview) • [Prerequisites](#prerequisites) • [Objectives](#objectives) • [Labs](#labs) • [Resources](#resources) • [License](#license)
+
+</div>
+
+# Overview
 
 Welcome to the **GitHub Actions Workshop**! This hands-on workshop is designed to help you learn and master GitHub Actions. Throughout the course, you'll get hands-on experience automating workflows, running tests, deploying applications, and more.
 
@@ -31,11 +43,7 @@ By the end of this workshop, you will learn how to:
 - Integrate GitHub Actions with other tools and services.
 - Follow best practices for using GitHub Actions.
 
-## Getting Started
-
-Follow the instructions in the labs to start experimenting with GitHub Actions workflows. Each lab is designed to teach you a specific aspect of GitHub Actions.
-
-## Workshop Labs
+## Labs
 
 The core of this workshop is built around a set of labs that walk you through the process of automating your software development workflows using GitHub Actions.
 
