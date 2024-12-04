@@ -36,7 +36,9 @@ In this lab, you will create a new repository using the `GitHub Actions Workshop
 
 9. The `src` folder contains the source code for the sample application.
 
-10. The repository includes utility scripts like `generator.py` and `remove-workflow.sh`. These scripts are used for maintaining the workshop content, such as generating the table of contents for workshop labs in markdown format and deleting all workflows from the `.github/workflows` folder. These are supporting files for repository management and are not required for the workshop. You can safely ignore them during your exercises.
+10. The `.github/workflows` folder contains the starter files for the workflows. You can delete these files and create your own workflows as you progress through the workshop.
+
+11. The repository includes utility scripts like `generator.py` and `remove-workflow.sh`. These scripts are used for maintaining the workshop content, such as generating the table of contents for workshop labs in markdown format and deleting all workflows from the `.github/workflows` folder. These are supporting files for repository management and are not required for the workshop. You can safely ignore them during your exercises.
 
 ## Summary
 
