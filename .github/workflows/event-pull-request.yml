@@ -1,4 +1,4 @@
-name: Create Dynamic Environment
+name: Pull Request Event
 
 on:
   pull_request:
@@ -28,9 +28,3 @@ jobs:
         run: |
           echo "Deploying application to environment: $DEPLOY_ENV"
           # Add your deployment commands here
-
-      # Step 4: Mark the environment as used for deployment
-      - name: Create GitHub Environment
-        uses: tibdex/github-app-token@v1
-        with:
-          environment: ${{ env.environment-name }}

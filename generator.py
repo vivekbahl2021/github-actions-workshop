@@ -234,6 +234,18 @@ data = [
         ""
     ),
     (
+        "[Pull Request Event](./labs/events/pull-request-event-lab.md)", 
+        "N/A", 
+        "[View Solution](./labs/events/pull-request-event-solution.md)", 
+        "[![Reusable Workflow Echo Caller](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/reusable-workflow-echo-caller.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/reusable-workflow-echo-caller.yml)"
+    ),
+    (
+        "",  # This row will be a blank row (no ID, no content)
+        "",
+        "",
+        ""
+    ),
+    (
         "[Introduction to Reusable Workflows](./labs/reusable-workflow/reusable-workflow-lab.md)", 
         "N/A", 
         "[View Solution](./labs/reusable-workflow/reusable-workflow-solution.md)", 
