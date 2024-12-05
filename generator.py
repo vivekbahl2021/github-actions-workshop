@@ -84,6 +84,12 @@ data = [
         "[![Environment Variables List](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-list.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-var-list.yml)"
     ),
     (
+        "[Environment Deployment Protection Rule](./labs/env-var/env-deployment-protection-rule-lab.md)", 
+        "N/A",
+        "[View Solution](./labs/env-var/env-deployment-protection-rule-solution.md)", 
+        "[![Env - Deployment Protection Rule](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-deployment-protection-rule.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/env-deployment-protection-rule.yml)"
+    ),
+    (
         "",  # This row will be a blank row (no ID, no content)
         "",
         "",
