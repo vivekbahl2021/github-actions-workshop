@@ -25,7 +25,8 @@ jobs:
         if: ${{ runner.os == 'Windows' }} && (exists 'C:\temp')
         run: |
           echo "Listing all folders in C:\temp..."
-          dir C:\temp /AD /B
+          # PowerShell command to list directories in C:\temp
+          Get-ChildItem -Path C:\temp -Directory | Select-Object -ExpandProperty Name
         shell: pwsh
 
       # Step 3: Delete all folders in C:\temp
