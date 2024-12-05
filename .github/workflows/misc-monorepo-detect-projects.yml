@@ -53,21 +53,24 @@ jobs:
 
           # Output the list of changed projects
           echo "Changed projects: $CHANGED_PROJECTS"
-          echo "::set-output name=changed_projects::$CHANGED_PROJECTS"
+
+          # Set the output using environment files instead of set-output
+          echo "changed_projects=$CHANGED_PROJECTS" >> $GITHUB_ENV
 
       - name: Display Changed Projects
         run: |
-          if [[ -z "${{ steps.changed_projects.outputs.changed_projects }}" ]]; then
+          # Use the environment variable to check the changed projects
+          if [[ -z "${{ env.changed_projects }}" ]]; then
             echo "No projects detected with changes."
           else
             echo "The following projects have changes that triggered the workflow:"
-            echo "${{ steps.changed_projects.outputs.changed_projects }}"
+            echo "${{ env.changed_projects }}"
           fi
 
       - name: Run tasks for changed projects
         run: |
           # Loop through each changed project directory
-          for PROJECT in ${{ steps.changed_projects.outputs.changed_projects }}; do
+          for PROJECT in ${{ env.changed_projects }}; do
             PROJECT_NAME="${PROJECT%/}"  # Remove trailing slash from project name
             echo "Running tasks for $PROJECT_NAME..."
 
