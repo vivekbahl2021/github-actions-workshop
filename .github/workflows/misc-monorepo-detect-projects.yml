@@ -1,0 +1,70 @@
+name: Monorepo - Detect Project Changes
+
+on:
+  push:
+    paths:
+      - '.github/workflows/misc-monorepo-detect-projects.yml'
+      - 'src/monorepo/**'
+
+jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Get list of changed projects
+        id: changed_projects
+        run: |
+          # Get a list of changed files in the current commit
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
+          echo "Changed files: $CHANGED_FILES"
+
+          # List all directories (projects) at the root level
+          PROJECTS=$(ls -d */)
+          echo "Projects found in the repo: $PROJECTS"
+
+          # Initialize an empty string for changed projects
+          CHANGED_PROJECTS=""
+
+          # Iterate over each project directory
+          for PROJECT in $PROJECTS; do
+            # Check if any of the changed files are inside the current project directory
+            if echo "$CHANGED_FILES" | grep -q "^$PROJECT"; then
+              echo "$PROJECT has changes."
+              CHANGED_PROJECTS="$CHANGED_PROJECTS$PROJECT "
+            fi
+          done
+
+          # Output the list of changed projects
+          echo "Changed projects: $CHANGED_PROJECTS"
+          echo "::set-output name=changed_projects::$CHANGED_PROJECTS"
+
+      - name: Display Changed Projects
+        run: |
+          if [[ -z "${{ steps.changed_projects.outputs.changed_projects }}" ]]; then
+            echo "No projects detected with changes."
+          else
+            echo "The following projects have changes that triggered the workflow:"
+            echo "${{ steps.changed_projects.outputs.changed_projects }}"
+          fi
+
+      # Loop through the changed projects and run tasks for each one
+      - name: Run tasks for changed projects
+        run: |
+          # Loop through each changed project
+          for PROJECT in ${{ steps.changed_projects.outputs.changed_projects }}; do
+            # Remove trailing slash from project directory name
+            PROJECT_NAME="${PROJECT%/}"
+            
+            echo "Running tasks for $PROJECT_NAME..."
+
+            # Change to the project directory and run tasks (e.g., install, lint, test, build)
+            cd $PROJECT_NAME
+            npm install
+            npm run lint
+            npm run test
+            npm run build
+            cd ..
+          done
