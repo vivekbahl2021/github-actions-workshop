@@ -322,6 +322,18 @@ data = [
         "N/A", 
         "[View Solution](./labs/misc/auto-comment-on-new-issues-solution.md)", 
         "[![Misc - Auto Comment on New Issues](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/misc-auto-comment-on-new-issues.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/misc-auto-comment-on-new-issues.yml)", 
+    ),
+    (
+        "",  # This row will be a blank row (no ID, no content)
+        "",
+        "",
+        ""
+    ),
+    (
+       "[SAST vs DAST](./labs/docs/sast-vs-dast.md)", 
+        "",
+        "",
+        ""
     ),    
 ]
 
