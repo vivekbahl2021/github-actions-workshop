@@ -2,9 +2,11 @@ name: Monorepo - Detect Project Changes
 
 on:
   push:
-    paths:
-      - '.github/workflows/misc-monorepo-detect-projects.yml'
-      - 'src/monorepo/**'
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   detect-changes:
