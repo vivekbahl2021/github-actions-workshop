@@ -14,11 +14,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 1: Check if the runner is on Windows OS
+      # Step 1: Check if the runner is on Windows OS using PowerShell
       - name: Check OS
         run: |
-          echo "Running on OS: $RUNNER_OS"
-        shell: bash
+          echo "Running on OS: $env:RUNNER_OS"
+        shell: pwsh
 
       # Step 2: List all folders in C:\temp (only on Windows, and if C:\temp exists)
       - name: List all folders in C:\temp
@@ -26,6 +26,7 @@ jobs:
         run: |
           echo "Listing all folders in C:\temp..."
           dir C:\temp /AD /B
+        shell: pwsh
 
       # Step 3: Delete all folders in C:\temp
       - name: Delete all folders in C:\temp
@@ -41,3 +42,4 @@ jobs:
         if: ${{ runner.os == 'Windows' }} && !(exists 'C:\temp')
         run: |
           echo "C:\temp does not exist. Skipping cleanup step."
+        shell: pwsh
