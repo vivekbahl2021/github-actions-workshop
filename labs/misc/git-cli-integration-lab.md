@@ -155,14 +155,6 @@ build-and-test                   12345  active
 
 ---
 
-### Learning Objectives
-
-- Understand how to integrate the GitHub CLI into workflows.
-- Use the CLI to perform programmatic operations on repositories and workflows.
-- Test workflows across multiple operating systems and environments.
-
----
-
 ### Additional Notes
 
 - **Self-Hosted Runners**:

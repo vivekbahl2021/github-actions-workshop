@@ -1,3 +1,6 @@
+## Solution: Temp Folder Cleanup
+
+```yaml
 name: Misc - Temp Folder Cleanup
 
 on:
@@ -46,3 +49,4 @@ jobs:
         run: |
           echo "C:\temp does not exist. Skipping cleanup step."
         shell: pwsh
+```

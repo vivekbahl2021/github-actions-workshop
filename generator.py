@@ -342,6 +342,12 @@ data = [
         "[![Misc - Auto Comment on New Issues](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/misc-auto-comment-on-new-issues.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/misc-auto-comment-on-new-issues.yml)", 
     ),
     (
+        "[Misc - Temp Folder Cleanup](./labs/misc/temp-folder-cleanup-lab.md)", 
+        "N/A", 
+        "[View Solution](./labs/misc/temp-folder-cleanup-solution.md)", 
+        "[![Misc - Temp Folder Cleanup](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/misc-temp-folder-cleanup.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/misc-temp-folder-cleanup.yml)", 
+    ),
+    (
         "",  # This row will be a blank row (no ID, no content)
         "",
         "",
