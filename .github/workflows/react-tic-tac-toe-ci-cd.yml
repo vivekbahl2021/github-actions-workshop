@@ -26,13 +26,13 @@ jobs:
           node-version: '20'
 
       # Step 3: Restore Cache
-      - name: Restore npm cache
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('${{ env.CONTEXT_PATH }}/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+      # - name: Restore npm cache
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: ~/.npm
+      #     key: ${{ runner.os }}-node-${{ hashFiles('${{ env.CONTEXT_PATH }}/package-lock.json') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-node-
 
       - name: Install Dependencies
         run: npm ci
