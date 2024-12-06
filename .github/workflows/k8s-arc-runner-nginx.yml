@@ -26,6 +26,7 @@ jobs:
         with:
           resource-group: 'aks-rg'
           cluster-name: 'aks'
+          creds: ${{ secrets.AZURE_SERVICE_PRINCIPAL }}
 
       # Step 4: Deploy an existing Docker image (e.g., nginx) to AKS
       - name: Deploy NGINX to AKS
