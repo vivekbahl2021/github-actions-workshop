@@ -330,6 +330,24 @@ data = [
         ""
     ),
     (
+        "[Arc Runner on K8s](./labs/k8s/k8s-arc-runner-lab.md)", 
+        "N/A", 
+        "[View Solution](./labs/k8s/k8s-arc-runner-solution.md)",
+        "[![K8s ARC Runner](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/k8s-arc-runner.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/k8s-arc-runner.yml)", 
+    ),
+    (
+        "[NGINX Deployment on AKS Using ARC Runner](./labs/k8s/nginx-deployment-on-aks-using-arc-runner.md)", 
+        "N/A", 
+        "[View Solution](./labs/k8s/nginx-deployment-on-aks-using-arc-runner.md)",
+        "[![K8s ARC Runner NGINX](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/k8s-arc-runner-nginx.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/k8s-arc-runner-nginx.yml)", 
+    ),
+    (
+        "",  # This row will be a blank row (no ID, no content)
+        "",
+        "",
+        ""
+    ),
+    (
         "[Misc - Git Cli Integration](./labs/misc/git-cli-integration-lab.md)", 
         "N/A", 
         "[View Solution](./labs/misc/git-cli-integration-solution.md)", 
