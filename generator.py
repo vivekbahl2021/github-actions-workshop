@@ -222,13 +222,13 @@ data = [
         ""
     ),
     (
-        "[Build and Publish CSharp.ExtensionMethods as a Nuget package ](./labs/csharp-extension-methods/csharp-extension-methods-build-test-nuget.md)", 
+        "[Build and Publish CSharp.ExtensionMethods as a Nuget package ](./labs/csharp-extension-methods/csharp-extension-methods-build-test-nuget-lab.md)", 
         "N/A", 
         "[View Solution](./labs/csharp-extension-methods/csharp-extension-methods-build-test-nuget-solution.md)", 
         "[![CSharp Extension Methods Build - Test - NuGet](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/csharp-extension-methods-build-test-nuget.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/csharp-extension-methods-build-test-nuget.yml)"
     ),
     (
-        "[CSharp.ExtensionMethods Release Artifacts ](./labs/csharp-extension-methods/csharp-extension-methods-release-artifacts.md)", 
+        "[CSharp.ExtensionMethods Release Artifacts ](./labs/csharp-extension-methods/csharp-extension-methods-release-artifacts-lab.md)", 
         "N/A", 
         "[View Solution](./labs/csharp-extension-methods/csharp-extension-methods-release-artifacts-solution.md)", 
         "[[![CSharp Extension Methods Release Artifacts](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/csharp-extension-methods-release-artifacts.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/csharp-extension-methods-release-artifacts.yml)"
