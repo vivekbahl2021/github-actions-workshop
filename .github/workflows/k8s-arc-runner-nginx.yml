@@ -43,7 +43,7 @@ jobs:
           kubectl describe deployment nginx-deployment
 
       # Optional: Clean up the deployment after the demo
-      - name: Clean up deployment
-        run: |
-          kubectl delete deployment nginx-deployment
-          kubectl delete service nginx-deployment
+      # - name: Clean up deployment
+      #   run: |
+      #     kubectl delete deployment nginx-deployment
+      #     kubectl delete service nginx-deployment
