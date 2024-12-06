@@ -1,0 +1,14 @@
+name: ASP.NET Web App Build ARC Runner
+
+on:
+  push:
+    paths:
+      - '.github/workflows/aspnet-webapp-build-arc-runner.yml'
+      - 'src/dotnet/WebApp/**'
+  workflow_dispatch:
+
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: arc-runner-set
+    steps:
+      - run: echo "🎉 This job uses runner scale set runners!"
