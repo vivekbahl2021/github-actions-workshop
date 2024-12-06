@@ -18,4 +18,4 @@ jobs:
       - name: Run Hello Docker Action
         uses: ./.github/actions/print-message-docker-action
         with:
-          message: 'This is a custom message from the workflow!'
+          message: 'GitHub'
