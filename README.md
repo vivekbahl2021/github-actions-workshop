@@ -10,7 +10,7 @@
   <a href="#overview">Overview</a> • 
   <a href="#prerequisites">Prerequisites</a> • 
   <a href="#objectives">Objectives</a> • 
-  <a href="./workshop-labs.md">Labs</a> • 
+  <a href="#labs">Labs</a> • 
   <a href="#resources">Resources</a> • 
   <a href="#license">License</a>
 </p>
@@ -147,13 +147,13 @@ Before you start the workshop, ensure you meet the following requirements:
 
 ---
 
-<!-- ## Labs
+## Labs
 
 The core of this workshop is built around a set of labs that walk you through the process of automating your software development workflows using GitHub Actions.
 
 To get started, navigate to the [Workshop Labs](./workshop-labs.md) page where you'll find all the exercises, instructions, and challenges designed to help you understand and implement GitHub Actions step by step. Feel free to explore the labs and start working through them at your own pace!
 
---- -->
+---
 
 ## Resources
 
