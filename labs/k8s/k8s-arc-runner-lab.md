@@ -81,7 +81,7 @@ Make sure the following tools are installed:
 2. **Create a Resource Group**:
 
    ```bash
-   az group create --name arc-lab-rg --location eastus
+   az group create --name arc-lab-rg --location uksouth
    ```
 
 3. **Create the AKS Cluster**:

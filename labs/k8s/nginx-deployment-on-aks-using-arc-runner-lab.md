@@ -53,8 +53,8 @@ jobs:
       - name: Configure kubectl
         uses: azure/aks-set-context@v1
         with:
-          resource-group: 'aks-rg'
-          cluster-name: 'aks'
+          resource-group: 'arc-lab-rg'
+          cluster-name: 'arc-lab-cluster'
           creds: ${{ secrets.AZURE_SERVICE_PRINCIPAL }}
 
       # Step 4: Deploy an existing Docker image (e.g., nginx) to AKS
