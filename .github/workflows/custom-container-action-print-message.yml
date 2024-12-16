@@ -18,4 +18,4 @@ jobs:
       - name: Run Hello Docker Action
         uses: ./.github/actions/print-message-container-action
         with:
-          message: 'GitHub'
+          message: '**** GitHub Actions is Awesome! ****'
