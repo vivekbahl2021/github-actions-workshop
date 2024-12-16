@@ -336,9 +336,9 @@ data = [
         "[![K8s ARC Runner](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/k8s-arc-runner.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/k8s-arc-runner.yml)", 
     ),
     (
-        "[NGINX Deployment on AKS Using ARC Runner](./labs/k8s/nginx-deployment-on-aks-using-arc-runner.md)", 
+        "[NGINX Deployment on AKS Using ARC Runner](./labs/k8s/nginx-deployment-on-aks-using-arc-runner-lab.md)", 
         "N/A", 
-        "[View Solution](./labs/k8s/nginx-deployment-on-aks-using-arc-runner.md)",
+        "[View Solution](./labs/k8s/nginx-deployment-on-aks-using-arc-runner-solution.md)",
         "[![K8s ARC Runner NGINX](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/k8s-arc-runner-nginx.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/k8s-arc-runner-nginx.yml)", 
     ),
     (
