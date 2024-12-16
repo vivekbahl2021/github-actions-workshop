@@ -11,6 +11,6 @@ jobs:
     with:
       my-input: 'Hello, world!'
   say-goodbye:
-    uses: ./.github/workflows/reusable-workflow-echo.yml
+    uses: https://github.com/prasadhonrao/github-actions-workshop-shared-repo/blob/main/.github/workflows/deploy.yml
     with:
       my-input: 'Goodbye!'

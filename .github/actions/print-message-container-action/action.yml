@@ -1,5 +1,5 @@
-name: 'Print Message Docker Action'
-description: 'A simple Docker action that prints a message.'
+name: 'Print Message Container Action'
+description: 'A simple container action that prints a message.'
 
 inputs:
   message:

@@ -6,8 +6,8 @@ name: Custom Docker Action - Print Message
 on:
   push:
     paths:
-      - '.github/actions/print-message-docker-action/**'
-      - '.github/workflows/custom-docker-action-print-message.yml'
+      - '.github/actions/print-message-container-action/**'
+      - '.github/workflows/custom-container-action-print-message.yml'
   workflow_dispatch:
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run Hello Docker Action
-        uses: ./.github/actions/print-message-docker-action
+        uses: ./.github/actions/print-message-container-action
         with:
           message: 'This is a custom message from the workflow!'
 ```

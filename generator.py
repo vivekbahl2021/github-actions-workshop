@@ -312,10 +312,10 @@ data = [
         "[![Custom JavaScript Action - TODO Checker](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-javascript-action-todo-checker.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-javascript-action-todo-checker.yml)", 
     ),    
     (
-        "[Custom Docker Action - Print Message](./labs/custom-actions/print-message-docker-action-lab.md)", 
+        "[Custom Docker Action - Print Message](./labs/custom-actions/print-message-container-action-lab.md)", 
         "N/A", 
-        "[View Solution](./labs/custom-actions/print-message-docker-action-solution.md)", 
-        "[![Custom Docker Action - Print Message](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-docker-action-print-message.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-docker-action-print-message.yml)", 
+        "[View Solution](./labs/custom-actions/print-message-container-action-solution.md)", 
+        "[![Custom Docker Action - Print Message](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-container-action-print-message.yml/badge.svg)](https://github.com/prasadhonrao/github-actions-workshop/actions/workflows/custom-container-action-print-message.yml)", 
     ),    
     (
         "[Composite Action - Print Message and Time](./labs/custom-actions/print-message-and-time-composite-action-lab.md)", 
