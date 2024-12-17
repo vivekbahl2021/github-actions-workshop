@@ -31,7 +31,7 @@ jobs:
       # Step 4: Deploy an existing Docker image (e.g., nginx) to AKS
       - name: Deploy NGINX to AKS
         run: |
-          kubectl create deployment nginx-deployment --image=nginx:latest
+          kubectl apply deployment nginx-deployment --image=nginx:latest
           kubectl expose deployment nginx-deployment --port=80 --target-port=80 --type=LoadBalancer
           kubectl rollout status deployment/nginx-deployment
 
