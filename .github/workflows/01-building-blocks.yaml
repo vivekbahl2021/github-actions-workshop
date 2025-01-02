@@ -1,22 +1,24 @@
 name: 01 - Building Blocks
-on:
-  push:
-  workflow_dispatch:
+
+on: push
 
 jobs:
   echo-heelo:
-    runs-on: ubuntu-latest
-    steps:
-      -name: Helo World step
-       run: echo Helo World!
+       runs-on: ubuntu-latest
+       steps:
+        - name: hello world
+          run: echo hello world
+
   echo-goodbye:
-    runs-on: ubuntu-latest
-    steps:
-      -name: Failed step
-       run: echo Goodbye!
-        
-      -name: Multi-line bash
-       run: |
-        echo "I am"
-        echo "a multi-line"
-        echo "script." 
+        runs-on: ubuntu-latest
+        steps:
+         - name: Failed step
+           run: echo Goodbye!
+                
+         - name: Multi-line bash
+           run: |
+            echo "I am"
+            echo "a multi-line"
+            echo "script." 
+
+  
