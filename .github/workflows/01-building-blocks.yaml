@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  echo-hellow:
+  echo-heelo:
     runs-on: ubuntu-latest
     steps:
-      -name: say heello
-       run: echo Goodbye Hellow world
+      -name: Helo World step
+       run: echo Helo World!
   echo-goodbye:
     runs-on: ubuntu-latest
     steps:
