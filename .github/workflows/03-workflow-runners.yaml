@@ -9,3 +9,10 @@ jobs:
         steps:
             - name: Show OS
               run: echo "runs on ubuntu OS {{$RUNNER_OS}}" 
+
+    windows-echo:
+        runs-on: windows-latest
+        steps:
+            - name: Show OS
+              shell: bash
+              run: echo "I runs on bash in windows {{$RUNNER_OS}}"
