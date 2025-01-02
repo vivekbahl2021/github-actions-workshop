@@ -2,8 +2,8 @@ name: Intro - Scheduled Workflow
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '*/5 * * * *' # Every 5 minutes. You can use https://crontab.guru/ to generate cron expressions
+  #schedule:
+  #  - cron: '*/5 * * * *' # Every 5 minutes. You can use https://crontab.guru/ to generate cron expressions
   push:
     paths:
       - '.github/workflows/intro-scheduled-workflow.yml'
