@@ -2,7 +2,9 @@ name: 01 - Building Blocks
 
 on: 
   workflow_dispatch:
-  push:  
+  push:
+    paths: 
+      - '.github/workflows/01-building-blocks.yaml'  
 
 jobs:
   echo-heelo:
