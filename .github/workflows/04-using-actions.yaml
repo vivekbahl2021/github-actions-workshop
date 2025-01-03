@@ -9,6 +9,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
               - name: Checkout Code
-                run: 
+                run: echo "checkout folder" 
               - name: Printing Folders
-                run: 
+                run: echo "Print folder"
