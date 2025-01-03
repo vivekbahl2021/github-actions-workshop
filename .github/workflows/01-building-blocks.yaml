@@ -1,6 +1,8 @@
 name: 01 - Building Blocks
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+  push:  
 
 jobs:
   echo-heelo:

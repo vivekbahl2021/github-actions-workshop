@@ -1,0 +1,14 @@
+name: 04 - Using Actions
+
+on: 
+    push:
+        paths:
+            - '.github/workflows/04-using-actions.yaml'
+jobs: 
+    build:
+        runs-on: ubuntu-latest
+        steps:
+              - name: Checkout Code
+                run: 
+              - name: Printing Folders
+                run: 
